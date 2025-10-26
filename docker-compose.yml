@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  china-pewter-museum:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: china-pewter-museum
+    ports:
+      - "3000:80"  # 使用 3000 端口，避免权限问题
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
