@@ -1,58 +1,41 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-
-interface NavbarProps {
-  className?: string;
+import { motion } from 'framer-motion';
+https://www.bing.com/ck/a?!&&p=9d99cdcb43f3f824867a8fe482a664a42645ed89211704ee473b57164050a134JmltdHM9MTc2MTUyMzIwMA&ptn=3&ver=2&hsh=4&fclid=097add22-2bfe-6b0b-2e65-cec52af76a67&psq=%e5%a4%a7%e8%8b%b1%e5%8d%9a%e7%89%a9%e9%a4%a8%e5%ae%98%e7%b6%b2&u=a1aHR0cHM6Ly93d3cuYnJpdGlzaG11c2V1bS5vcmcv&ntb=1
+interface NavBarProps {
+  isChinese: boolean;
+  onLanguageToggle: () => void;
 }
 
-export default function Navbar({ className = "" }: NavbarProps) {
-  const location = useLocation();
-  
-  const navItems = [
-    { path: "/", label: "Home", labelCn: "首页" },
-    { path: "/hall-origins", label: "Hall of Origins", labelCn: "起源厅" },
-    { path: "/craft-life", label: "Craft and Life", labelCn: "匠艺厅" },
-    { path: "/word-metal", label: "Word and Metal", labelCn: "铭文厅" },
-    { path: "/future-design", label: "Future and Design", labelCn: "未来厅" }
-  ];
-
+export default function Navbar({ isChinese, onLanguageToggle }: NavBarProps) {
   return (
-    <nav className={`fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-4 z-50 flex items-center justify-between px-8 ${className}`}>
-      {/* Logo */}
-      <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-        <img 
-          src="/images/logo.jpg" 
-          alt="China Pewter Museum Logo" 
-          className="h-10 w-10 rounded-full object-cover"
-        />
-        <div className="hidden md:block">
-          <h1 className="text-lg font-bold text-white">China Pewter Museum</h1>
-          <p className="text-xs text-gray-300">中国锡器博物馆</p>
-        </div>
-      </Link>
-
-      {/* Navigation Links */}
-      <div className="flex gap-8 text-center text-sm md:text-base">
-        {navItems.map((item) => {
-          const isActive = location.pathname === item.path;
-          return (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`transition block whitespace-pre-line leading-tight ${
-                isActive 
-                  ? "text-red-400" 
-                  : "hover:text-red-400"
-              }`}
-            >
-              {`${item.label}\n${item.labelCn}`}
-            </Link>
-          );
-        })}
+    <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-4 z-50 flex justify-center items-center gap-8 text-sm md:text-base">
+      <div className="flex items-center gap-3">
+        <img src="/images/logo.jpg" alt="logo" className="w-10 h-10" />
+        <p className="text-1xl font-bold whitespace-nowrap">{isChinese ? '中国锡器博物馆' : 'CHINA PEWTER MUSEUM'}</p>
       </div>
-
-      {/* Right side spacer for balance */}
-      <div className="w-32"></div>
+      <a href="#hero" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+        {isChinese ? '首页' : 'Home'}
+      </a>
+      <a href="#about" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+        {isChinese ? '关于' : 'About'}
+      </a>
+      <a href="#exhibitions" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+        {isChinese ? '展览与收藏' : 'Exhibitions'}
+      </a>
+      <a href="#events" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+        {isChinese ? '活动与交流' : 'Events'}
+      </a>
+      <a href="#learning" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+        {isChinese ? '研学与教育' : 'Learning'}
+      </a>
+      <motion.button
+        onClick={onLanguageToggle}
+        className="bg-red-800 hover:bg-red-700 px-3 py-1 rounded-md text-white text-xs font-medium transition-colors"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        {isChinese ? 'EN' : '中文'}
+      </motion.button>
     </nav>
   );
 }
