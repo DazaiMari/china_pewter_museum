@@ -200,8 +200,7 @@ export default function Home() {
                   : 'Showcasing global influences and the dialogue of pewter across cultures.',
                 img: '/images/collection/collection9.jpg',
               },
-            ]
-            .map((item, i) => (
+            ].map((item) => (
               <a
                 key={item.id}
                 href={`/collections/${item.id}`}
