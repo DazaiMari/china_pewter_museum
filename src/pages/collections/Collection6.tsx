@@ -17,12 +17,12 @@ export default function Collection6() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '当代设计系列4' : 'Contemporary Pewter Series 4'}
+              {isChinese ? '满工錾花蚊灯' : 'Fine-Engraved Tin Mosquito Lamp'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
-                ? '传统工艺与现代审美的结合，赋予锡器新的生命'
-                : 'A fusion of heritage and modern aesthetics, giving new life to traditional craft'
+                ? '匠心造形，照明之外的生活智慧'
+                : 'A Subtle Union of Function and Gracet'
               }
             </p>
           </motion.div>
@@ -38,7 +38,7 @@ export default function Collection6() {
             >
               <img
                 src="/images/collection/collection4.jpg"
-                alt={isChinese ? '当代设计系列4' : 'Contemporary Pewter Series 4'}
+                alt={isChinese ? '满工錾花蚊灯' : 'Fine-Engraved Tin Mosquito Lamp'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
@@ -64,48 +64,48 @@ export default function Collection6() {
             >
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '设计特色' : 'Design Features'}
+                  {isChinese ? '历史背景' : 'Historical Background'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这一系列作品展现了当代设计师对锡器艺术的独特理解。通过简约的线条和现代的造型语言，重新定义了锡器在当代生活中的美学价值。'
-                    : 'This series showcases contemporary designers\' unique understanding of pewter art. Through simple lines and modern sculptural language, it redefines the aesthetic value of pewter in contemporary life.'
+                    ? '蚊灯流行于清代，是古人夏夜常用的防蚊照明器具。此件满工錾花蚊灯约制于清末民初，造型独特，兼具实用与装饰价值。它体现了古代民居生活中“以器成理”的生活智慧：灯不止为照明之具，更寄寓对安宁与洁净生活的追求。'
+                    : 'Mosquito lamps were widely used during the late Qing and early Republican periods as both lighting devices and insect repellents. This finely engraved tin lamp, with its unique form and refined decoration, reflects the practical ingenuity and aesthetic sensibility of traditional Chinese domestic life. Beyond illumination, it embodies the pursuit of comfort, cleanliness, and quiet elegance in everyday living.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '材料探索' : 'Material Exploration'}
+                  {isChinese ? '工艺技艺' : 'Craftsmanship'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '设计师们大胆尝试锡器与其他现代材料的结合，如玻璃、木材、陶瓷等，创造出丰富的质感和层次感。这种跨界融合为传统锡器注入了新的活力。'
-                    : 'Designers boldly experiment with combining pewter and other modern materials such as glass, wood, and ceramics, creating rich textures and layers. This cross-boundary fusion injects new vitality into traditional pewter.'
+                    ? '蚊灯以精炼锡铸成，通体满工錾花。工匠以细錾描绘花卉与卷草纹饰，线条柔密、层次分明，打磨后银光内敛。灯体呈葫芦形，上下以圈足与灯口呼应，侧设喇叭口状通气窗，背后置提柄。灯内燃点后，气流自小窗涌出，蚊虫被吸入灯内并被烟气熏灭，既实用又美观。'
+                    : 'Cast in pure tin and fully decorated with fine chiseled patterns, the lamp’s surface features dense floral and scroll motifs executed with delicate hammering and engraving. The polished finish lends a soft silvery sheen. The vessel takes the shape of a gourd, with a flaring trumpet-like side opening for air circulation and a handle on the reverse. When lit, warm air draws mosquitoes into the lamp through the small vent, where the flame and smoke eliminate them—a functional yet aesthetically refined design.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '生活美学' : 'Life Aesthetics'}
+                  {isChinese ? '造型特点' : 'Design Features'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这些作品不仅仅是艺术品，更是现代生活美学的体现。它们完美融入当代家居环境，为日常生活增添诗意和温度。'
-                    : 'These works are not merely art pieces but embodiments of modern life aesthetics. They seamlessly integrate into contemporary home environments, adding poetry and warmth to daily life.'
+                    ? '器身高约10.5厘米，比例匀称。灯体圆润饱满，喇叭口与提柄平衡成趣，整体构思巧妙。錾刻花纹繁复细致，层层叠映，呈现出晚清锡器工艺的高峰水准。其喇叭形开口兼具功能与形式之美，使整器在简约中透出雅致。'
+                    : 'Standing 10.5 centimeters tall, the lamp’s body is rounded and well balanced, combining practicality with sculptural harmony. The flared opening and rear handle create a dynamic visual rhythm, while the intricate engraving covers the entire surface in a rich, rhythmic pattern. The lamp’s structure integrates geometry and utility, achieving both technical precision and understated beauty.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '未来展望' : 'Future Vision'}
+                  {isChinese ? '艺术价值' : 'Artistic Value'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这一系列作品代表了锡器艺术的发展方向。它们证明了传统工艺在当代设计中的无限可能，为锡器文化的传承和发展开辟了新的道路。'
-                    : 'This series represents the direction of pewter art development. They prove the infinite possibilities of traditional craftsmanship in contemporary design, opening new paths for the inheritance and development of pewter culture.'
+                    ? '满工錾花蚊灯不仅是一件生活器物，更是匠人审美与智慧的结晶。它体现了中国古代器物中“以用见美”的设计哲学，也折射出传统工艺中对生活细节的体贴关怀。作为锡制照明器具的重要代表，这件蚊灯见证了民间生活与金属工艺结合的精妙成就。'
+                    : 'This mosquito lamp is more than a household utensil—it is a manifestation of craftsmanship and cultural intelligence. It embodies the philosophy of “beauty through utility” central to traditional Chinese design, merging practical purpose with refined artistry. As a representative example of late Qing tin lighting ware, it stands as a testament to the fusion of everyday life and exquisite metalworking craftsmanship.'
                   }
                 </p>
               </div>
