@@ -37,18 +37,18 @@ export default function Collection5() {
               className="space-y-6"
             >
               <img
-                src="/images/collection/collection4.jpg"
+                src="/images/collection/collection5.jpg"
                 alt={isChinese ? '嵌铜石榴喜鹊纹笔筒' : 'Inlaid Copper Brush Pot with Pomegranate and Magpie Motif'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/images/collection/collection4-detail1.jpg"
+                  src="/images/collection/collection5-detail1.jpg"
                   alt="Modern Design Detail"
                   className="w-full rounded-lg shadow-lg"
                 />
                 <img
-                  src="/images/collection/collection4-detail2.jpg"
+                  src="/images/collection/collection5.jpg-detail2.jpg"
                   alt="Contemporary Style"
                   className="w-full rounded-lg shadow-lg"
                 />

@@ -37,18 +37,18 @@ export default function Collection6() {
               className="space-y-6"
             >
               <img
-                src="/images/collection/collection4.jpg"
+                src="/images/collection/collection6.jpg"
                 alt={isChinese ? '满工錾花蚊灯' : 'Fine-Engraved Tin Mosquito Lamp'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/images/collection/collection4-detail1.jpg"
+                  src="/images/collection/collection6-detail1.jpg"
                   alt="Modern Design Detail"
                   className="w-full rounded-lg shadow-lg"
                 />
                 <img
-                  src="/images/collection/collection4-detail2.jpg"
+                  src="/images/collection/collection6-detail2.jpg"
                   alt="Contemporary Style"
                   className="w-full rounded-lg shadow-lg"
                 />
