@@ -215,7 +215,7 @@ export default function Home() {
               },
               {
                 id: 8,
-                title: isChinese ? '雕像 饰件 花瓶 烟具 墓盒' : 'Sculptures & Decorative Pewter',
+                title: isChinese ? '雕像 饰件 花瓶 烟具' : 'Sculptures & Decorative Pewter',
                 desc: isChinese
                   ? '从雕像到饰件，锡以柔韧之性塑造生命与纪念的艺术。'
                   : 'From figurines to vases and smoking sets, pewter conveys artistry and remembrance.',

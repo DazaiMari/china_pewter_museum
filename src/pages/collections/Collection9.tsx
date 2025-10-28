@@ -17,12 +17,12 @@ export default function Collection9() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '当代设计系列4' : 'Contemporary Pewter Series 4'}
+              {isChinese ? '錾花三足鼎式香炉' : 'Fine-Engraved Tripod Incense Burner'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
-                ? '传统工艺与现代审美的结合，赋予锡器新的生命'
-                : 'A fusion of heritage and modern aesthetics, giving new life to traditional craft'
+                ? '清雅鼎形，花鸟满工'
+                : 'Grace in Form, Harmony in Craft'
               }
             </p>
           </motion.div>
@@ -37,18 +37,18 @@ export default function Collection9() {
               className="space-y-6"
             >
               <img
-                src="/images/collection/collection4.jpg"
-                alt={isChinese ? '当代设计系列4' : 'Contemporary Pewter Series 4'}
+                src="/images/collection/collection9.jpg"
+                alt={isChinese ? '錾花三足鼎式香炉' : 'Fine-Engraved Tripod Incense Burner'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/images/collection/collection4-detail1.jpg"
+                  src="/images/collection/collection9-detail1.jpg"
                   alt="Modern Design Detail"
                   className="w-full rounded-lg shadow-lg"
                 />
                 <img
-                  src="/images/collection/collection4-detail2.jpg"
+                  src="/images/collection/collection9-detail2.jpg"
                   alt="Contemporary Style"
                   className="w-full rounded-lg shadow-lg"
                 />
@@ -64,48 +64,48 @@ export default function Collection9() {
             >
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '设计特色' : 'Design Features'}
+                  {isChinese ? '历史背景' : 'Historical Background'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这一系列作品展现了当代设计师对锡器艺术的独特理解。通过简约的线条和现代的造型语言，重新定义了锡器在当代生活中的美学价值。'
-                    : 'This series showcases contemporary designers\' unique understanding of pewter art. Through simple lines and modern sculptural language, it redefines the aesthetic value of pewter in contemporary life.'
+                    ? '香炉为中国传统器具中最具文化象征的种类之一，常见于书斋、佛堂及闺房空间，用以焚香静心、清气怡神。此件錾花三足鼎式香炉约制于清末民初，承袭明清金属香具之制，同时融入地方工艺师的创新理念，呈现出庄重而富文人气息的器物风格。'
+                    : 'The incense burner holds a central place in Chinese ritual and domestic culture, symbolizing purity and contemplation. This fine-engraved tripod incense burner, made in the late Qing to early Republic period, continues the lineage of traditional bronze-inspired forms while reflecting local innovation in tin craftsmanship. Its elegant proportions and refined surface make it both a functional vessel and a work of literati taste.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '材料探索' : 'Material Exploration'}
+                  {isChinese ? '工艺技艺' : 'Craftsmanship'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '设计师们大胆尝试锡器与其他现代材料的结合，如玻璃、木材、陶瓷等，创造出丰富的质感和层次感。这种跨界融合为传统锡器注入了新的活力。'
-                    : 'Designers boldly experiment with combining pewter and other modern materials such as glass, wood, and ceramics, creating rich textures and layers. This cross-boundary fusion injects new vitality into traditional pewter.'
+                    ? '炉体以精炼锡铸造，三足承鼎，双耳对称。全器通体满工錾花，工匠以细錾描绘花卉与鸟雀纹样，纹线清晰，布局匀整。花瓣以点錾衬地，叶脉与羽翎刻画细腻，金属表面经打磨抛光后泛出柔和银光。口沿处饰以铜质包边，既增强强度，又增色层次。整体工艺规整精湛，显见当时锡器工坊的高水平。'
+                    : 'Cast in high-quality tin, the vessel stands on three animal-head feet with paired loop handles on each side. The entire surface is decorated with dense hand-chiseled floral and bird motifs, each petal and feather delicately rendered. The background is filled with fine dotted patterns, producing a subtle contrast of light and shadow. The rim is reinforced with a thin copper band, enhancing both durability and visual depth. The polished surface emits a soft silvery luster, typical of mature tin craftsmanship.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '生活美学' : 'Life Aesthetics'}
+                  {isChinese ? '造型特点' : 'Design Features'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这些作品不仅仅是艺术品，更是现代生活美学的体现。它们完美融入当代家居环境，为日常生活增添诗意和温度。'
-                    : 'These works are not merely art pieces but embodiments of modern life aesthetics. They seamlessly integrate into contemporary home environments, adding poetry and warmth to daily life.'
+                    ? '器形仿古鼎式，口大腹深，三足呈兽首状，稳重端庄。双侧环耳便于提携，比例匀称。纹饰以花鸟为主，辅以卷草、蜂巢地纹相衬，寓意花开富贵、岁岁平安。整体造型古雅而不失灵动，实用与审美融为一体。'
+                    : 'The form follows the ancient tripod cauldron, with a wide mouth and deep belly supported by robust legs. The floral-and-bird frieze around the body conveys wishes for prosperity and longevity, while the scroll and honeycomb patterns add rhythmic texture. The design achieves harmony between solidity and elegance, function and ornament.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '未来展望' : 'Future Vision'}
+                  {isChinese ? '艺术价值' : 'Artistic Value'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这一系列作品代表了锡器艺术的发展方向。它们证明了传统工艺在当代设计中的无限可能，为锡器文化的传承和发展开辟了新的道路。'
-                    : 'This series represents the direction of pewter art development. They prove the infinite possibilities of traditional craftsmanship in contemporary design, opening new paths for the inheritance and development of pewter culture.'
+                    ? '此香炉体现了晚清至民初锡器工艺中“以古为新”的审美取向。其錾刻细腻，构图饱满，既保留传统礼器的端庄格调，又呈现生活化的温度。作为文人案头与香道空间的常用器具，它不仅是嗅觉与仪式之器，更是修身与静心的媒介，代表了中国金属艺术从礼器向生活美学的转化过程。'
+                    : 'This incense burner exemplifies the refined aesthetics of late Qing and early Republican tinwork—where ritual dignity meets domestic grace. Beyond its practical role in incense rituals, it embodies the ideal of inner cultivation through everyday objects. As a masterpiece of engraved tin art, it reveals how traditional Chinese metalcraft evolved from ceremonial symbolism to an expression of serene, lived beauty.'
                   }
                 </p>
               </div>
