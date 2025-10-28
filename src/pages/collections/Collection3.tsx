@@ -20,12 +20,12 @@ export default function Collection3() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '当代设计系列' : 'Contemporary Pewter Series'}
+              {isChinese ? '錾花墨玉提梁鱼形锡茶壶' : 'Engraved Pewter Teapot with Jade Handle in the Shape of a Fish'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
-                ? '传统工艺与现代审美的结合，赋予锡器新的生命'
-                : 'A fusion of heritage and modern aesthetics, giving new life to traditional craft'
+                ? '造型生动，寓意吉祥，锡艺与雕饰的完美结合'
+                : 'Lively form and auspicious meaning — a perfect harmony of metalcraft and artistry'
               }
             </p>
           </motion.div>
@@ -41,7 +41,7 @@ export default function Collection3() {
             >
               <img
                 src="/images/collection/collection3.jpg"
-                alt={isChinese ? '当代设计系列' : 'Contemporary Pewter Series'}
+                alt={isChinese ? '錾花墨玉提梁鱼形锡茶壶' : 'Engraved Pewter Teapot with Jade Handle in the Shape of a Fish'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
@@ -67,48 +67,48 @@ export default function Collection3() {
             >
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '设计理念' : 'Design Philosophy'}
+                  {isChinese ? '历史背景' : 'Historical Background'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '当代设计师在传承传统锡器工艺的基础上，融入现代设计语言和审美理念。这些作品既保持了锡器的温润质感，又具有鲜明的时代特征，展现了传统工艺在当代的无限可能。'
-                    : 'Contemporary designers integrate modern design language and aesthetic concepts while preserving traditional pewter craftsmanship. These works maintain the warm texture of pewter while exhibiting distinct contemporary characteristics, showcasing the infinite possibilities of traditional craft in modern times.'
+                    ? '鱼形锡壶盛行于清末至民国时期，是锡器造型艺术中的代表作之一。此类器物多为民间匠人精工手作，兼具实用与观赏功能，常见于茶具陈设与节庆馈赠。鱼在中国传统文化中象征富足与吉庆，“鱼跃有余”寓意生活丰盈安泰，反映了当时社会的美好愿景与审美趣味。'
+                    : 'Fish-shaped pewter teapots became popular from the late Qing Dynasty to the early Republic period, representing one of the most distinctive achievements in pewter design. Handcrafted by skilled artisans, these pieces combined practicality with ornamental elegance and were often presented as gifts or used for tea display. In Chinese culture, the fish symbolizes abundance and prosperity — the saying “year after year with surplus” conveys people’s wishes for wealth and harmony, reflecting both the optimism and refined taste of the era.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '创新工艺' : 'Innovative Techniques'}
+                  {isChinese ? '工艺技艺' : 'Craftsmanship'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '结合现代科技与传统工艺，采用新的成型技术和表面处理工艺。设计师们探索了锡器与其他材料的结合，创造出独特的视觉效果和触感体验。'
-                    : 'Combining modern technology with traditional craftsmanship, employing new forming techniques and surface treatments. Designers explore the integration of pewter with other materials, creating unique visual effects and tactile experiences.'
+                    ? '壶身以优质锡铸造，通体錾刻鱼鳞、波纹与卷云纹饰，工艺细腻严谨，鳞片层次分明、线条流畅。鱼眼嵌红玛瑙珠，晶莹温润，令器物更具神采。提梁以墨玉雕制，两端嵌接锡质件，坚固而富质感。壶盖置于鱼身上方，与背鳍造型自然衔接，结构稳妥。整体经多道錾刻、打磨与抛光工序完成，金属光泽柔和，手工质感丰富。'
+                    : 'The teapot is cast from high-quality pewter, its surface finely engraved with fish scales, waves, and swirling cloud motifs. The workmanship is meticulous — each scale is clearly defined and rhythmically arranged. The eyes are inlaid with red agate, giving the fish a vivid and spirited expression. The handle is carved from black jade, joined securely with pewter fittings for strength and elegance. The lid is set atop the fish’s back, seamlessly integrated with the dorsal fin design. The entire piece is carefully chased, polished, and hand-finished, producing a gentle metallic sheen and a smooth tactile quality.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '功能创新' : 'Functional Innovation'}
+                  {isChinese ? '造型特点' : 'Design Features'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '当代锡器设计不仅注重美观，更强调实用性和人机工程学。设计师们重新思考锡器在现代生活中的角色，创造出既美观又实用的现代生活用品。'
-                    : 'Contemporary pewter design emphasizes not only aesthetics but also functionality and ergonomics. Designers reconsider the role of pewter in modern life, creating beautiful yet practical contemporary household items.'
+                    ? '整器以鲤鱼为形，壶首为流，鱼腹饱满，鱼尾高翘作装饰。提梁弯曲自然，配合墨玉质地，呈现古雅之韵。壶底刻有波浪纹饰，与鱼身呼应，寓意“游于清波、丰年有余”。整体比例匀称，构思巧妙，写实中见装饰美，凝聚工艺师高超的造型功力与艺术感悟。'
+                    : 'The vessel takes the form of a carp, with the fish’s mouth serving as the spout, its body forming the main chamber, and the tail elegantly arched as a decorative element. The jade handle curves naturally, adding a subtle contrast in texture and color. The base is adorned with wave patterns that echo the fish’s flowing form, symbolizing movement and vitality. Balanced in proportion and lively in spirit, the piece achieves both structural harmony and artistic grace.'
                   }
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '文化传承' : 'Cultural Heritage'}
+                  {isChinese ? '艺术价值' : 'Artistic Value'}
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这些当代作品体现了对传统文化的尊重和传承。设计师们通过现代设计语言重新诠释传统锡器文化，使其在当代社会中焕发新的生命力。'
-                    : 'These contemporary works reflect respect for and continuation of traditional culture. Designers reinterpret traditional pewter culture through modern design language, breathing new life into it within contemporary society.'
+                    ? '此件錾花墨玉提梁鱼形锡茶壶兼具民间艺术的灵动与金属工艺的精致，是清末民初锡艺创新的代表之作。其造型寓意吉祥，工艺繁复细腻，展现出中国传统手工艺“以形寓意、以器载道”的精神内涵。作为集雕錾、嵌饰与造型于一体的精品，它在锡器艺术史与民俗文化研究中均具有重要的艺术与收藏价值。'
+                    : 'This engraved pewter teapot with jade handle in the shape of a fish exemplifies the fusion of liveliness and refinement found in late Qing pewter craftsmanship. Its form embodies auspicious symbolism, while its exquisite technique reflects the aesthetic ideal of “conveying meaning through form.” Combining engraving, inlay, and sculptural modeling, the work stands as a masterpiece of traditional Chinese metal artistry and an important object for the study of folk craftsmanship and symbolic design in early modern China.'
                   }
                 </p>
               </div>

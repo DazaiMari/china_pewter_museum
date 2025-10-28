@@ -20,12 +20,12 @@ export default function Collection1() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '明代锡盏' : 'Ming Dynasty Pewter Cup'}
+              {isChinese ? '清代锡一品锅' : 'Qing Dynasty Pewter Yi Pin Guo'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
-                ? '古朴典雅，展现明代器物的温润与含蓄之美'
-                : 'Elegant and understated, reflecting the refined pewter artistry of the Ming era'
+                ? '古雅精工，展现清代宫廷器物的匠心与礼制之美'
+                : 'Elegant craftsmanship reflecting the harmony and refinement of Qing imperial utensils'
               }
             </p>
           </motion.div>
@@ -41,7 +41,7 @@ export default function Collection1() {
             >
               <img
                 src="/images/collection/collection1.jpg"
-                alt={isChinese ? '明代锡盏' : 'Ming Dynasty Pewter Cup'}
+                alt={isChinese ? '清代锡一品锅' : 'Qing Dynasty Pewter Yi Pin Guo'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
@@ -71,8 +71,9 @@ export default function Collection1() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '明代锡器制作工艺达到巅峰，这件锡盏体现了当时工匠的精湛技艺。锡器在明代不仅是实用器具，更是身份地位的象征。其温润的质感和简洁的造型，反映了明代文人的审美追求。'
-                    : 'The Ming Dynasty marked the pinnacle of pewter craftsmanship. This cup exemplifies the masterful skills of Ming artisans. Pewter vessels were not merely utilitarian objects but symbols of status and refinement, reflecting the aesthetic sensibilities of Ming literati.'
+                    ? '清代锡器制作工艺日臻成熟，形成了宫廷与民间并存、南北并秀的格局。这件锡一品锅即为清代典型宴饮器具之一，体现了当时社会上层生活的礼制秩序与审美趣味。其圆形造型寓意团圆与和合，象征清代贵族生活中“和为贵”的文化理想。器具不仅具备实用功能，更兼陈设之雅，是身份与品位的象征。'
+                    : 'During the Qing Dynasty, pewter craftsmanship reached a remarkable level of sophistication, flourishing in both court and folk traditions. This circular Yi Pin Guo (imperial hotpot) exemplifies the refined lifestyle and aesthetic sensibilities of the upper class.' +
+                      'Its round form symbolizes unity and completeness, embodying the cultural ideal of harmony cherished in Qing society. Beyond its practical use as a dining vessel, it also served as a marker of social status and cultivated taste within the imperial household.'
                   }
                 </p>
               </div>
@@ -83,8 +84,10 @@ export default function Collection1() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '采用传统铸造工艺，表面经过精细打磨，呈现出独特的金属光泽。器型简洁大方，线条流畅，体现了明代器物"简约而不简单"的设计理念。'
-                    : 'Crafted using traditional casting techniques with meticulous surface finishing, revealing a distinctive metallic luster. The simple yet elegant form with flowing lines embodies the Ming philosophy of "simplicity without simplicity."'
+                    ? '通体以优质锡铸造，整体结构精巧严整，采用模块化组合设计，由碗、碟、盖、座等组件构成。锅体中设五个分格碗，每个碗配以錾刻花卉纹饰的盖，盖纽为桃形，圆润饱满，寓意吉祥长寿。' +
+                      '器表纹饰以传统錾刻技法完成，花卉纹理细腻流畅，线条柔和自然，展现出清代工匠高超的手工打磨与雕刻功力。整体造型简练规整，金属光泽温润含蓄，体现出“富而不奢、雅而有度”的宫廷美学。'
+                    : 'Cast entirely from high-quality pewter, the vessel showcases a modular design comprising bowls, dishes, lids, and a base. The interior contains five compartments, each with its own engraved floral-patterned lid. The lids are topped with peach-shaped knobs—smooth, lustrous, and symbolizing longevity and good fortune.' +
+                      'The surface decoration features delicately chased floral motifs with graceful, flowing lines. The meticulous hand-finishing and subtle metallic sheen reveal the technical mastery of Qing artisans. The overall design is elegant and restrained, expressing the Qing aesthetic ideal of “refinement within simplicity.”'
                   }
                 </p>
               </div>
@@ -95,8 +98,10 @@ export default function Collection1() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '这件锡盏承载着深厚的文化内涵，是研究明代社会生活、工艺技术和审美观念的重要实物资料。它见证了锡器在中国传统文化中的重要地位。'
-                    : 'This pewter cup carries profound cultural significance, serving as important material evidence for studying Ming Dynasty social life, craftsmanship, and aesthetic concepts. It testifies to the important role of pewter in traditional Chinese culture.'
+                    ? '锡一品锅承载着清代饮食文化与金属工艺的双重价值，是研究当时社会生活、器物设计与审美观的重要实物资料。其结构设计兼顾功能与美感，体现出早期中国工艺中“器以载道”的思想。圆形布局寓意天圆地方之理，五格分置象征五福同臻，既具象征意义，也符合宴饮分席的礼制需求。' +
+                      '这件器物不仅是生活器具，更是一种文化意象，展现了清代匠师对秩序、和谐与美的追求，见证了锡器工艺在传统文化中的重要地位。'
+                    : 'This Yi Pin Guo represents the integration of culinary culture and metal artistry in the Qing Dynasty. Its structure demonstrates an early form of functional modular design, balancing utility and beauty. The circular layout reflects the ancient cosmological concept of “heaven as round, earth as square,” while the five compartments symbolize the Five Blessings — longevity, prosperity, health, virtue, and peace.' +
+                      'More than a utensil, it embodies the values of harmony and refinement that defined Qing court life. As a precious artifact, it provides valuable insight into the social customs, craftsmanship, and aesthetic philosophy of traditional Chinese pewter ware.'
                   }
                 </p>
               </div>

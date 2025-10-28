@@ -183,10 +183,10 @@ export default function Home() {
               },
               {
                 id: 4,
-                title: isChinese ? '厨房用具' : 'Kitchen Utensils',
+                title: isChinese ? '闺房用具' : 'Boudoir Utensils',
                 desc: isChinese
-                  ? '兼具实用与装饰，展现传统生活的匠心与秩序。'
-                  : 'Balancing practicality and beauty, these pieces reflect craftsmanship in daily life.',
+                  ? '精巧雅致，寄寓生活情趣与东方审美的温柔格调。'
+                  : 'Delicate and refined, reflecting the grace and elegance of traditional domestic life.',
                 img: '/images/collection/collection4.jpg',
               },
               {
@@ -311,8 +311,8 @@ export default function Home() {
               id: 1,
               title: isChinese ? '中法文化交流论坛' : 'Sino-French Forum',
               desc: isChinese
-                ? '中法艺术家与设计师共同探讨锡器的当代表达。'
-                : 'Chinese and French designers discuss the contemporary art of pewter.',
+                ? '法国学生来华，与中国工艺师共同探讨锡器的当代表达'
+                : 'French students visited China to explore the contemporary expression of pewter craftsmanship with Chinese artisans.',
               img: '/images/events/event1.jpg',
             },
             {
