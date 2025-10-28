@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import * as React from "react";
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 
@@ -39,7 +40,7 @@ export default function Home() {
         {/* 左下角文字 */}
         <div className="relative z-10 p-10 md:p-20 text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            {isChinese ? '欢迎来到中国锡器博物馆' : 'WELCOME TO CHINA PEWTER MUSEUM'}
+            {isChinese ? '欢迎来到中国锡器博物馆(test)' : 'WELCOME TO CHINA PEWTER MUSEUM'}
           </h1>
           <p className="text-lg text-gray-200">
              9:00 – 17:00 ({isChinese ? '周一闭馆' : 'Closed Mondays'})
