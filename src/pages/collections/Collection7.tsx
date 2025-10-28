@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Navbar from '../../components/Navbar';
 
-export default function Collection4() {
+export default function Collection7() {
   const [isChinese, setIsChinese] = useState(true);
   return (
     <main className="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans min-h-screen">
-      <section className="pt-24 pb-16 px-6 md:px-20">
+      {/* Navigation */}
+      <Navbar isChinese={isChinese} onLanguageToggle={() => setIsChinese(!isChinese)} />
+      <section className="pt-32 pb-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

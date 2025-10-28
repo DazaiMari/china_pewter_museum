@@ -7,9 +7,11 @@ export default function Collection1() {
 
   return (
     <main className="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans min-h-screen">
+      {/* Navigation */}
+      <Navbar isChinese={isChinese} onLanguageToggle={() => setIsChinese(!isChinese)} />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6 md:px-20">
+      <section className="pt-32 pb-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
