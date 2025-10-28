@@ -48,7 +48,7 @@ export default function Collection5() {
                   className="w-full rounded-lg shadow-lg"
                 />
                 <img
-                  src="/images/collection/collection5.jpg-detail2.jpg"
+                  src="/images/collection/collection5-detail2.jpg"
                   alt="Contemporary Style"
                   className="w-full rounded-lg shadow-lg"
                 />
