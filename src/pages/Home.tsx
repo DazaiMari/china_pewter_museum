@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="bg-gray-900 text-white font-sans overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-4 z-50 flex justify-center items-center gap-8 text-sm md:text-base">
+      <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-10 z-50 flex justify-center items-center gap-8 text-sm md:text-base">
       <div className="flex items-center gap-3">
         <img src="/images/logo.jpg" alt="logo" className="w-10 h-10" />
         <p className="text-1xl font-bold whitespace-nowrap">{isChinese ? '中国锡器博物馆' : 'CHINA PEWTER MUSEUM'}</p>
@@ -67,7 +67,7 @@ export default function Home() {
 
         {/* 左下角文字 */}
         <div className="relative z-10 p-10 md:p-20 text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold mb-3">
             {isChinese ? '欢迎来到中国锡器博物馆' : 'WELCOME TO CHINA PEWTER MUSEUM'}
           </h1>
           <p className="text-lg text-gray-200">

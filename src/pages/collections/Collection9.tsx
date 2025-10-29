@@ -17,12 +17,12 @@ export default function Collection9() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '錾花三足鼎式香炉' : 'Fine-Engraved Tripod Incense Burner'}
+              {isChinese ? '日本 飞鸟纹磨砂瓶' : 'Japanese Matte Tin Vase with Flying Bird Motif'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
-                ? '清雅鼎形，花鸟满工'
-                : 'Grace in Form, Harmony in Craft'
+                ? '静寂之光，金工之美'
+                : 'Quiet Radiance, Refined Craft'
               }
             </p>
           </motion.div>
@@ -38,7 +38,7 @@ export default function Collection9() {
             >
               <img
                 src="/images/collection/collection9.jpg"
-                alt={isChinese ? '錾花三足鼎式香炉' : 'Fine-Engraved Tripod Incense Burner'}
+                alt={isChinese ? '日本 飞鸟纹磨砂瓶' : 'Japanese Matte Tin Vase with Flying Bird Motif'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
@@ -68,8 +68,8 @@ export default function Collection9() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '香炉为中国传统器具中最具文化象征的种类之一，常见于书斋、佛堂及闺房空间，用以焚香静心、清气怡神。此件錾花三足鼎式香炉约制于清末民初，承袭明清金属香具之制，同时融入地方工艺师的创新理念，呈现出庄重而富文人气息的器物风格。'
-                    : 'The incense burner holds a central place in Chinese ritual and domestic culture, symbolizing purity and contemplation. This fine-engraved tripod incense burner, made in the late Qing to early Republic period, continues the lineage of traditional bronze-inspired forms while reflecting local innovation in tin craftsmanship. Its elegant proportions and refined surface make it both a functional vessel and a work of literati taste.'
+                    ? '此瓶约制于二十世纪上半叶，是日本近代金工艺术中以飞鸟为题的代表作品之一。明治维新后，日本金属工艺在吸收西方金属冶炼与表面处理技术的同时，延续了传统金银错嵌与雕金技法，形成了既古雅又现代的独特审美体系。飞鸟纹题材源于古代祥瑞文化，象征高洁、自由与升华之意。'
+                    : 'This vase, created in early 20th-century Japan, exemplifies the refined artistry of modern Japanese metalwork. Following the Meiji Restoration, Japanese artisans absorbed Western metal-refining and surface-finishing techniques while preserving traditional skills such as inlay, chiseling, and polishing. The flying bird motif, drawn from ancient auspicious symbolism, represents purity, transcendence, and freedom.'
                   }
                 </p>
               </div>
@@ -80,8 +80,8 @@ export default function Collection9() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '炉体以精炼锡铸造，三足承鼎，双耳对称。全器通体满工錾花，工匠以细錾描绘花卉与鸟雀纹样，纹线清晰，布局匀整。花瓣以点錾衬地，叶脉与羽翎刻画细腻，金属表面经打磨抛光后泛出柔和银光。口沿处饰以铜质包边，既增强强度，又增色层次。整体工艺规整精湛，显见当时锡器工坊的高水平。'
-                    : 'Cast in high-quality tin, the vessel stands on three animal-head feet with paired loop handles on each side. The entire surface is decorated with dense hand-chiseled floral and bird motifs, each petal and feather delicately rendered. The background is filled with fine dotted patterns, producing a subtle contrast of light and shadow. The rim is reinforced with a thin copper band, enhancing both durability and visual depth. The polished surface emits a soft silvery luster, typical of mature tin craftsmanship.'
+                    ? '器形浑圆饱满，肩部微收，颈口简洁。瓶身中段一圈环饰飞鸟纹带，构图疏密有致，飞鸟展翅于花枝之间，羽势凌空。整体线条纯净，造型比例恰到好处，体现日本工艺美学中“留白”与“克制”的精神。'
+                    : 'Crafted primarily in fine tin and accented with copper, silver, and gold alloys, the vase combines matte finishing and metal inlay techniques. The surface is first sand-polished to achieve a soft, mist-like texture. The artisan then engraves the bird and floral patterns and inlays gold and silver lines to highlight movement and depth. The wings are layered with precision, the golden hues shimmering gently against the subdued gray ground—creating a sense of grace in stillness.'
                   }
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function Collection9() {
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
                     ? '器形仿古鼎式，口大腹深，三足呈兽首状，稳重端庄。双侧环耳便于提携，比例匀称。纹饰以花鸟为主，辅以卷草、蜂巢地纹相衬，寓意花开富贵、岁岁平安。整体造型古雅而不失灵动，实用与审美融为一体。'
-                    : 'The form follows the ancient tripod cauldron, with a wide mouth and deep belly supported by robust legs. The floral-and-bird frieze around the body conveys wishes for prosperity and longevity, while the scroll and honeycomb patterns add rhythmic texture. The design achieves harmony between solidity and elegance, function and ornament.'
+                    : 'The form is full and balanced, with a slightly constricted shoulder and plain narrow mouth. A decorative band encircles the midsection, where a bird in flight spreads its wings among flowering branches. The design embodies the Japanese sense of ma—the beauty of restraint and space—balancing strength with serenity.'
                   }
                 </p>
               </div>
@@ -104,8 +104,8 @@ export default function Collection9() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '此香炉体现了晚清至民初锡器工艺中“以古为新”的审美取向。其錾刻细腻，构图饱满，既保留传统礼器的端庄格调，又呈现生活化的温度。作为文人案头与香道空间的常用器具，它不仅是嗅觉与仪式之器，更是修身与静心的媒介，代表了中国金属艺术从礼器向生活美学的转化过程。'
-                    : 'This incense burner exemplifies the refined aesthetics of late Qing and early Republican tinwork—where ritual dignity meets domestic grace. Beyond its practical role in incense rituals, it embodies the ideal of inner cultivation through everyday objects. As a masterpiece of engraved tin art, it reveals how traditional Chinese metalcraft evolved from ceremonial symbolism to an expression of serene, lived beauty.'
+                    ? '此瓶将东方金工传统与现代审美理念融为一体，展现了金属材料在“光泽—质感—造型”三重维度上的表现力。飞鸟的动态寓意着自由与生机，而磨砂质地则营造出时间沉静的气息，形成鲜明的视觉与精神对比。它不仅是一件金属器物，更是一种关于“寂静与生命”的艺术表达。'
+                    : 'This vase reflects the synthesis of traditional Eastern craft and modern aesthetics, demonstrating the expressive potential of metal in both texture and form. The dynamic flight of the bird contrasts with the tranquil matte surface, evoking the poetic dialogue between silence and vitality. It stands not merely as an object of function but as a meditation on light, movement, and time.'
                   }
                 </p>
               </div>

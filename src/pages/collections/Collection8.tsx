@@ -17,11 +17,11 @@ export default function Collection8() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '錾花三足鼎式香炉' : 'Fine-Engraved Tripod Incense Burner'}
+              {isChinese ? '仙鹤立像锡雕' : 'Fine-Engraved Tripod Incense Burner'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
-                ? '清雅鼎形，花鸟满工'
+                ? '祥瑞长生，雅器生辉'
                 : 'Grace in Form, Harmony in Craft'
               }
             </p>
@@ -38,7 +38,7 @@ export default function Collection8() {
             >
               <img
                 src="/images/collection/collection8.jpg"
-                alt={isChinese ? '錾花三足鼎式香炉' : 'Fine-Engraved Tripod Incense Burner'}
+                alt={isChinese ? '仙鹤立像锡雕' : 'Fine-Engraved Tripod Incense Burner'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
@@ -68,8 +68,8 @@ export default function Collection8() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '香炉为中国传统器具中最具文化象征的种类之一，常见于书斋、佛堂及闺房空间，用以焚香静心、清气怡神。此件錾花三足鼎式香炉约制于清末民初，承袭明清金属香具之制，同时融入地方工艺师的创新理念，呈现出庄重而富文人气息的器物风格。'
-                    : 'The incense burner holds a central place in Chinese ritual and domestic culture, symbolizing purity and contemplation. This fine-engraved tripod incense burner, made in the late Qing to early Republic period, continues the lineage of traditional bronze-inspired forms while reflecting local innovation in tin craftsmanship. Its elegant proportions and refined surface make it both a functional vessel and a work of literati taste.'
+                    ? '仙鹤自古为中国文化中象征高洁、长寿与祥瑞的灵禽，常见于宫廷陈设与文人雅玩。此件仙鹤立像锡雕约制于清末民初，是锡艺由实用器向陈设艺术演进的代表之作。它体现了晚清工艺师在吸收传统造像法则的基础上，对动物形象塑造与工艺表现的高度掌握。'
+                    : 'In Chinese culture, the crane symbolizes purity, longevity, and auspicious blessings. This standing tin sculpture of an immortal crane, produced in the late Qing to early Republic period, marks the transition of tin craftsmanship from utilitarian ware to decorative art. It reflects the mastery of artisans who skillfully combined traditional sculptural form with the refined techniques of metalcraft.'
                   }
                 </p>
               </div>
@@ -80,8 +80,8 @@ export default function Collection8() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '炉体以精炼锡铸造，三足承鼎，双耳对称。全器通体满工錾花，工匠以细錾描绘花卉与鸟雀纹样，纹线清晰，布局匀整。花瓣以点錾衬地，叶脉与羽翎刻画细腻，金属表面经打磨抛光后泛出柔和银光。口沿处饰以铜质包边，既增强强度，又增色层次。整体工艺规整精湛，显见当时锡器工坊的高水平。'
-                    : 'Cast in high-quality tin, the vessel stands on three animal-head feet with paired loop handles on each side. The entire surface is decorated with dense hand-chiseled floral and bird motifs, each petal and feather delicately rendered. The background is filled with fine dotted patterns, producing a subtle contrast of light and shadow. The rim is reinforced with a thin copper band, enhancing both durability and visual depth. The polished surface emits a soft silvery luster, typical of mature tin craftsmanship.'
+                    ? '全器以精炼锡铸造，辅以錾刻、嵌饰与焊接工艺完成。鹤首红冠，双目嵌蓝玻璃珠，羽翼与颈部以细錾线勾勒羽纹，层次分明。鹤身挺立于八角台座之上，台面围以栏杆，红柱与银灰相映成趣。台座脚作四曲足式，承托稳健。整体结构协调、比例匀称，细部打磨极为精致，展现出锡雕工艺的高度成熟。'
+                    : 'Cast in pure tin and finished through chiseling, inlay, and soldering, the sculpture features a red-crested head with blue glass-inlaid eyes. The feathers are meticulously engraved with fine lines, giving the surface texture and rhythm. The crane stands gracefully upon an octagonal pedestal enclosed by railings with red posts, the silver-gray body contrasting elegantly against the warm accents. The four-legged base provides firm support, and every detail—from the beak to the talons—reveals exquisite workmanship.'
                   }
                 </p>
               </div>
@@ -92,8 +92,8 @@ export default function Collection8() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '器形仿古鼎式，口大腹深，三足呈兽首状，稳重端庄。双侧环耳便于提携，比例匀称。纹饰以花鸟为主，辅以卷草、蜂巢地纹相衬，寓意花开富贵、岁岁平安。整体造型古雅而不失灵动，实用与审美融为一体。'
-                    : 'The form follows the ancient tripod cauldron, with a wide mouth and deep belly supported by robust legs. The floral-and-bird frieze around the body conveys wishes for prosperity and longevity, while the scroll and honeycomb patterns add rhythmic texture. The design achieves harmony between solidity and elegance, function and ornament.'
+                    ? '鹤体修长，颈部微弯，双喙微启，神态生动。羽毛错落有致，金属光泽与形体韵律相得益彰。八角台座象征方圆并合，寓意天地和谐。整体造型既具礼器之庄重，又有陈设之优雅。'
+                    : 'The crane’s long neck curves gently, its beak slightly open as if mid-call, exuding vitality and serenity. The layered plumage and lustrous tin finish create a play of light and shadow. The octagonal base symbolizes harmony between heaven and earth, balancing form and meaning.'
                   }
                 </p>
               </div>
@@ -104,8 +104,8 @@ export default function Collection8() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '此香炉体现了晚清至民初锡器工艺中“以古为新”的审美取向。其錾刻细腻，构图饱满，既保留传统礼器的端庄格调，又呈现生活化的温度。作为文人案头与香道空间的常用器具，它不仅是嗅觉与仪式之器，更是修身与静心的媒介，代表了中国金属艺术从礼器向生活美学的转化过程。'
-                    : 'This incense burner exemplifies the refined aesthetics of late Qing and early Republican tinwork—where ritual dignity meets domestic grace. Beyond its practical role in incense rituals, it embodies the ideal of inner cultivation through everyday objects. As a masterpiece of engraved tin art, it reveals how traditional Chinese metalcraft evolved from ceremonial symbolism to an expression of serene, lived beauty.'
+                    ? '此件仙鹤立像将象征性与装饰性完美结合，体现了中国传统文化中“以形寓意、以器载道”的美学精神。作为锡器艺术向雕塑领域延伸的典范之作，它不仅承载祈寿纳福的文化意涵，更见证了锡艺从日常实用走向艺术表现的历史进程。'
+                    : 'This sculpture seamlessly unites symbolism and artistry, embodying the traditional Chinese ideal of conveying virtue through form. As a representative of tin sculpture’s artistic maturity, it not only expresses wishes for peace and longevity but also stands as a milestone in the evolution of tin craftsmanship from household utility to fine art.'
                   }
                 </p>
               </div>
