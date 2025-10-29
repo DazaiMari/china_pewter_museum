@@ -353,64 +353,65 @@ export default function Home() {
               : 'With every exhibition, tin speaks its universal language of light and endurance.'}
           </p>
         </div>
-        {/* 活动卡片区 */}
-        <div className="grid grid-cols-4 gap-6 max-w-6xl mx-auto mt-12">
-          {[
-            {
-              id: 1,
-              title: isChinese ? '中法文化交流论坛' : 'Sino-French Forum',
-              desc: isChinese
-                ? '法国学生来华，与中国工艺师共同探讨锡器的当代表达'
-                : 'French students visited China to explore the contemporary expression of pewter craftsmanship with Chinese artisans.',
-              img: '/images/events/event1.jpg',
-            },
-            {
-              id: 2,
-              title: isChinese ? '长三角文化峰会' : 'Yangtze Delta Summit',
-              desc: isChinese
-                ? '博物馆代表分享民间工艺的创新保护经验。'
-                : 'Museum representatives share experiences in heritage innovation.',
-              img: '/images/events/event2.jpg',
-            },
-            {
-              id: 3,
-              title: isChinese ? '锡器国际设计展' : 'Pewter Design Expo',
-              desc: isChinese
-                ? '展示传统锡工艺与现代设计融合的跨界作品。'
-                : 'Showcasing cross-cultural pewter works blending tradition and design.',
-              img: '/images/events/event3.jpg',
-            },
-            {
-              id: 4,
-              title: isChinese ? '道口锡文化节' : 'Daokou Tinware Festival',
-              desc: isChinese
-                ? '让传统工艺走进生活，传递手作的温度与美感。'
-                : 'Bringing pewter craft into daily life through interactive festivals.',
-              img: '/images/events/event4.jpg',
-            },
-          ].map((item) => (
-            <div
-              key={item.id}
-              className="group block overflow-hidden rounded-xl shadow-lg bg-gray-800 hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="relative">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
-              </div>
-              <div className="p-5 text-left">
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+
       </section>
+          {/* 活动卡片区 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto mt-12 px-2">
+              {[
+                  {
+                      id: 1,
+                      title: isChinese ? '中法文化交流论坛' : 'Sino-French Forum',
+                      desc: isChinese
+                          ? '法国学生来华，与中国工艺师共同探讨锡器的当代表达。'
+                          : 'French students visited China to explore the contemporary expression of pewter craftsmanship with Chinese artisans.',
+                      img: '/images/events/event1.jpg',
+                  },
+                  {
+                      id: 2,
+                      title: isChinese ? '长三角文化峰会' : 'Yangtze Delta Summit',
+                      desc: isChinese
+                          ? '博物馆代表分享民间工艺的创新保护经验。'
+                          : 'Museum representatives share experiences in heritage innovation.',
+                      img: '/images/events/event2.jpg',
+                  },
+                  {
+                      id: 3,
+                      title: isChinese ? '锡器国际设计展' : 'Pewter Design Expo',
+                      desc: isChinese
+                          ? '展示传统锡工艺与现代设计融合的跨界作品。'
+                          : 'Showcasing cross-cultural pewter works blending tradition and design.',
+                      img: '/images/events/event3.jpg',
+                  },
+                  {
+                      id: 4,
+                      title: isChinese ? '道口锡文化节' : 'Daokou Tinware Festival',
+                      desc: isChinese
+                          ? '让传统工艺走进生活，传递手作的温度与美感。'
+                          : 'Bringing pewter craft into daily life through interactive festivals.',
+                      img: '/images/events/event4.jpg',
+                  },
+              ].map((item) => (
+                  <div
+                      key={item.id}
+                      className="group block overflow-hidden bg-gray-800 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+                  >
+                      <div className="relative">
+                          <img
+                              src={item.img}
+                              alt={item.title}
+                              className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
+                      </div>
+                      <div className="p-6 text-left">
+                          <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
+                              {item.title}
+                          </h3>
+                          <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
+                      </div>
+                  </div>
+              ))}
+          </div>
 
       </div>
         {/* Learning & Discovery Section */}
