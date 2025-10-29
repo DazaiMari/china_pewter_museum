@@ -140,7 +140,7 @@ export default function Home() {
         <div className="relative z-10 bg-[#0f172a]">
             <section
                 id="exhibitions"
-                className="bg-[#0f172a] text-white py-24 px-6 md:px-20 text-center fade"
+                className="bg-[#0f172a] text-white py-24 px-4 md:px-10 text-center fade"
             >
                 {/* 标题与说明 */}
                 <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-snug">
@@ -173,7 +173,7 @@ export default function Home() {
                     {/* 滚动容器 */}
                     <div
                         id="scrollContainer"
-                        className="flex overflow-x-scroll scroll-smooth space-x-8 px-10 pb-4"
+                        className="flex overflow-x-auto scroll-smooth space-x-8 px-2 md:px-6 pb-4 hide-scrollbar"
                     >
                         {[
                             {
@@ -270,6 +270,17 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* 隐藏滚动条 */}
+            <style>{`
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;  /* IE 和 Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  `}</style>
         </div>
 
         {/* 控制滚动箭头逻辑 */}
@@ -288,7 +299,6 @@ export default function Home() {
     }
   `}
         </script>
-
 
 
         {/* Events & Partnerships Section */}
