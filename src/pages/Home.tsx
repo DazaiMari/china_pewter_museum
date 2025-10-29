@@ -136,122 +136,161 @@ export default function Home() {
         </section>
       </div>
 
-      {/*  & Collections Section */}
-      <div className="relative z-10 bg-[#0f172a]">
-        <section
-          id="exhibitions"
-          className="bg-[#0f172a] text-white py-24 px-6 md:px-20 text-center fade"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-snug">
-            {isChinese ? '展览与收藏' : 'Exhibitions & Collections'}
-          </h2>
-
-          <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16">
-            <p>
-              {isChinese
-                ? '馆藏横跨明清至今，涵盖生活器具、宗教用器与当代艺术作品。每件锡器，都是一个有温度的金属故事。从宋元的家用锡盒，到民国的婚庆锡壶，再到现代设计师的再创，锡器折射出中国人生活的秩序与情感。'
-                : 'The museum’s collection spans from the Ming and Qing dynasties to today—from domestic pewter cups to ceremonial vessels and contemporary designs. Each piece of tin tells a story of warmth and endurance, a reflection of how the Chinese have shaped metal, and how metal, in turn, has shaped their way of life.'}
-            </p>
-          </div>
-
-          {/* Cards Section */}
-          <div className="grid sm:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                id: 1,
-                title: isChinese ? '食具' : 'Tableware',
-                desc: isChinese
-                  ? '以实用为先，形制规整，体现锡器在饮食文化中的温润气度。'
-                  : 'Functional and elegant, reflecting pewter’s graceful presence in Chinese dining culture.',
-                img: '/images/collection/collection1.jpg',
-              },
-              {
-                id: 2,
-                title: isChinese ? '茶具' : 'Tea Ware',
-                desc: isChinese
-                  ? '以锡保香、避湿之特性，承载千年茶文化的清雅与仪式感。'
-                  : 'Known for preserving aroma and freshness, pewter vessels embody the spirit of Chinese tea rituals.',
-                img: '/images/collection/collection2.jpg',
-              },
-              {
-                id: 3,
-                title: isChinese ? '酒具' : 'Wine Ware',
-                desc: isChinese
-                  ? '温润如玉的锡酒器，凝结古人待客的礼节与风雅。'
-                  : 'Pewter wine sets, warm and refined, capture the etiquette and elegance of ancient gatherings.',
-                img: '/images/collection/collection3.jpg',
-              },
-              {
-                id: 4,
-                title: isChinese ? '闺房用具' : 'Boudoir Utensils',
-                desc: isChinese
-                  ? '精巧雅致，寄寓生活情趣与东方审美的温柔格调。'
-                  : 'Delicate and refined, reflecting the grace and elegance of traditional domestic life.',
-                img: '/images/collection/collection4.jpg',
-              },
-              {
-                id: 5,
-                title: isChinese ? '文房用具' : 'Scholar’s Utensils',
-                desc: isChinese
-                  ? '炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息。'
-                  : 'Incense burners and ink boxes blending artistry and scholarly refinement.',
-                img: '/images/collection/collection5.jpg',
-              },
-              {
-                id: 6,
-                title: isChinese ? '照明用具' : 'Lighting Ware',
-                desc: isChinese
-                  ? '烛台灯具，形制多样，映照古人的审美与生活之光。'
-                  : 'Candleholders and lamps that illuminate both craft and culture.',
-                img: '/images/collection/collection6.jpg',
-              },
-              {
-                id: 7,
-                title: isChinese ? '祭供用具' : 'Ritual Utensils',
-                desc: isChinese
-                  ? '承载敬祖礼仪，融信仰与美学于一体的锡制供器。'
-                  : 'Ritual pewter vessels uniting belief, heritage, and artistry.',
-                img: '/images/collection/collection7.jpg',
-              },
-              {
-                id: 8,
-                title: isChinese ? '雕像 饰件 花瓶 烟具' : 'Sculptures & Decorative Pewter',
-                desc: isChinese
-                  ? '从雕像到饰件，锡以柔韧之性塑造生命与纪念的艺术。'
-                  : 'From figurines to vases and smoking sets, pewter conveys artistry and remembrance.',
-                img: '/images/collection/collection8.jpg',
-              },
-              {
-                id: 9,
-                title: isChinese ? '国外锡器' : 'Overseas Pewter',
-                desc: isChinese
-                  ? '展示世界各地锡文化的交流与融合。'
-                  : 'Showcasing global influences and the dialogue of pewter across cultures.',
-                img: '/images/collection/collection9.jpg',
-              },
-            ].map((item) => (
-              <a
-                key={item.id}
-                href={`/collections/${item.id}`}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300"></div>
-                <div className="absolute bottom-0 p-6 text-left">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-200 text-sm leading-snug">{item.desc}</p>
+        {/* 展览与收藏 Section */}
+        <div className="relative z-10 bg-[#0f172a]">
+            <section
+                id="exhibitions"
+                className="bg-[#0f172a] text-white py-24 px-6 md:px-20 text-center fade"
+            >
+                {/* 标题与说明 */}
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-snug">
+                    {isChinese ? '展览与收藏' : 'Exhibitions & Collections'}
+                </h2>
+                <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16">
+                    <p>
+                        {isChinese
+                            ? '馆藏横跨明清至今，涵盖生活器具、宗教用器与当代艺术作品。每件锡器，都是一个有温度的金属故事。从宋元的家用锡盒，到民国的婚庆锡壶，再到现代设计师的再创，锡器折射出中国人生活的秩序与情感。'
+                            : 'The museum’s collection spans from the Ming and Qing dynasties to today—from domestic pewter cups to ceremonial vessels and contemporary designs. Each piece of tin tells a story of warmth and endurance, a reflection of how the Chinese have shaped metal, and how metal, in turn, has shaped their way of life.'}
+                    </p>
                 </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      </div>
 
-     
+                {/* 图片滚动区域 */}
+                <div className="relative">
+                    {/* 左右按钮 */}
+                    <button
+                        id="scrollLeft"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-20 hover:bg-black/70 transition"
+                    >
+                        ‹
+                    </button>
+                    <button
+                        id="scrollRight"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-20 hover:bg-black/70 transition"
+                    >
+                        ›
+                    </button>
+
+                    {/* 滚动容器 */}
+                    <div
+                        id="scrollContainer"
+                        className="flex overflow-x-scroll scroll-smooth space-x-8 px-10 pb-4"
+                    >
+                        {[
+                            {
+                                id: 1,
+                                title: isChinese ? '食具' : 'Tableware',
+                                desc: isChinese
+                                    ? '以实用为先，形制规整，体现锡器在饮食文化中的温润气度。'
+                                    : 'Functional and elegant, reflecting pewter’s graceful presence in Chinese dining culture.',
+                                img: '/images/collection/collection1.jpg',
+                            },
+                            {
+                                id: 2,
+                                title: isChinese ? '茶具' : 'Tea Ware',
+                                desc: isChinese
+                                    ? '以锡保香、避湿之特性，承载千年茶文化的清雅与仪式感。'
+                                    : 'Known for preserving aroma and freshness, pewter vessels embody the spirit of Chinese tea rituals.',
+                                img: '/images/collection/collection2.jpg',
+                            },
+                            {
+                                id: 3,
+                                title: isChinese ? '酒具' : 'Wine Ware',
+                                desc: isChinese
+                                    ? '温润如玉的锡酒器，凝结古人待客的礼节与风雅。'
+                                    : 'Pewter wine sets, warm and refined, capture the etiquette and elegance of ancient gatherings.',
+                                img: '/images/collection/collection3.jpg',
+                            },
+                            {
+                                id: 4,
+                                title: isChinese ? '闺房用具' : 'Boudoir Utensils',
+                                desc: isChinese
+                                    ? '精巧雅致，寄寓生活情趣与东方审美的温柔格调。'
+                                    : 'Delicate and refined, reflecting the grace and elegance of traditional domestic life.',
+                                img: '/images/collection/collection4.jpg',
+                            },
+                            {
+                                id: 5,
+                                title: isChinese ? '文房用具' : 'Scholar’s Utensils',
+                                desc: isChinese
+                                    ? '炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息。'
+                                    : 'Incense burners and ink boxes blending artistry and scholarly refinement.',
+                                img: '/images/collection/collection5.jpg',
+                            },
+                            {
+                                id: 6,
+                                title: isChinese ? '照明用具' : 'Lighting Ware',
+                                desc: isChinese
+                                    ? '烛台灯具，形制多样，映照古人的审美与生活之光。'
+                                    : 'Candleholders and lamps that illuminate both craft and culture.',
+                                img: '/images/collection/collection6.jpg',
+                            },
+                            {
+                                id: 7,
+                                title: isChinese ? '祭供用具' : 'Ritual Utensils',
+                                desc: isChinese
+                                    ? '承载敬祖礼仪，融信仰与美学于一体的锡制供器。'
+                                    : 'Ritual pewter vessels uniting belief, heritage, and artistry.',
+                                img: '/images/collection/collection7.jpg',
+                            },
+                            {
+                                id: 8,
+                                title: isChinese ? '雕像 饰件 花瓶 烟具' : 'Sculptures & Decorative Pewter',
+                                desc: isChinese
+                                    ? '从雕像到饰件，锡以柔韧之性塑造生命与纪念的艺术。'
+                                    : 'From figurines to vases and smoking sets, pewter conveys artistry and remembrance.',
+                                img: '/images/collection/collection8.jpg',
+                            },
+                            {
+                                id: 9,
+                                title: isChinese ? '国外锡器' : 'Overseas Pewter',
+                                desc: isChinese
+                                    ? '展示世界各地锡文化的交流与融合。'
+                                    : 'Showcasing global influences and the dialogue of pewter across cultures.',
+                                img: '/images/collection/collection9.jpg',
+                            },
+                        ].map((item) => (
+                            <a
+                                key={item.id}
+                                href={`/collections/${item.id}`}
+                                className="flex-shrink-0 w-[320px] bg-[#13203b] hover:bg-[#182a4d] transition-all duration-300 shadow-lg"
+                            >
+                                <div className="h-64 overflow-hidden">
+                                    <img
+                                        src={item.img}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                    />
+                                </div>
+                                <div className="text-left p-6">
+                                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                                    <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        {/* 控制滚动箭头逻辑 */}
+        <script>
+            {`
+    const scrollContainer = document.getElementById('scrollContainer');
+    const scrollLeft = document.getElementById('scrollLeft');
+    const scrollRight = document.getElementById('scrollRight');
+    if (scrollContainer && scrollLeft && scrollRight) {
+      scrollLeft.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
+      });
+      scrollRight.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
+      });
+    }
+  `}
+        </script>
+
+
+
         {/* Events & Partnerships Section */}
       <div className="relative z-10 bg-[#0f172a]">
       <section
