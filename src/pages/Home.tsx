@@ -1,3 +1,9 @@
+console.log("🔥 Home.tsx rendered at", new Date().toLocaleTimeString());
+console.log("🔥 Home.tsx reloaded at", new Date().toLocaleTimeString());
+
+console.log("✅ This Home.tsx is now active");
+console.log("🏗️ Home component re-rendered at", new Date().toLocaleTimeString());
+
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -150,15 +156,15 @@ export default function Home() {
             </section>
 
             {/* About Section */}
-            <div className="relative z-10 bg-[#0f172a]">
+            <div className="relative z-10 bg-gray-450">
                 <section
                     id="about"
-                    className="bg-[#0f172a] text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade"
+                    className="bg-gray-450 text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade"
                 >
                     {/* Left side: Text */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
-                            {isChinese ? "关于博物馆" : "About the Museum"}
+                            {isChinese ? "关于锡器博物馆测试" : "About the Museum"}
                         </h2>
 
                         <p className="text-gray-300 leading-relaxed text-lg mb-4 whitespace-pre-line">

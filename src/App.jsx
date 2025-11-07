@@ -15,9 +15,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* 首页 */}  
-        <Route path="/" element={<Home />} />
-        {/* 收藏品页面 */}
+        {/* 首页 */}
+          <Route path="/" element={<Home key={Date.now()} />} />
+          {/* 收藏品页面 */}
         <Route path="/learning" element={<LearningDetail />} />
         <Route path="/collections/1" element={<Collection1 />} />
         <Route path="/collections/2" element={<Collection2 />} />
