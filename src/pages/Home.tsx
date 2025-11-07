@@ -112,19 +112,19 @@ export default function Home() {
                 </div>
 
                 {/* 左下角文字 */}
-                <div className="relative z-10 p-10 md:p-20 text-left">
+                <div className="relative z-10 p-6 md:p-10 text-left">
                     <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug">
                         {isChinese ? (
                             <>
-                                <span className="text-xl md:text-2xl">欢迎来到</span>
+                                <span className="text-xl md:text-4xl">欢迎来到</span>
                                 <br />
-                                <span className="text-2xl md:text-3xl">中国锡器博物馆</span>
+                                <span className="text-3xl md:text-4xl">中国锡器博物馆</span>
                             </>
                         ) : (
                             <>
-                                <span className="text-xl md:text-2xl">WELCOME TO</span>
+                                <span className="text-xl md:text-4xl">WELCOME TO</span>
                                 <br />
-                                <span className="text-2xl md:text-3xl">CHINA PEWTER MUSEUM</span>
+                                <span className="text-3xl md:text-4xl">CHINA PEWTER MUSEUM</span>
                             </>
                         )}
                     </h1>
@@ -138,15 +138,15 @@ export default function Home() {
             {/* Intro Section */}
             <section
                 id="intro"
-                className="relative bg-[#0f172a] py-24 px-6 md:px-20 text-center fade z-10"
+                className="relative bg-black py-12 md:py-16 px-6 md:px-16 text-center fade z-10"
             >
-                <h2 className="text-lg md:text-2xl font-bold text-white mb-6 leading-snug">
-                    {isChinese
+                <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest">
+                {isChinese
                         ? "让金属有温度，让文化会呼吸"
                         : "Where Metal Breathes and Culture Lives"}
                 </h2>
 
-                <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed space-y-4 text-sm">
+                <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed space-y-4 text-base md:text-lg tracking-wide">
                     <p>
                         {isChinese
                             ? "在黎里古镇的古巷与河湾间，一座明代古宅温润如锡，沉静如诗。中国锡器博物馆，于此安放光影与匠心。这里没有冷冰冰的展柜，而是一场跨越千年的对话——人与器、心与文明。"
@@ -164,7 +164,7 @@ export default function Home() {
                     {/* Left side: Text */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
-                            {isChinese ? "关于锡器博物馆测试" : "About the Museum"}
+                            {isChinese ? "关于锡器博物馆" : "About the Museum"}
                         </h2>
 
                         <p className="text-gray-300 leading-relaxed text-lg mb-4 whitespace-pre-line">
@@ -388,10 +388,10 @@ Every object in the gallery carries its own story. In the play of light and shad
                 </section>
             </div>
             {/* Craft & Culture Section */}
-            <div className="relative z-10 bg-[#0f172a]">
+            <div className="relative z-10 bg-gray-450">
                 <section
                     id="Craft & Culture"
-                    className="bg-[#0f172a] text-white py-24 px-6 md:px-20 text-center fade"
+                    className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
                     {/* 标题 */}
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
