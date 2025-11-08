@@ -20,7 +20,7 @@ export default function Collection3() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '錾花墨玉提梁鱼形锡茶壶' : 'Engraved Pewter Teapot with Jade Handle in the Shape of a Fish'}
+              {isChinese ? '錾花墨玉提梁鱼形锡酒壶' : 'Engraved Pewter Wine Ewer with Jade Handle in the Shape of a Fish'}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {isChinese 
@@ -41,7 +41,7 @@ export default function Collection3() {
             >
               <img
                 src="/images/collection/collection3.jpg"
-                alt={isChinese ? '錾花墨玉提梁鱼形锡茶壶' : 'Engraved Pewter Teapot with Jade Handle in the Shape of a Fish'}
+                alt={isChinese ? '錾花墨玉提梁鱼形锡酒壶' : 'Engraved Pewter Wine Ewer with Jade Handle in the Shape of a Fish'}
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="grid grid-cols-2 gap-4">
@@ -71,8 +71,8 @@ export default function Collection3() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '鱼形锡壶盛行于清末至民国时期，是锡器造型艺术中的代表作之一。此类器物多为民间匠人精工手作，兼具实用与观赏功能，常见于茶具陈设与节庆馈赠。鱼在中国传统文化中象征富足与吉庆，“鱼跃有余”寓意生活丰盈安泰，反映了当时社会的美好愿景与审美趣味。'
-                    : 'Fish-shaped pewter teapots became popular from the late Qing Dynasty to the early Republic period, representing one of the most distinctive achievements in pewter design. Handcrafted by skilled artisans, these pieces combined practicality with ornamental elegance and were often presented as gifts or used for tea display. In Chinese culture, the fish symbolizes abundance and prosperity — the saying “year after year with surplus” conveys people’s wishes for wealth and harmony, reflecting both the optimism and refined taste of the era.'
+                    ? '鱼形锡酒壶盛行于清末至民国时期，是锡器造型艺术中的代表作之一。此类器物多为民间匠人精工手作，兼具实用与观赏功能，鱼在中国传统文化中象征富足与吉庆，“鱼跃有余”寓意生活丰盈安泰，反映了当时社会的美好愿景与审美趣味。'
+                    : 'Fish-shaped pewter Wine Ewer became popular from the late Qing Dynasty to the early Republic period, representing one of the most distinctive achievements in pewter design. Handcrafted by skilled artisans, In Chinese culture, the fish symbolizes abundance and prosperity — the saying “year after year with surplus” conveys people’s wishes for wealth and harmony, reflecting both the optimism and refined taste of the era.'
                   }
                 </p>
               </div>
@@ -107,8 +107,8 @@ export default function Collection3() {
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {isChinese 
-                    ? '此件錾花墨玉提梁鱼形锡茶壶兼具民间艺术的灵动与金属工艺的精致，是清末民初锡艺创新的代表之作。其造型寓意吉祥，工艺繁复细腻，展现出中国传统手工艺“以形寓意、以器载道”的精神内涵。作为集雕錾、嵌饰与造型于一体的精品，它在锡器艺术史与民俗文化研究中均具有重要的艺术与收藏价值。'
-                    : 'This engraved pewter teapot with jade handle in the shape of a fish exemplifies the fusion of liveliness and refinement found in late Qing pewter craftsmanship. Its form embodies auspicious symbolism, while its exquisite technique reflects the aesthetic ideal of “conveying meaning through form.” Combining engraving, inlay, and sculptural modeling, the work stands as a masterpiece of traditional Chinese metal artistry and an important object for the study of folk craftsmanship and symbolic design in early modern China.'
+                    ? '此件錾花墨玉提梁鱼形锡酒壶兼具民间艺术的灵动与金属工艺的精致，是清末民初锡艺创新的代表之作。其造型寓意吉祥，工艺繁复细腻，展现出中国传统手工艺“以形寓意、以器载道”的精神内涵。作为集雕錾、嵌饰与造型于一体的精品，它在锡器艺术史与民俗文化研究中均具有重要的艺术与收藏价值。'
+                    : 'This engraved pewter Wine Ewer with jade handle in the shape of a fish exemplifies the fusion of liveliness and refinement found in late Qing pewter craftsmanship. Its form embodies auspicious symbolism, while its exquisite technique reflects the aesthetic ideal of “conveying meaning through form.” Combining engraving, inlay, and sculptural modeling, the work stands as a masterpiece of traditional Chinese metal artistry and an important object for the study of folk craftsmanship and symbolic design in early modern China.'
                   }
                 </p>
               </div>

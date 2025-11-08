@@ -450,7 +450,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     ]
                             ).map((step, index, arr) => (
                                 <React.Fragment key={index}>
-                                    <div className="bg-[#1e2a45] px-4 py-3 rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
+                                    <div className="bg-black px-4 py-3 rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
                                         {step}
                                     </div>
                                     {index < arr.length - 1 && (
