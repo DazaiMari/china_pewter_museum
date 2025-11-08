@@ -227,10 +227,10 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
             </div>
 
             {/* 展览与收藏 Section */}
-            <div className="relative z-10 bg-[#0f172a]">
+            <div className="relative z-10 bg-black">
                 <section
                     id="Exhibitions & Collections"
-                    className="bg-[#0f172a] text-white py-24 px-4 md:px-10 text-center fade"
+                    className="bg-black text-white py-24 px-4 md:px-10 text-center fade"
                 >
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                         {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
@@ -572,10 +572,10 @@ Every object in the gallery carries its own story. In the play of light and shad
             </div>
 
             {/* Events Section */}
-            <div className="relative z-10 bg-[#0f172a]">
+            <div className="relative z-10 bg-gray-450">
                 <section
                     id="Events & Partnerships"
-                    className="bg-[#0f172a] text-white py-24 px-6 md:px-20 text-center fade"
+                    className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                         {isChinese ? "活动与交流" : "Events & Partnerships"}
