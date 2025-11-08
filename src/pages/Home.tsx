@@ -361,7 +361,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                                 <a
                                     key={item.id}
                                     href={`/collections/${item.id}`}
-                                    className="bg-[#13203b] hover:bg-[#182a4d] transition-all duration-300 shadow-lg rounded-lg snap-start"
+                                    className="bg-gray450 hover:bg-gray450 transition-all duration-300 shadow-lg rounded-lg snap-start"
                                 >
                                     <div className="h-64 overflow-hidden">
                                         <img
@@ -481,10 +481,10 @@ Every object in the gallery carries its own story. In the play of light and shad
                 </section>
             </div>
             {/* Learning & Discovery Section */}
-            <div className="relative z-10 bg-[#0f172a]">
+            <div className="relative z-10 bg-black">
                 <section
                     id="Learning & Discovery"
-                    className="bg-[#0f172a] text-white py-24 px-6 md:px-20 text-center fade"
+                    className="bg-black text-white py-24 px-6 md:px-20 text-center fade"
                 >
                     {/* 标题 */}
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
@@ -540,7 +540,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                         ].map((item) => (
                             <div
                                 key={item.id}
-                                className="group bg-[#13203b] hover:bg-[#1a2c4d] rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
+                                className="group bg-gray-450 hover:bg-gray450 rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
                             >
                                 <div className="relative">
                                     <img
