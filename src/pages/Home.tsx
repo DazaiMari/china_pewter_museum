@@ -668,7 +668,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                     ].map((item) => (
                         <div
                             key={item.id}
-                            className="group block overflow-hidden bg-gray-800 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+                            className="group block overflow-hidden bg-gray-450 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
                         >
                             <div className="relative">
                                 <img
