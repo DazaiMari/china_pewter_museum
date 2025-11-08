@@ -450,7 +450,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     ]
                             ).map((step, index, arr) => (
                                 <React.Fragment key={index}>
-                                    <div className="bg-black px-4 py-3 rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
+                                    <div className="bg-gray-800 px-4 py-3 rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
                                         {step}
                                     </div>
                                     {index < arr.length - 1 && (
@@ -540,7 +540,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                         ].map((item) => (
                             <div
                                 key={item.id}
-                                className="group bg-gray-450 hover:bg-gray450 rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
+                                className="group bg-[rgba(220,230,240,0.2)] hover:bg-[rgba(220,230,240,0.2)] backdrop-blur-md rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
                             >
                                 <div className="relative">
                                     <img
@@ -668,7 +668,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                     ].map((item) => (
                         <div
                             key={item.id}
-                            className="group block overflow-hidden bg-gray-450 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+                            className="group block overflow-hidden bg-[rgba(220,230,240,0.1)] backdrop-blur-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
                         >
                             <div className="relative">
                                 <img
