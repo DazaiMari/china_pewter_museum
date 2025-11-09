@@ -64,7 +64,7 @@ export default function Home() {
             });
 
             // 自动轮播
-            let autoScroll: NodeJS.Timeout;
+            let autoScroll: ReturnType<typeof setInterval>;
             const startAutoScroll = () => {
                 autoScroll = setInterval(() => {
                     processContainer.scrollBy({
