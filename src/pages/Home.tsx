@@ -527,6 +527,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     "锤击敲打，节奏生光。",
                                     "焊接组合，巧思相连。",
                                     "挫修精整，匠意见微。",
+                                    "削光去滓，光华初现。\n" +
                                     "砂磨细作，润泽如玉。",
                                     "擦洗成器，见匠心本色。",
                                     "纹饰收尾，技与美的合一。",
@@ -538,7 +539,8 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     "Hammering — rhythm brings light.",
                                     "Joining — craft connects creation.",
                                     "Filing — precision reveals mastery.",
-                                    "Sanding — smooth as jade.",
+                                    "Polishing — brilliance begins to emerge.\n" +
+                                    "Sanding — smooth as flowing jade.",
                                     "Cleaning — revealing pure craft.",
                                     "Engraving — where skill meets beauty.",
                                 ][i],
