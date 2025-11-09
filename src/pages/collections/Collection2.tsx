@@ -6,7 +6,7 @@ export default function Collection2() {
   const [isChinese, setIsChinese] = useState(true);
 
   return (
-    <main className="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans min-h-screen">
+    <main className="bg-gradient-to-b from-gray-700 to-gray-400 text-white font-sans min-h-screen">
       {/* Navigation */}
       <Navbar isChinese={isChinese} onLanguageToggle={() => setIsChinese(!isChinese)} />
 
