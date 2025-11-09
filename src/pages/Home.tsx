@@ -425,7 +425,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
-                        <div className="grid grid-cols-12 gap-3 justify-items-center text-base md:text-lg leading-relaxed">
+                        <div className="grid grid-cols-12 gap-1 justify-items-center text-base md:text-lg leading-relaxed">
                             {/* 第一行主流程 */}
                             <div className="col-span-2 bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                 {isChinese ? "原料锡" : "Raw Tin"}
@@ -522,22 +522,22 @@ Every object in the gallery carries its own story. In the play of light and shad
                                 img: `/images/process/process00${i + 1}.jpg`,
                                 zh: [
                                     "熔锡成液，开篇之始。",
-                                    "倾注模具，塑形初成。",
-                                    "冷锻定形，力与匀的平衡。",
+                                    "压锡成片，形质初定。",
+                                    "打样裁剪，定形之准。",
                                     "锤击敲打，节奏生光。",
                                     "焊接组合，巧思相连。",
-                                    "抛光打磨，光影渐显。",
+                                    "挫修精整，匠意见微。",
                                     "砂磨细作，润泽如玉。",
                                     "擦洗成器，见匠心本色。",
                                     "纹饰收尾，技与美的合一。",
                                 ][i],
                                 en: [
                                     "Melting tin — the beginning of form.",
-                                    "Pouring molds — shaping the first life.",
-                                    "Cold forging — balance of force and precision.",
+                                    "Rolling tin sheets — shaping the essence of form.",
+                                    "Pattern cutting — precision defines the form.",
                                     "Hammering — rhythm brings light.",
                                     "Joining — craft connects creation.",
-                                    "Polishing — light takes shape.",
+                                    "Filing — precision reveals mastery.",
                                     "Sanding — smooth as jade.",
                                     "Cleaning — revealing pure craft.",
                                     "Engraving — where skill meets beauty.",
