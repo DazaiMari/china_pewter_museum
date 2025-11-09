@@ -412,54 +412,79 @@ Every object in the gallery carries its own story. In the play of light and shad
                         </p>
                     </div>
 
-                    {/* 动态中英文打锡流程图 */}
+                    {/* 动态中英文打锡工艺流程图（修正版：分支结构 + 居中排版） */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
                         <h3 className="text-2xl font-bold mb-8">
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
-                        <div className="flex flex-wrap justify-center items-center gap-4 text-base md:text-lg leading-relaxed">
-                            {(isChinese
-                                    ? [
-                                        "原料锡",
-                                        "熔锡",
-                                        "压锡片",
-                                        "打样裁剪",
-                                        "模铸",
-                                        "冷锻捶打",
-                                        "焊接组合",
-                                        "挫修",
-                                        "削光",
-                                        "砂磨",
-                                        "擦洗",
-                                        "纹饰",
-                                    ]
-                                    : [
-                                        "Raw Tin",
-                                        "Melting",
-                                        "Sheet Rolling",
-                                        "Pattern Cutting",
-                                        "Casting",
-                                        "Cold Hammering",
-                                        "Joining & Assembly",
-                                        "Filing & Finishing",
-                                        "Polishing",
-                                        "Sanding",
-                                        "Cleaning",
-                                        "Decoration",
-                                    ]
-                            ).map((step, index, arr) => (
-                                <React.Fragment key={index}>
-                                    <div className="bg-gray-800 px-4 py-3 rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
-                                        {step}
+                        <div className="grid grid-cols-12 gap-3 justify-items-center text-base md:text-lg leading-relaxed">
+                            {/* 第一行主流程 */}
+                            <div className="col-span-2 bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                {isChinese ? "原料锡" : "Raw Tin"}
+                            </div>
+                            <span className="col-span-1 text-gray-400 text-2xl">→</span>
+
+                            <div className="col-span-2 bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                {isChinese ? "熔锡" : "Melting"}
+                            </div>
+                            <span className="col-span-1 text-gray-400 text-2xl">→</span>
+
+                            {/* 熔锡分为上中下三支 */}
+                            <div className="col-span-6 flex flex-col items-center gap-4">
+                                {/* 上支线 */}
+                                <div className="flex items-center gap-2">
+                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                        {isChinese ? "压锡片" : "Sheet Rolling"}
                                     </div>
-                                    {index < arr.length - 1 && (
-                                        <span className="text-gray-400 text-2xl">→</span>
-                                    )}
-                                </React.Fragment>
-                            ))}
+                                    <span className="text-gray-400 text-2xl">→</span>
+                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                        {isChinese ? "打样裁剪" : "Pattern Cutting"}
+                                    </div>
+                                    <span className="text-gray-400 text-2xl">→</span>
+                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                        {isChinese ? "冷锻捶打" : "Cold Hammering"}
+                                    </div>
+                                </div>
+
+                                {/* 中支线：模铸 */}
+                                <div className="flex items-center gap-2">
+                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                        {isChinese ? "模铸" : "Casting"}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 下一行继续主干 */}
+                            <div className="col-span-12 mt-8 flex justify-center items-center gap-2 flex-wrap">
+                                <span className="text-gray-400 text-2xl">↓</span>
+                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    {isChinese ? "焊接组合" : "Joining & Assembly"}
+                                </div>
+                                <span className="text-gray-400 text-2xl">→</span>
+                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    {isChinese ? "挫修" : "Filing & Finishing"}
+                                </div>
+                                <span className="text-gray-400 text-2xl">→</span>
+                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    {isChinese ? "削光" : "Polishing"}
+                                </div>
+                                <span className="text-gray-400 text-2xl">→</span>
+                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    {isChinese ? "砂磨" : "Sanding"}
+                                </div>
+                                <span className="text-gray-400 text-2xl">→</span>
+                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    {isChinese ? "擦洗" : "Cleaning"}
+                                </div>
+                                <span className="text-gray-400 text-2xl">→</span>
+                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    {isChinese ? "纹饰" : "Decoration"}
+                                </div>
+                            </div>
                         </div>
                     </div>
+
 
                     {/* 工艺流程图图片 */}
                     <div className="max-w-6xl mx-auto my-16">
@@ -492,21 +517,43 @@ Every object in the gallery carries its own story. In the play of light and shad
                     </h2>
 
                     {/* 段落文字 */}
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-left space-y-6">
+                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
                         <p>
                             {isChinese
-                                ? "如果说展厅是静观的课堂，工坊便是动手的学堂。中国锡器博物馆将传统工艺教育融入日常体验，让观众在‘做中学’、在‘造中悟’。每一次触摸锡片的温度、聆听锤击的节奏，都是一次从感官到心性的修行。"
-                                : "If the exhibition hall is a classroom for contemplation, the workshop is one for creation. The China Pewter Museum brings traditional craft education into everyday experience—where visitors learn by doing and reflect by making. Each touch of warm pewter, each rhythm of hammering, becomes a meditation in motion."}
-                        </p>
-                        <p>
-                            {isChinese
-                                ? "博物馆在‘研学4.0’理念下，将金属工艺、文化叙事与创造性思维结合，面向青少年、家庭与国际访客推出多层次课程体系。通过亲手打锡、模具设计、器物拓印等体验活动，学习者在实践中理解工艺之理，感受文化之魂。"
-                                : "Under the ‘Learning 4.0’ initiative, the museum integrates metalwork, storytelling, and creative thinking into a layered education system for students, families, and international visitors. Through hands-on experiences—pewter hammering, mold design, and relief printing—learners grasp not only the technique, but the spirit of craftsmanship."}
-                        </p>
-                        <p>
-                            {isChinese
-                                ? "我们相信，文化的学习不止是知识的传递，更是心灵的唤醒。无论是儿童的第一次敲打，还是匠人的一次讲解，都是文化生命延续的节点。"
-                                : "We believe that learning culture is not merely the transfer of knowledge, but the awakening of awareness. Whether it is a child’s first hammer strike or a craftsman’s gentle demonstration, each moment becomes part of culture’s living continuity."}
+                                ? `如果说展厅是静观的课堂，工坊便是动手的学堂。
+中国锡器博物馆将传统工艺教育融入日常体验，
+让观众在“做中学”、在“造中悟”。
+每一次触摸锡片的温度、聆听锤击的节奏，
+都是一次从感官到心性的修行。
+
+博物馆将金属工艺、文化叙事与创造性思维结合，
+面向青少年、家庭与国际访客推出多层次课程体系。
+通过亲手打锡、模具设计、器物拓印等活动，
+学习者在实践中理解工艺之理，感受文化之魂。
+
+与此同时，锡文化也走进校园。
+博物馆以宣讲、讲座与主题课程的形式，
+将“匠心”“文化自觉”与“工艺精神”带入课堂。
+学生了解锡器的历史脉络与当代表达，
+在近距离的接触中激发兴趣，启发思考。`
+                                : `If the exhibition hall is a classroom of contemplation,
+then the workshop is a classroom of creation.
+The China Pewter Museum integrates traditional craftsmanship education
+into everyday experience,
+inviting visitors to “learn by doing” and “reflect through making.”
+Each touch of pewter, each rhythm of hammer and hand,
+becomes a quiet journey from the senses to the spirit.
+
+Combining craftsmanship, cultural narrative, and creative thinking,
+the museum offers a range of programs for youth, families, and international visitors.
+Through hands-on pewter work, mold design, and creative exercises,
+learners discover the logic of craft and the soul of culture through practice.
+
+At the same time, pewter culture enters schools.
+Through talks and lectures,
+the museum brings craftsmanship and cultural awareness into the classroom.
+Students encounter the history and modern relevance of pewter,
+finding curiosity and inspiration through direct experience.`}
                         </p>
                     </div>
 
@@ -581,53 +628,49 @@ Every object in the gallery carries its own story. In the play of light and shad
                         {isChinese ? "活动与交流" : "Events & Partnerships"}
                     </h2>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-2">
-                        <p className="mb-6">
+                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
+                        <p>
                             {isChinese
-                                ? "从区域峰会到国际展会，博物馆积极参与文化交流与国际展览，让锡的温度跨越语言与国界。"
-                                : "From regional summits to international fairs, the museum brings the story of Chinese pewter to the world—bridging traditions with dialogue, and craft with innovation."}
-                        </p>
+                                ? `文化的生命，在于交流。
+中国锡器博物馆以开放的姿态，
+参与并发起多层次的文化合作与公众活动，
+让锡的温度跨越地域、连接世界。
+从区域峰会到国际展会，
+博物馆以展览、论坛与艺术计划的形式，
+持续推动锡文化的对话与传播。
+无论是在长三角一体化发展峰会，
+还是在中国国际进口博览会、国际旅游交易会等平台，
+锡器都以它独特的光泽与东方美感，
+讲述着“工艺之美、生活之雅、文化之信”。
 
-                        <ul className="text-left list-disc list-inside space-y-2 text-gray-400 mx-auto max-w-2xl">
-                            <li>
-                                {isChinese
-                                    ? "长三角一体化发展峰会"
-                                    : "Yangtze River Delta Integration Development Summit"}
-                            </li>
-                            <li>
-                                {isChinese
-                                    ? "中法文化交流论坛"
-                                    : "Sino-French Cultural Exchange Forum"}
-                            </li>
-                            <li>
-                                {isChinese
-                                    ? "中国国际进口博览会"
-                                    : "China International Import Expo"}
-                            </li>
-                            <li>
-                                {isChinese
-                                    ? "中国国际旅游交易会"
-                                    : "China International Tourism Expo"}
-                            </li>
-                            <li>
-                                {isChinese
-                                    ? "中国道口锡器文化节"
-                                    : "China Daokou Tinware Cultural Festival"}
-                            </li>
-                        </ul>
+近年来，博物馆连续受邀在民非博物馆馆长国际论坛作主题发言，
+分享在展陈策划、教育推广、文创开发与文化节庆中的经验。
+同时，联合地方政府共同举办“中国道口锡器文化节”，
+以地方文化为根基，以公众参与为纽带，
+探索传统手艺融入现代生活的新路径。`
+                                : `Culture lives through connection.
+The China Pewter Museum takes an open approach to collaboration and exchange,
+engaging in a wide range of programs that bring the warmth of pewter
+beyond its local roots and into the world.
+From regional summits to international expos,
+the museum participates in exhibitions, forums, and cultural initiatives
+that foster dialogue and understanding around pewter culture.
+At events such as the Yangtze River Delta Integration Summit,
+the China International Import Expo, and the China Tourism Fair,
+the museum presents pewter not only as a craft,
+but as a reflection of Chinese aesthetics and cultural confidence.
 
-                        <p className="mt-8 text-gray-300">
-                            {isChinese
-                                ? "近年来，中国锡器博物馆连续两届受邀在民非博物馆馆长国际论坛上作主题发言：第三届论坛分享了我馆在博物馆选址、展陈策划、文化教育、文创设计和旅游研学活动中的探索与实践；第四届则以“民非博物馆如何扩大影响力”为主题，系统交流了社会力量参与文化传播的经验与思考。论坛分享了我们联合地方政府主办了首届中国道口锡器文化节，以地方文化为基底，以工艺体验和公众参与为路径，推动锡文化走向社会、融入生活，探索出一条兼具学术深度与公众活力的传播之路。"
-                                : "In recent years, the China Pewter Museum has been invited to deliver keynote speeches at the International Forum for Private Museum Directors for two consecutive sessions. At the third forum, we shared our exploration and practices in museum site selection, exhibition planning, cultural education, creative design, and cultural tourism programs. At the fourth forum, themed “How Private Museums Can Expand Their Influence”, we presented our experience and reflections on the role of social forces in cultural communication. During the forum, we also shared the case of our joint initiative with the local government — the First China Daokou Pewter Culture Festival. Rooted in regional culture and driven by craft experience and public participation, the festival promotes pewter culture to the broader society and everyday life, creating a pathway that combines academic depth with public vitality."}
-                        </p>
-
-                        <p className="mt-8 text-gray-400 italic">
-                            {isChinese
-                                ? "在每一次交流中，中国锡文化都以柔韧的金属，讲述坚韧的故事。"
-                                : "With every exhibition, tin speaks its universal language of light and endurance."}
+In recent years, the museum has been invited to deliver keynote presentations
+at the International Forum for Private Museum Directors,
+sharing its experience in exhibition planning, cultural education,
+creative design, and public engagement.
+It also co-organized the China Daokou Pewter Culture Festival
+with local government partners —
+a celebration rooted in regional heritage and open to the public,
+exploring how traditional craftsmanship can find new life in modern society.`}
                         </p>
                     </div>
+
                 </section>
 
                 {/* 活动卡片区 */}
