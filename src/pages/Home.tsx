@@ -1,5 +1,6 @@
 console.log("🔥 Home.tsx rendered at", new Date().toLocaleTimeString());
 console.log("🔥 Home.tsx reloaded at", new Date().toLocaleTimeString());
+
 console.log("✅ This Home.tsx is now active");
 console.log("🏗️ Home component re-rendered at", new Date().toLocaleTimeString());
 
@@ -44,7 +45,6 @@ export default function Home() {
 
     return (
         <main className="bg-gray-900 text-white font-sans overflow-x-hidden">
-
             {/* Navigation */}
             <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-10 z-50 flex justify-center items-center gap-8 text-sm md:text-base">
                 <div className="flex items-center gap-3">
@@ -53,22 +53,40 @@ export default function Home() {
                         {isChinese ? "中国锡器博物馆" : "CHINA PEWTER MUSEUM"}
                     </p>
                 </div>
-                <a href="#hero" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+                <a
+                    href="#hero"
+                    className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center"
+                >
                     {isChinese ? "首页" : "Home"}
                 </a>
-                <a href="#about" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+                <a
+                    href="#about"
+                    className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center"
+                >
                     {isChinese ? "关于" : "About"}
                 </a>
-                <a href="#Exhibitions & Collections" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+                <a
+                    href="#Exhibitions & Collections"
+                    className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center"
+                >
                     {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
                 </a>
-                <a href="#Craft & Culture" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+                <a
+                    href="#Craft & Culture"
+                    className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center"
+                >
                     {isChinese ? "工艺与文化" : "Craft & Culture"}
                 </a>
-                <a href="#Learning & Discovery" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+                <a
+                    href="#Learning & Discovery"
+                    className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center"
+                >
                     {isChinese ? "研学与教育" : "Learning & Discovery"}
                 </a>
-                <a href="#Events & Partnerships" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
+                <a
+                    href="#Events & Partnerships"
+                    className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center"
+                >
                     {isChinese ? "活动与交流" : "Events & Partnerships"}
                 </a>
                 <motion.button
@@ -83,13 +101,19 @@ export default function Home() {
 
             {/* Hero Section */}
             <section id="hero" className="relative h-screen flex items-end justify-start">
+                {/* 背景图固定 */}
                 <div className="fixed inset-0 z-0">
-                    <img src="/images/Welcom.png" alt="Museum Background" className="w-full h-full object-cover" />
+                    <img
+                        src="/images/Welcom.png"
+                        alt="Museum Background"
+                        className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-black/40" />
                 </div>
 
+                {/* 左下角文字 */}
                 <div className="relative z-10 p-6 md:p-10 text-left">
-                    <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug crystal-text">
+                    <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug">
                         {isChinese ? (
                             <>
                                 <span className="text-xl md:text-4xl">欢迎来到</span>
@@ -104,6 +128,7 @@ export default function Home() {
                             </>
                         )}
                     </h1>
+
                     <p className="text-lg text-gray-200">
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
@@ -111,10 +136,16 @@ export default function Home() {
             </section>
 
             {/* Intro Section */}
-            <section id="intro" className="relative bg-black py-12 md:py-16 px-6 md:px-16 text-center fade z-10">
-                <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest crystal-text">
-                    {isChinese ? "让金属有温度，让文化会呼吸" : "Where Metal Breathes and Culture Lives"}
+            <section
+                id="intro"
+                className="relative bg-black py-12 md:py-16 px-6 md:px-16 text-center fade z-10"
+            >
+                <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest">
+                {isChinese
+                        ? "让金属有温度，让文化会呼吸"
+                        : "Where Metal Breathes and Culture Lives"}
                 </h2>
+
                 <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed space-y-4 text-base md:text-lg tracking-wide">
                     <p>
                         {isChinese
@@ -123,6 +154,7 @@ export default function Home() {
                     </p>
                 </div>
             </section>
+
             {/* About Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
@@ -131,7 +163,7 @@ export default function Home() {
                 >
                     {/* Left side: Text */}
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                             {isChinese ? "关于锡器博物馆" : "About the Museum"}
                         </h2>
 
@@ -139,7 +171,7 @@ export default function Home() {
                             {isChinese
                                 ? `中国锡器博物馆位于中国苏州黎里古镇，馆舍依托明代毛宅修复而成。
 由徐鹏林创办，于二〇一七年正式开馆，
-是中国规模最大、最具代表性的锡器专题博物馆。
+是中国规模最大、最具代表性的锡器专题博物馆。                    
 
 博物馆被列入中国非物质文化遗产体系，并获评为：
 苏州市中小学生综合素质发展活动基地、
@@ -153,7 +185,7 @@ export default function Home() {
 让传统与创新共生，让手艺与教育相融。
 
 在这里，展示不止于器物，更是一次精神的唤醒。
-中国锡器博物馆的使命，是让锡文化“活起来、传下去、走出去”，
+中国锡器博物馆的使命，是让锡文化“活起来、传下去、走出去”
 让金属有温度，让文化会呼吸。`
                                 : `The China Pewter Museum, located in Lili Ancient Town, Suzhou, China, is housed within the restored Mao Mansion, a Ming-dynasty residence of historic character.
 Founded by Xu Penglin and opened in 2017, it is China’s largest institution dedicated to pewter culture and preservation.
@@ -194,16 +226,15 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                 </section>
             </div>
 
-            {/* Exhibitions & Collections Section */}
+            {/* 展览与收藏 Section */}
             <div className="relative z-10 bg-black">
                 <section
                     id="Exhibitions & Collections"
                     className="bg-black text-white py-24 px-4 md:px-10 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                         {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
                     </h2>
-
                     <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
                         <p>
                             {isChinese
@@ -231,6 +262,7 @@ From the sixteenth century onward, Chinese pewter craftsmanship traveled along t
 Every object in the gallery carries its own story. In the play of light and shadow, pewter continues to speak, its sheen holding the warmth of life and the memory of time.`}
                         </p>
                     </div>
+
                     {/* 滚动容器 */}
                     <div className="relative max-w-[1600px] mx-auto">
                         <button
@@ -309,7 +341,9 @@ Every object in the gallery carries its own story. In the play of light and shad
                                 },
                                 {
                                     id: 8,
-                                    title: isChinese ? "雕像 饰件 花瓶 烟具" : "Sculptures & Decorative Pewter",
+                                    title: isChinese
+                                        ? "雕像 饰件 花瓶 烟具"
+                                        : "Sculptures & Decorative Pewter",
                                     desc: isChinese
                                         ? "从雕像到饰件，锡以柔韧之性塑造生命与纪念的艺术。"
                                         : "From figurines to vases and smoking sets, pewter conveys artistry and remembrance.",
@@ -353,17 +387,18 @@ Every object in the gallery carries its own story. In the play of light and shad
           `}</style>
                 </section>
             </div>
-
             {/* Craft & Culture Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
                     id="Craft & Culture"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                    {/* 标题 */}
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                         {isChinese ? "工艺与文化" : "Craft & Culture"}
                     </h2>
 
+                    {/* 段落文字 */}
                     <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-left space-y-6">
                         <p>
                             {isChinese
@@ -377,13 +412,13 @@ Every object in the gallery carries its own story. In the play of light and shad
                         </p>
                     </div>
 
-                    {/* 动态中英文打锡工艺流程图（横排居中） */}
+                    {/* 动态中英文打锡流程图 */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
-                        <h3 className="text-2xl font-bold mb-8 crystal-text">
+                        <h3 className="text-2xl font-bold mb-8">
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
-                        <div className="flex flex-wrap justify-center items-center gap-3 text-base md:text-lg leading-relaxed">
+                        <div className="flex flex-wrap justify-center items-center gap-4 text-base md:text-lg leading-relaxed">
                             {(isChinese
                                     ? [
                                         "原料锡",
@@ -415,7 +450,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     ]
                             ).map((step, index, arr) => (
                                 <React.Fragment key={index}>
-                                    <div className="bg-gray-800 px-5 py-3 flex items-center justify-center rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
+                                    <div className="bg-gray-800 px-4 py-3 rounded-md shadow-md whitespace-nowrap hover:scale-105 transition-all duration-300">
                                         {step}
                                     </div>
                                     {index < arr.length - 1 && (
@@ -425,10 +460,11 @@ Every object in the gallery carries its own story. In the play of light and shad
                             ))}
                         </div>
                     </div>
+
                     {/* 工艺流程图图片 */}
                     <div className="max-w-6xl mx-auto my-16">
                         <img
-                            src="/images/process.jpg"
+                            src="/images/process.jpg" // 请将“传统打锡工艺流程.jpg”重命名为 process.jpg 并放入 public/images
                             alt="Traditional Pewter Craft Process"
                             className="rounded-lg shadow-lg mx-auto"
                         />
@@ -444,58 +480,37 @@ Every object in the gallery carries its own story. In the play of light and shad
                     </div>
                 </section>
             </div>
-
             {/* Learning & Discovery Section */}
             <div className="relative z-10 bg-black">
                 <section
                     id="Learning & Discovery"
                     className="bg-black text-white py-24 px-6 md:px-20 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                    {/* 标题 */}
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                         {isChinese ? "研学与教育" : "Learning & Discovery"}
                     </h2>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
+                    {/* 段落文字 */}
+                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-left space-y-6">
                         <p>
                             {isChinese
-                                ? `如果说展厅是静观的课堂，工坊便是动手的学堂。
-中国锡器博物馆将传统工艺教育融入日常体验，
-让观众在“做中学”、在“造中悟”。
-每一次触摸锡片的温度、聆听锤击的节奏，
-都是一次从感官到心性的修行。
-
-博物馆将金属工艺、文化叙事与创造性思维结合，
-面向青少年、家庭与国际访客推出多层次课程体系。
-通过亲手打锡、模具设计、器物拓印等活动，
-学习者在实践中理解工艺之理，感受文化之魂。
-
-与此同时，锡文化也走进校园。
-博物馆以宣讲、讲座与主题课程的形式，
-将“匠心”“文化自觉”与“工艺精神”带入课堂。
-学生了解锡器的历史脉络与当代表达，
-在近距离的接触中激发兴趣，启发思考。`
-                                : `If the exhibition hall is a classroom of contemplation,
-then the workshop is a classroom of creation.
-The China Pewter Museum integrates traditional craftsmanship education
-into everyday experience,
-inviting visitors to “learn by doing” and “reflect through making.”
-Each touch of pewter, each rhythm of hammer and hand,
-becomes a quiet journey from the senses to the spirit.
-
-Combining craftsmanship, cultural narrative, and creative thinking,
-the museum offers a range of programs for youth, families, and international visitors.
-Through hands-on pewter work, mold design, and creative exercises,
-learners discover the logic of craft and the soul of culture through practice.
-
-At the same time, pewter culture enters schools.
-Through talks and lectures,
-the museum brings craftsmanship and cultural awareness into the classroom.
-Students encounter the history and modern relevance of pewter,
-finding curiosity and inspiration through direct experience.`}
+                                ? "如果说展厅是静观的课堂，工坊便是动手的学堂。中国锡器博物馆将传统工艺教育融入日常体验，让观众在‘做中学’、在‘造中悟’。每一次触摸锡片的温度、聆听锤击的节奏，都是一次从感官到心性的修行。"
+                                : "If the exhibition hall is a classroom for contemplation, the workshop is one for creation. The China Pewter Museum brings traditional craft education into everyday experience—where visitors learn by doing and reflect by making. Each touch of warm pewter, each rhythm of hammering, becomes a meditation in motion."}
+                        </p>
+                        <p>
+                            {isChinese
+                                ? "博物馆在‘研学4.0’理念下，将金属工艺、文化叙事与创造性思维结合，面向青少年、家庭与国际访客推出多层次课程体系。通过亲手打锡、模具设计、器物拓印等体验活动，学习者在实践中理解工艺之理，感受文化之魂。"
+                                : "Under the ‘Learning 4.0’ initiative, the museum integrates metalwork, storytelling, and creative thinking into a layered education system for students, families, and international visitors. Through hands-on experiences—pewter hammering, mold design, and relief printing—learners grasp not only the technique, but the spirit of craftsmanship."}
+                        </p>
+                        <p>
+                            {isChinese
+                                ? "我们相信，文化的学习不止是知识的传递，更是心灵的唤醒。无论是儿童的第一次敲打，还是匠人的一次讲解，都是文化生命延续的节点。"
+                                : "We believe that learning culture is not merely the transfer of knowledge, but the awakening of awareness. Whether it is a child’s first hammer strike or a craftsman’s gentle demonstration, each moment becomes part of culture’s living continuity."}
                         </p>
                     </div>
 
-                    {/* 研学课程卡片 */}
+                    {/* 学习与体验卡片 */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
                         {[
                             {
@@ -556,61 +571,66 @@ finding curiosity and inspiration through direct experience.`}
                 </section>
             </div>
 
-            {/* Events & Partnerships Section */}
+            {/* Events Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
                     id="Events & Partnerships"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
                         {isChinese ? "活动与交流" : "Events & Partnerships"}
                     </h2>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
-                        <p>
+                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-2">
+                        <p className="mb-6">
                             {isChinese
-                                ? `文化的生命，在于交流。
-中国锡器博物馆以开放的姿态，
-参与并发起多层次的文化合作与公众活动，
-让锡的温度跨越地域、连接世界。
-从区域峰会到国际展会，
-博物馆以展览、论坛与艺术计划的形式，
-持续推动锡文化的对话与传播。
-无论是在长三角一体化发展峰会，
-还是在中国国际进口博览会、国际旅游交易会等平台，
-锡器都以它独特的光泽与东方美感，
-讲述着“工艺之美、生活之雅、文化之信”。
+                                ? "从区域峰会到国际展会，博物馆积极参与文化交流与国际展览，让锡的温度跨越语言与国界。"
+                                : "From regional summits to international fairs, the museum brings the story of Chinese pewter to the world—bridging traditions with dialogue, and craft with innovation."}
+                        </p>
 
-近年来，博物馆连续受邀在民非博物馆馆长国际论坛作主题发言，
-分享在展陈策划、教育推广、文创开发与文化节庆中的经验。
-同时，联合地方政府共同举办“中国道口锡器文化节”，
-以地方文化为根基，以公众参与为纽带，
-探索传统手艺融入现代生活的新路径。`
-                                : `Culture lives through connection.
-The China Pewter Museum takes an open approach to collaboration and exchange,
-engaging in a wide range of programs that bring the warmth of pewter
-beyond its local roots and into the world.
-From regional summits to international expos,
-the museum participates in exhibitions, forums, and cultural initiatives
-that foster dialogue and understanding around pewter culture.
-At events such as the Yangtze River Delta Integration Summit,
-the China International Import Expo, and the China Tourism Fair,
-the museum presents pewter not only as a craft,
-but as a reflection of Chinese aesthetics and cultural confidence.
+                        <ul className="text-left list-disc list-inside space-y-2 text-gray-400 mx-auto max-w-2xl">
+                            <li>
+                                {isChinese
+                                    ? "长三角一体化发展峰会"
+                                    : "Yangtze River Delta Integration Development Summit"}
+                            </li>
+                            <li>
+                                {isChinese
+                                    ? "中法文化交流论坛"
+                                    : "Sino-French Cultural Exchange Forum"}
+                            </li>
+                            <li>
+                                {isChinese
+                                    ? "中国国际进口博览会"
+                                    : "China International Import Expo"}
+                            </li>
+                            <li>
+                                {isChinese
+                                    ? "中国国际旅游交易会"
+                                    : "China International Tourism Expo"}
+                            </li>
+                            <li>
+                                {isChinese
+                                    ? "中国道口锡器文化节"
+                                    : "China Daokou Tinware Cultural Festival"}
+                            </li>
+                        </ul>
 
-In recent years, the museum has been invited to deliver keynote presentations
-at the International Forum for Private Museum Directors,
-sharing its experience in exhibition planning, cultural education,
-creative design, and public engagement.
-It also co-organized the China Daokou Pewter Culture Festival
-with local government partners —
-a celebration rooted in regional heritage and open to the public,
-exploring how traditional craftsmanship can find new life in modern society.`}
+                        <p className="mt-8 text-gray-300">
+                            {isChinese
+                                ? "近年来，中国锡器博物馆连续两届受邀在民非博物馆馆长国际论坛上作主题发言：第三届论坛分享了我馆在博物馆选址、展陈策划、文化教育、文创设计和旅游研学活动中的探索与实践；第四届则以“民非博物馆如何扩大影响力”为主题，系统交流了社会力量参与文化传播的经验与思考。论坛分享了我们联合地方政府主办了首届中国道口锡器文化节，以地方文化为基底，以工艺体验和公众参与为路径，推动锡文化走向社会、融入生活，探索出一条兼具学术深度与公众活力的传播之路。"
+                                : "In recent years, the China Pewter Museum has been invited to deliver keynote speeches at the International Forum for Private Museum Directors for two consecutive sessions. At the third forum, we shared our exploration and practices in museum site selection, exhibition planning, cultural education, creative design, and cultural tourism programs. At the fourth forum, themed “How Private Museums Can Expand Their Influence”, we presented our experience and reflections on the role of social forces in cultural communication. During the forum, we also shared the case of our joint initiative with the local government — the First China Daokou Pewter Culture Festival. Rooted in regional culture and driven by craft experience and public participation, the festival promotes pewter culture to the broader society and everyday life, creating a pathway that combines academic depth with public vitality."}
+                        </p>
+
+                        <p className="mt-8 text-gray-400 italic">
+                            {isChinese
+                                ? "在每一次交流中，中国锡文化都以柔韧的金属，讲述坚韧的故事。"
+                                : "With every exhibition, tin speaks its universal language of light and endurance."}
                         </p>
                     </div>
                 </section>
 
-                {/* 活动卡片 */}
+                {/* 活动卡片区 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto mt-1 px-2">
                     {[
                         {
@@ -662,12 +682,16 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
+                                <p className="text-gray-300 text-sm leading-snug">
+                                    {item.desc}
+                                </p>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
+
 
             {/* Footer */}
             <footer className="bg-black text-center py-8 text-gray-400 text-sm relative z-10">
@@ -677,52 +701,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                         : "© 2025 China Pewter Museum | Designed with Heritage and Heart"}
                 </p>
             </footer>
-
-            {/* Crystal Text Effect */}
-            <style>{`
-  .crystal-text {
-    background: linear-gradient(
-      90deg,
-      #cce7ff 0%,
-      #ffffff 20%,
-      #a5d8ff 40%,
-      #bde0fe 60%,
-      #e0f2fe 80%,
-      #cce7ff 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow:
-      0 0 8px rgba(180, 220, 255, 0.6),
-      0 0 16px rgba(150, 200, 255, 0.4);
-    animation: crystalGlow 6s ease-in-out infinite;
-    background-size: 200% auto;
-  }
-
-  @keyframes crystalGlow {
-    0% {
-      background-position: 0% 50%;
-      text-shadow:
-        0 0 6px rgba(180, 220, 255, 0.5),
-        0 0 12px rgba(150, 200, 255, 0.3);
-    }
-    50% {
-      background-position: 100% 50%;
-      text-shadow:
-        0 0 12px rgba(255, 255, 255, 0.8),
-        0 0 20px rgba(170, 220, 255, 0.6);
-    }
-    100% {
-      background-position: 0% 50%;
-      text-shadow:
-        0 0 6px rgba(180, 220, 255, 0.5),
-        0 0 12px rgba(150, 200, 255, 0.3);
-    }
-  }
-`}</style>
-
         </main>
     );
 }
-
 
