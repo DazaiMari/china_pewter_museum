@@ -173,15 +173,22 @@ export default function Home() {
                 >
                     {/* Left side: Text */}
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
-                            {isChinese ? "关于锡器博物馆" : "About the Museum"}
-                        </h2>
+                        <a
+                            href="https://www.youtube.com/watch?v=Jh-MCwFMsJk"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-colors duration-300 hover:text-red-500"
+                        >
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                                {isChinese ? "关于锡器博物馆" : "About the Museum"}
+                            </h2>
+                        </a>
 
-                        <p className="text-gray-300 leading-relaxed text-lg mb-4 whitespace-pre-line">
+                        <p className="text-white leading-relaxed text-lg mb-4 whitespace-pre-line">
                             {isChinese
                                 ? `中国锡器博物馆位于中国苏州黎里古镇，馆舍依托明代毛宅修复而成。
 由徐鹏林创办，于二〇一七年正式开馆，
-是中国规模最大、最具代表性的锡器专题博物馆。
+是中国规模最大、最具代表性的锡器专题博物馆。                    
 
 博物馆被列入中国非物质文化遗产体系，并获评为：
 苏州市中小学生综合素质发展活动基地、
@@ -195,7 +202,7 @@ export default function Home() {
 让传统与创新共生，让手艺与教育相融。
 
 在这里，展示不止于器物，更是一次精神的唤醒。
-中国锡器博物馆的使命，是让锡文化“活起来、传下去、走出去”，
+中国锡器博物馆的使命，是让锡文化“活起来、传下去、走出去”
 让金属有温度，让文化会呼吸。`
                                 : `The China Pewter Museum, located in Lili Ancient Town, Suzhou, China, is housed within the restored Mao Mansion, a Ming-dynasty residence of historic character.
 Founded by Xu Penglin and opened in 2017, it is China’s largest institution dedicated to pewter culture and preservation.
@@ -236,15 +243,24 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                 </section>
             </div>
 
+
+
             {/* Exhibitions & Collections Section */}
             <div className="relative z-10 bg-black">
                 <section
                     id="Exhibitions & Collections"
                     className="bg-black text-white py-24 px-4 md:px-10 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
-                        {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
-                    </h2>
+                    <a
+                        href="https://www.youtube.com/watch?v=Jh-MCwFMsJk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-colors duration-300 hover:text-red-500"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                            {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
+                        </h2>
+                    </a>
 
                     <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
                         <p>
@@ -273,6 +289,7 @@ From the sixteenth century onward, Chinese pewter craftsmanship traveled along t
 Every object in the gallery carries its own story. In the play of light and shadow, pewter continues to speak, its sheen holding the warmth of life and the memory of time.`}
                         </p>
                     </div>
+
                     {/* 滚动容器 */}
                     <div className="relative max-w-[1600px] mx-auto">
                         <button
@@ -390,11 +407,12 @@ Every object in the gallery carries its own story. In the play of light and shad
                     </div>
 
                     <style>{`
-            .hide-scrollbar::-webkit-scrollbar { display: none; }
-            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-          `}</style>
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    `}</style>
                 </section>
             </div>
+
 
             {/* Craft & Culture Section */}
             <div className="relative z-10 bg-gray-450">
@@ -402,14 +420,23 @@ Every object in the gallery carries its own story. In the play of light and shad
                     id="Craft & Culture"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
-                        {isChinese ? "工艺与文化" : "Craft & Culture"}
-                    </h2>
+                    {/* 标题带链接 + hover 微亮 */}
+                    <a
+                        href="https://www.youtube.com/watch?v=Jh-MCwFMsJk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-colors duration-300 hover:text-red-500"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                            {isChinese ? "工艺与文化" : "Craft & Culture"}
+                        </h2>
+                    </a>
 
+                    {/* 段落说明 */}
                     <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-left space-y-6">
                         <p>
                             {isChinese
-                                ? "锡，柔而不弱，润而不寒，素光含静气。在它的延展与回收之间，蕴藏着金属最温柔的秩序。自古以来，锡被视为调和之材——既能与铜成青，又能与银共白，在火与手的交替中，显露出东方文化中“中和”之美。"
+                                ? "锡，柔而不弱，润而不寒，素光含静气。在它的延展与回收之间，蕴藏着金属最温柔的秩序。自古以来，锡被视为调和之材——既能与铜成青，又能与银共白，在火与手的交替中，显露出东方文化中‘中和’之美。"
                                 : "Pewter is soft yet enduring, gentle yet firm — its muted glow carrying the quiet spirit of balance. For centuries, it has been known as a metal of harmony, blending with copper to form bronze or with silver to yield light brilliance — a reflection of the Eastern pursuit of balance between strength and grace."}
                         </p>
                         <p>
@@ -419,14 +446,13 @@ Every object in the gallery carries its own story. In the play of light and shad
                         </p>
                     </div>
 
-                    {/* 动态中英文打锡工艺流程图（修正版：分支结构 + 居中排版） */}
+                    {/* 打锡工艺流程 */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
                         <h3 className="text-2xl font-bold mb-8">
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
                         <div className="grid grid-cols-12 gap-1 justify-items-center text-base md:text-lg leading-relaxed">
-                            {/* 第一行主流程 */}
                             <div className="col-span-2 bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                 {isChinese ? "原料锡" : "Raw Tin"}
                             </div>
@@ -437,9 +463,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                             </div>
                             <span className="col-span-1 text-gray-400 text-2xl">→</span>
 
-                            {/* 熔锡分为上中下三支 */}
                             <div className="col-span-6 flex flex-col items-center gap-4">
-                                {/* 上支线 */}
                                 <div className="flex items-center gap-2">
                                     <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                         {isChinese ? "压锡片" : "Sheet Rolling"}
@@ -454,7 +478,6 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     </div>
                                 </div>
 
-                                {/* 中支线：模铸 */}
                                 <div className="flex items-center gap-2">
                                     <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                         {isChinese ? "模铸" : "Casting"}
@@ -462,43 +485,33 @@ Every object in the gallery carries its own story. In the play of light and shad
                                 </div>
                             </div>
 
-                            {/* 下一行继续主干 */}
                             <div className="col-span-12 mt-8 flex justify-center items-center gap-2 flex-wrap">
                                 <span className="text-gray-400 text-2xl">↓</span>
-                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                    {isChinese ? "焊接组合" : "Joining & Assembly"}
-                                </div>
-                                <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                    {isChinese ? "挫修" : "Filing & Finishing"}
-                                </div>
-                                <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                    {isChinese ? "削光" : "Polishing"}
-                                </div>
-                                <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                    {isChinese ? "砂磨" : "Sanding"}
-                                </div>
-                                <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                    {isChinese ? "擦洗" : "Cleaning"}
-                                </div>
-                                <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                    {isChinese ? "纹饰" : "Decoration"}
-                                </div>
+                                {[
+                                    { zh: "焊接组合", en: "Joining & Assembly" },
+                                    { zh: "挫修", en: "Filing & Finishing" },
+                                    { zh: "削光", en: "Polishing" },
+                                    { zh: "砂磨", en: "Sanding" },
+                                    { zh: "擦洗", en: "Cleaning" },
+                                    { zh: "纹饰", en: "Decoration" },
+                                ].map((step, index) => (
+                                    <React.Fragment key={index}>
+                                        <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                            {isChinese ? step.zh : step.en}
+                                        </div>
+                                        {index < 5 && <span className="text-gray-400 text-2xl">→</span>}
+                                    </React.Fragment>
+                                ))}
                             </div>
                         </div>
                     </div>
 
-                    {/* 工艺过程九图滑动展示（竖幅高清 + 自动播放 + 悬停暂停 + 按钮控制） */}
+                    {/* 工艺过程九图滑动展示 */}
                     <div className="max-w-[1600px] mx-auto mt-20 relative">
                         <h3 className="text-2xl font-bold mb-6 text-center">
                             {isChinese ? "工艺过程掠影" : "Craftsmanship in Motion"}
                         </h3>
 
-                        {/* 左右按钮 */}
                         <button
                             id="scrollLeftProcess"
                             className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-[#000000b0] to-transparent text-white p-5 rounded-full z-30 hover:scale-110 transition duration-300"
@@ -512,7 +525,6 @@ Every object in the gallery carries its own story. In the play of light and shad
                             ›
                         </button>
 
-                        {/* 图片滚动容器 */}
                         <div
                             id="scrollContainerProcess"
                             className="grid grid-flow-col auto-cols-[85%] sm:auto-cols-[42%] md:auto-cols-[22%] overflow-x-auto scroll-smooth gap-6 px-6 pb-6 hide-scrollbar snap-x snap-mandatory"
@@ -527,22 +539,20 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     "锤击敲打，节奏生光。",
                                     "焊接组合，巧思相连。",
                                     "挫修精整，匠意见微。",
-                                    "削光去滓，光华初现。\n" +
+                                    "削光去滓，光华初现。",
                                     "砂磨细作，润泽如玉。",
                                     "擦洗成器，见匠心本色。",
-                                    "纹饰收尾，技与美的合一。",
                                 ][i],
                                 en: [
                                     "Melting tin — the beginning of form.",
-                                    "Rolling tin sheets — shaping the essence of form.",
-                                    "Pattern cutting — precision defines the form.",
+                                    "Rolling tin sheets — shaping the essence.",
+                                    "Pattern cutting — precision defines.",
                                     "Hammering — rhythm brings light.",
                                     "Joining — craft connects creation.",
                                     "Filing — precision reveals mastery.",
-                                    "Polishing — brilliance begins to emerge.\n" +
+                                    "Polishing — brilliance begins to emerge.",
                                     "Sanding — smooth as flowing jade.",
                                     "Cleaning — revealing pure craft.",
-                                    "Engraving — where skill meets beauty.",
                                 ][i],
                             })).map((item) => (
                                 <div
@@ -569,15 +579,13 @@ Every object in the gallery carries its own story. In the play of light and shad
                         </div>
 
                         <style>{`
-    .hide-scrollbar::-webkit-scrollbar { display: none; }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  `}</style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
                     </div>
 
-
-
                     {/* 结语 */}
-                    <div className="max-w-6xl mx-auto text-white italic leading-relaxed text-center">
+                    <div className="max-w-6xl mx-auto text-white italic leading-relaxed text-center mt-12">
                         <p>
                             {isChinese
                                 ? "每一次锤击，都是对时间的回应；每一道光泽，都是对心性的修炼。传统工艺让金属拥有了生命，也让人心找到安处。"
@@ -586,6 +594,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                     </div>
                 </section>
             </div>
+
 
             {/* Learning & Discovery Section */}
             <div className="relative z-10 bg-black">
@@ -647,6 +656,7 @@ finding curiosity and inspiration through direct experience.`}
                                     ? "亲手完成一件锡器作品，从敲打、焊接到打磨，体验传统工艺的全流程。"
                                     : "Create your own pewter piece—from hammering and joining to polishing—experiencing the full craft journey.",
                                 img: "/images/learning/learning1.jpg",
+                                link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                             },
                             {
                                 id: 2,
@@ -655,6 +665,7 @@ finding curiosity and inspiration through direct experience.`}
                                     ? "结合艺术与科学，让学生在设计与实践中培养动手力与审美力。"
                                     : "Combining art and science, these classes help students cultivate creativity through design and hands-on making.",
                                 img: "/images/learning/learning2.jpg",
+                                link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                             },
                             {
                                 id: 3,
@@ -663,17 +674,21 @@ finding curiosity and inspiration through direct experience.`}
                                     ? "海外游客踊跃参与打锡体验，在锤炼与光泽之间，感受中国手工的温度与细腻。"
                                     : "Overseas visitors actively take part in pewter-craft workshops, experiencing the warmth and refinement of Chinese craftsmanship.",
                                 img: "/images/learning/learning3.jpg",
+                                link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                             },
                         ].map((item) => (
-                            <div
+                            <a
                                 key={item.id}
-                                className="group bg-[rgba(220,230,240,0.2)] hover:bg-[rgba(220,230,240,0.2)] backdrop-blur-md rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group block bg-[rgba(220,230,240,0.2)] hover:bg-[rgba(220,230,240,0.25)] backdrop-blur-md rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
                             >
                                 <div className="relative">
                                     <img
                                         src={item.img}
                                         alt={item.title}
-                                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+                                        className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
                                 </div>
@@ -683,9 +698,10 @@ finding curiosity and inspiration through direct experience.`}
                                     </h3>
                                     <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
+
 
                     {/* 结语 */}
                     <div className="max-w-4xl mx-auto text-gray-400 italic leading-relaxed text-center">
@@ -762,6 +778,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 ? "法国学生来华，与中国工艺师共同探讨锡器的当代表达。"
                                 : "French students visited China to explore the contemporary expression of pewter craftsmanship with Chinese artisans.",
                             img: "/images/events/event1.jpg",
+                            link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                         },
                         {
                             id: 2,
@@ -770,6 +787,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 ? "博物馆代表分享民间工艺的创新保护经验。"
                                 : "Museum representatives share experiences in heritage innovation.",
                             img: "/images/events/event2.jpg",
+                            link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                         },
                         {
                             id: 3,
@@ -778,6 +796,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 ? "展示传统锡工艺与现代设计融合的跨界作品。"
                                 : "Showcasing cross-cultural pewter works blending tradition and design.",
                             img: "/images/events/event3.jpg",
+                            link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                         },
                         {
                             id: 4,
@@ -786,10 +805,14 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 ? "让传统工艺走进生活，传递手作的温度与美感。"
                                 : "Bringing pewter craft into daily life through interactive festivals.",
                             img: "/images/events/event4.jpg",
+                            link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
                         },
                     ].map((item) => (
-                        <div
+                        <a
                             key={item.id}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="group block overflow-hidden bg-[rgba(220,230,240,0.1)] backdrop-blur-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
                         >
                             <div className="relative">
@@ -806,9 +829,10 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 </h3>
                                 <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
+
             </div>
 
             {/* Footer */}
