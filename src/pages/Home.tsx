@@ -202,7 +202,7 @@ export default function Home() {
                     {/* Left side: Text */}
                     <div>
                         <a
-                            href="https://www.youtube.com/watch?v=Jh-MCwFMsJk"
+                            href="https://v.douyin.com/VOMXkDBZLgk/ 03/25 foD:/ q@r.eO"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition-colors duration-300 hover:text-red-500"
