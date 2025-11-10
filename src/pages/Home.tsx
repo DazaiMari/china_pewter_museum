@@ -427,12 +427,12 @@ Every object in the gallery carries its own story. In the play of light and shad
 
                         <div className="grid grid-cols-12 gap-1 justify-items-center text-base md:text-lg leading-relaxed">
                             {/* 第一行主流程 */}
-                            <div className="col-span-2 bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                            <div className="col-span-2 bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                 {isChinese ? "原料锡" : "Raw Tin"}
                             </div>
                             <span className="col-span-1 text-gray-400 text-2xl">→</span>
 
-                            <div className="col-span-2 bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                            <div className="col-span-2 bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                 {isChinese ? "熔锡" : "Melting"}
                             </div>
                             <span className="col-span-1 text-gray-400 text-2xl">→</span>
@@ -441,22 +441,22 @@ Every object in the gallery carries its own story. In the play of light and shad
                             <div className="col-span-6 flex flex-col items-center gap-4">
                                 {/* 上支线 */}
                                 <div className="flex items-center gap-2">
-                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                         {isChinese ? "压锡片" : "Sheet Rolling"}
                                     </div>
                                     <span className="text-gray-400 text-2xl">→</span>
-                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                         {isChinese ? "打样裁剪" : "Pattern Cutting"}
                                     </div>
                                     <span className="text-gray-400 text-2xl">→</span>
-                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                         {isChinese ? "冷锻捶打" : "Cold Hammering"}
                                     </div>
                                 </div>
 
                                 {/* 中支线：模铸 */}
                                 <div className="flex items-center gap-2">
-                                    <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                         {isChinese ? "模铸" : "Casting"}
                                     </div>
                                 </div>
@@ -465,27 +465,27 @@ Every object in the gallery carries its own story. In the play of light and shad
                             {/* 下一行继续主干 */}
                             <div className="col-span-12 mt-8 flex justify-center items-center gap-2 flex-wrap">
                                 <span className="text-gray-400 text-2xl">↓</span>
-                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                     {isChinese ? "焊接组合" : "Joining & Assembly"}
                                 </div>
                                 <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                     {isChinese ? "挫修" : "Filing & Finishing"}
                                 </div>
                                 <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                     {isChinese ? "削光" : "Polishing"}
                                 </div>
                                 <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                     {isChinese ? "砂磨" : "Sanding"}
                                 </div>
                                 <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                     {isChinese ? "擦洗" : "Cleaning"}
                                 </div>
                                 <span className="text-gray-400 text-2xl">→</span>
-                                <div className="bg-gray-800 px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
                                     {isChinese ? "纹饰" : "Decoration"}
                                 </div>
                             </div>
