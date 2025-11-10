@@ -124,12 +124,39 @@ export default function Home() {
             </nav>
 
             {/* Hero Section */}
-            <section id="hero" className="relative h-screen flex items-end justify-start">
+            <section id="hero" className="relative h-screen flex items-end justify-start overflow-hidden">
+                {/* 背景自动切换 */}
                 <div className="fixed inset-0 z-0">
-                    <img src="/images/Welcom.png" alt="Museum Background" className="w-full h-full object-cover" />
+                    {(() => {
+                        const images = [
+                            "/images/welcome1.png",
+                            "/images/welcome2.png",
+                            "/images/welcome3.png",
+                        ];
+                        const [current, setCurrent] = React.useState(0);
+
+                        React.useEffect(() => {
+                            const timer = setInterval(() => {
+                                setCurrent((prev) => (prev + 1) % images.length);
+                            }, 4000);
+                            return () => clearInterval(timer);
+                        }, []);
+
+                        return images.map((src, index) => (
+                            <img
+                                key={index}
+                                src={src}
+                                alt="Museum Background"
+                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                                    index === current ? "opacity-100" : "opacity-0"
+                                }`}
+                            />
+                        ));
+                    })()}
                     <div className="absolute inset-0 bg-black/40" />
                 </div>
 
+                {/* 前景文字 */}
                 <div className="relative z-10 p-6 md:p-10 text-left">
                     <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug crystal-text">
                         {isChinese ? (
@@ -151,6 +178,7 @@ export default function Home() {
                     </p>
                 </div>
             </section>
+
 
             {/* Intro Section */}
             <section id="intro" className="relative bg-black py-12 md:py-16 px-6 md:px-16 text-center fade z-10">
