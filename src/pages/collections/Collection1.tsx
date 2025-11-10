@@ -1,124 +1,195 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Navbar from '../../components/Navbar';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 export default function Collection1() {
-  const [isChinese, setIsChinese] = useState(true);
+    const [isChinese, setIsChinese] = useState(true);
+    const navigate = useNavigate();
 
-  return (
-    <main className="bg-gradient-to-b from-gray-700 to-gray-400 text-white font-sans min-h-screen">
-      {/* Navigation */}
-      <Navbar isChinese={isChinese} onLanguageToggle={() => setIsChinese(!isChinese)} />
+    return (
+        <main className="relative min-h-screen font-sans text-white overflow-hidden bg-gradient-to-b from-gray-800 via-gray-700 to-gray-500">
+            {/* ✨ 微动光泽背景层 */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.08),transparent_70%)] animate-glow1"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.08),transparent_70%)] animate-glow2"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.06),transparent_75%)] animate-glow3"></div>
+            </div>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {isChinese ? '清代锡一品锅' : 'Qing Dynasty Pewter Yi Pin Guo'}
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {isChinese 
-                ? '古雅精工，展现清代宫廷器物的匠心与礼制之美'
-                : 'Elegant craftsmanship reflecting the harmony and refinement of Qing imperial utensils'
-              }
-            </p>
-          </motion.div>
+            {/* 🌫️ 展厅薄雾层 */}
+            <div className="absolute inset-0 bg-[url('/images/mist-texture.png')] opacity-25 mix-blend-screen animate-mist"></div>
 
-          {/* Main Content */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Image Section */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="space-y-6"
-            >
-              <img
-                src="/images/collection/collection1.jpg"
-                alt={isChinese ? '清代锡一品锅' : 'Qing Dynasty Pewter Yi Pin Guo'}
-                className="w-full rounded-lg shadow-2xl"
-              />
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/images/collection/collection1-detail1.jpg"
-                  alt="Detail 1"
-                  className="w-full rounded-lg shadow-lg"
+            {/* ✅ 内容层 */}
+            <div className="relative z-10">
+                <Navbar
+                    isChinese={isChinese}
+                    onLanguageToggle={() => setIsChinese(!isChinese)}
                 />
-                <img
-                  src="/images/collection/collection1-detail2.jpg"
-                  alt="Detail 2"
-                  className="w-full rounded-lg shadow-lg"
-                />
-              </div>
-            </motion.div>
 
-            {/* Text Section */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="space-y-8"
-            >
-              <div>
-                <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '历史背景' : 'Historical Background'}
-                </h2>
-                <p className="text-gray-300 leading-relaxed">
-                  {isChinese 
-                    ? '清代锡器制作工艺日臻成熟，形成了宫廷与民间并存、南北并秀的格局。这件锡一品锅即为清代典型宴饮器具之一，体现了当时社会上层生活的礼制秩序与审美趣味。其圆形造型寓意团圆与和合，象征清代贵族生活中“和为贵”的文化理想。器具不仅具备实用功能，更兼陈设之雅，是身份与品位的象征。'
-                    : 'During the Qing Dynasty, pewter craftsmanship reached a remarkable level of sophistication, flourishing in both court and folk traditions. This circular Yi Pin Guo (imperial hotpot) exemplifies the refined lifestyle and aesthetic sensibilities of the upper class.' +
-                      'Its round form symbolizes unity and completeness, embodying the cultural ideal of harmony cherished in Qing society. Beyond its practical use as a dining vessel, it also served as a marker of social status and cultivated taste within the imperial household.'
-                  }
-                </p>
-              </div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-16 px-6 md:px-20">
+                    <div className="max-w-6xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            className="text-center mb-16 bg-black/30 backdrop-blur-sm rounded-2xl p-6"
+                        >
+                            <h1 className="text-4xl md:text-4xl font-bold mb-6 hover:text-[#bde0fe] transition-colors duration-500">
+                                {isChinese ? "清代锡一品锅" : "Qing Dynasty Pewter Yi Pin Guo"}
+                            </h1>
+                            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+                                {isChinese
+                                    ? "古雅精工，展现清代宫廷器物的匠心与礼制之美"
+                                    : "Elegant craftsmanship reflecting the harmony and refinement of Qing imperial utensils"}
+                            </p>
+                        </motion.div>
 
-              <div>
-                <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '工艺特点' : 'Craftsmanship Features'}
-                </h2>
-                <p className="text-gray-300 leading-relaxed">
-                  {isChinese 
-                    ? '通体以优质锡铸造，整体结构精巧严整，采用模块化组合设计，由碗、碟、盖、座等组件构成。锅体中设五个分格碗，每个碗配以錾刻花卉纹饰的盖，盖纽为桃形，圆润饱满，寓意吉祥长寿。' +
-                      '器表纹饰以传统錾刻技法完成，花卉纹理细腻流畅，线条柔和自然，展现出清代工匠高超的手工打磨与雕刻功力。整体造型简练规整，金属光泽温润含蓄，体现出“富而不奢、雅而有度”的宫廷美学。'
-                    : 'Cast entirely from high-quality pewter, the vessel showcases a modular design comprising bowls, dishes, lids, and a base. The interior contains five compartments, each with its own engraved floral-patterned lid. The lids are topped with peach-shaped knobs—smooth, lustrous, and symbolizing longevity and good fortune.' +
-                      'The surface decoration features delicately chased floral motifs with graceful, flowing lines. The meticulous hand-finishing and subtle metallic sheen reveal the technical mastery of Qing artisans. The overall design is elegant and restrained, expressing the Qing aesthetic ideal of “refinement within simplicity.”'
-                  }
-                </p>
-              </div>
+                        {/* 主体内容 */}
+                        <div className="grid md:grid-cols-2 gap-12 items-start">
+                            {/* 图片区 */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1, delay: 0.3 }}
+                                className="space-y-6 bg-white/5 backdrop-blur-md p-4 rounded-xl shadow-lg"
+                            >
+                                <img
+                                    src="/images/collection/collection1.jpg"
+                                    alt={
+                                        isChinese ? "清代锡一品锅" : "Qing Dynasty Pewter Yi Pin Guo"
+                                    }
+                                    className="w-full rounded-lg shadow-2xl"
+                                />
+                                <div className="grid grid-cols-2 gap-4">
+                                    <img
+                                        src="/images/collection/collection1-detail1.jpg"
+                                        alt="Detail 1"
+                                        className="w-full rounded-lg shadow-lg"
+                                    />
+                                    <img
+                                        src="/images/collection/collection1-detail2.jpg"
+                                        alt="Detail 2"
+                                        className="w-full rounded-lg shadow-lg"
+                                    />
+                                </div>
+                            </motion.div>
 
-              <div>
-                <h2 className="text-2xl font-semibold mb-4">
-                  {isChinese ? '文化价值' : 'Cultural Significance'}
-                </h2>
-                <p className="text-gray-300 leading-relaxed">
-                  {isChinese 
-                    ? '锡一品锅承载着清代饮食文化与金属工艺的双重价值，是研究当时社会生活、器物设计与审美观的重要实物资料。其结构设计兼顾功能与美感，体现出早期中国工艺中“器以载道”的思想。圆形布局寓意天圆地方之理，五格分置象征五福同臻，既具象征意义，也符合宴饮分席的礼制需求。' +
-                      '这件器物不仅是生活器具，更是一种文化意象，展现了清代匠师对秩序、和谐与美的追求，见证了锡器工艺在传统文化中的重要地位。'
-                    : 'This Yi Pin Guo represents the integration of culinary culture and metal artistry in the Qing Dynasty. Its structure demonstrates an early form of functional modular design, balancing utility and beauty. The circular layout reflects the ancient cosmological concept of “heaven as round, earth as square,” while the five compartments symbolize the Five Blessings — longevity, prosperity, health, virtue, and peace.' +
-                      'More than a utensil, it embodies the values of harmony and refinement that defined Qing court life. As a precious artifact, it provides valuable insight into the social customs, craftsmanship, and aesthetic philosophy of traditional Chinese pewter ware.'
-                  }
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+                            {/* 文本区 */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1, delay: 0.5 }}
+                                className="space-y-8 bg-white/5 backdrop-blur-md p-8 rounded-xl shadow-lg"
+                            >
+                                <div>
+                                    <h2 className="text-2xl font-semibold mb-4 text-[#cce7ff]">
+                                        {isChinese ? "历史背景" : "Historical Background"}
+                                    </h2>
+                                    <p className="text-gray-200 leading-relaxed">
+                                        {isChinese
+                                            ? "清代锡器制作工艺日臻成熟，形成了宫廷与民间并存、南北并秀的格局。这件锡一品锅即为清代典型宴饮器具之一，体现了当时社会上层生活的礼制秩序与审美趣味。"
+                                            : "During the Qing Dynasty, pewter craftsmanship flourished in both court and folk traditions. This circular Yi Pin Guo exemplifies the refined lifestyle and harmony of the imperial household."}
+                                    </p>
+                                </div>
 
-      {/* Footer */}
-      <footer className="bg-black text-center py-8 text-gray-400 text-sm">
-        <p>
-          {isChinese 
-            ? '© 2025 中国锡器博物馆 | 传承匠心，用心设计' 
-            : '© 2025 China Pewter Museum | Designed with Heritage and Heart'
-          }
-        </p>
-      </footer>
-    </main>
-  );
+                                <div>
+                                    <h2 className="text-2xl font-semibold mb-4 text-[#cce7ff]">
+                                        {isChinese ? "工艺特点" : "Craftsmanship"}
+                                    </h2>
+                                    <p className="text-gray-200 leading-relaxed">
+                                        {isChinese
+                                            ? "全器以高纯度锡铸造而成，采用模块化组合结构设计。主体由碗、碟、盖、座等部件组成，配合精密卡槽与支架，可灵活拆装。各盖钮以天然玛瑙、玻璃珠嵌饰，形成点睛之效。表面饰以錾刻花纹及“寿”“福”等吉祥文字，线条流畅，刻工细致。器身打磨匀净，锡质温润光洁，既具金属之坚，也显玉石之泽。"
+                                            : "Made of refined tin through precise casting and modular construction, the vessel consists of interlocking bowls, dishes, lids, and a base. The knobs are inlaid with natural agate and colored glass, providing visual accents. Its surface is decorated with engraved floral motifs and auspicious characters such as “longevity” and “fortune.” The body is polished to a silvery sheen—smooth yet soft in luster, reflecting the dual qualities of metal’s strength and jade’s warmth."}
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h2 className="text-2xl font-semibold mb-4 text-[#cce7ff]">
+                                        {isChinese ? "造型特点" : "Design Features"}
+                                    </h2>
+                                    <p className="text-gray-200 leading-relaxed">
+                                        {isChinese
+                                            ? "整体呈六瓣式布局，中设主碗，外围环列副碗与碟，层次分明、构图严谨。展开时如花瓣舒展，收拢则浑然一体，既便于使用又兼具视觉美感。器形圆融稳重，比例协调，充分体现了清代金属器具“形以载礼”的造型理念。"
+                                            : "The vessel’s structure follows a six-lobed floral layout—a central bowl surrounded by smaller dishes, forming a harmonious, layered composition. When opened, it unfolds like petals in bloom; when closed, it forms a compact unity of order and grace. The balanced proportions and symmetrical design exemplify the Qing ideal of “form as the carrier of ritual.”"}
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h2 className="text-2xl font-semibold mb-4 text-[#cce7ff]">
+                                        {isChinese ? "文化价值" : "Cultural Significance"}
+                                    </h2>
+                                    <p className="text-gray-200 leading-relaxed">
+                                        {isChinese
+                                            ? "锡一品锅承载着清代饮食文化与金属工艺的双重价值，是研究当时社会生活与审美的重要实物。"
+                                            : "The Yi Pin Guo represents the fusion of dining culture and metal artistry, revealing Qing ideals of harmony and order."}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 页脚 */}
+                <footer className="bg-black/40 backdrop-blur-md text-center py-8 text-gray-300 text-sm mt-16">
+                    <p>
+                        {isChinese
+                            ? "© 2025 中国锡器博物馆 | 传承匠心，用心设计"
+                            : "© 2025 China Pewter Museum | Designed with Heritage and Heart"}
+                    </p>
+                </footer>
+            </div>
+
+            {/* 🔙 返回按钮 */}
+            <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-3">
+                {/* 返回上一页 */}
+                <button
+                    onClick={() => navigate(-1)}
+                    className="bg-white/10 backdrop-blur-md text-white px-4 py-3 rounded-full shadow-lg hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300 border border-white/20"
+                >
+                    {isChinese ? "返回" : "Back"}
+                </button>
+
+                {/* 返回主页 */}
+                <button
+                    onClick={() => navigate("/")}
+                    className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-md hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300 border border-white/20 text-sm"
+                >
+                    {isChinese ? "主页" : "Home"}
+                </button>
+            </div>
+
+            {/* ✨ 动画样式 */}
+            <style>{`
+        /* 卫东光泽动画 */
+        @keyframes glowMove1 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(30px, -20px); }
+        }
+        @keyframes glowMove2 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(-40px, 25px); }
+        }
+        @keyframes glowMove3 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(20px, 30px); }
+        }
+        .animate-glow1 { animation: glowMove1 14s ease-in-out infinite alternate; }
+        .animate-glow2 { animation: glowMove2 18s ease-in-out infinite alternate; }
+        .animate-glow3 { animation: glowMove3 22s ease-in-out infinite alternate; }
+
+        /* 展厅薄雾动画 */
+        @keyframes mistMove {
+          0% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+          50% { transform: translate(20px, -15px) scale(1.05); opacity: 0.35; }
+          100% { transform: translate(-10px, 10px) scale(1); opacity: 0.25; }
+        }
+        .animate-mist {
+          animation: mistMove 30s ease-in-out infinite alternate;
+          background-size: cover;
+        }
+      `}</style>
+        </main>
+    );
 }
+
