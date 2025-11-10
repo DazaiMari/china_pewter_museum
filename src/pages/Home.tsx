@@ -414,7 +414,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                                 <a
                                     key={item.id}
                                     href={`/collections/${item.id}`}
-                                    className="bg-gray450 hover:bg-gray450 transition-all duration-300 shadow-lg rounded-lg snap-start"
+                                    className="backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-500 shadow-lg rounded-lg snap-start border border-white/20"
                                 >
                                     <div className="h-64 overflow-hidden">
                                         <img
@@ -585,7 +585,7 @@ Every object in the gallery carries its own story. In the play of light and shad
                             })).map((item) => (
                                 <div
                                     key={item.id}
-                                    className="group bg-[rgba(220,230,240,0.1)] hover:bg-[rgba(220,230,240,0.2)] backdrop-blur-md rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1 snap-start"
+                                    className="group backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1 snap-start"
                                 >
                                     <div className="relative overflow-hidden">
                                         <img
@@ -710,9 +710,9 @@ finding curiosity and inspiration through direct experience.`}
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group block bg-[rgba(220,230,240,0.2)] hover:bg-[rgba(220,230,240,0.25)] backdrop-blur-md rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
+                                className="group block backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
                             >
-                                <div className="relative">
+                            <div className="relative">
                                     <img
                                         src={item.img}
                                         alt={item.title}
@@ -841,7 +841,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group block overflow-hidden bg-[rgba(220,230,240,0.1)] backdrop-blur-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+                            className="group block overflow-hidden backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
                         >
                             <div className="relative">
                                 <img
