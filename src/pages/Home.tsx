@@ -509,7 +509,7 @@ its sheen holding the warmth of life and the memory of time.`}
                 >
                     {/* 标题带链接 + hover 微亮 */}
                     <a
-                        href="https://v.douyin.com/tzGpN1S5tlw/ a@A.GI qeB:/ 04/28"
+                        href="http://tv.cctv.com/2018/09/14/VIDEfttgUKh1GzJlGhGYbkOJ180914.shtml"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-colors duration-300 hover:text-red-500"
