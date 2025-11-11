@@ -11,9 +11,9 @@ export default function Collection1() {
         <main className="relative min-h-screen font-sans text-white overflow-hidden bg-gradient-to-b from-gray-800 via-gray-700 to-gray-500">
             {/* ✨ 微动光泽背景层 */}
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.08),transparent_70%)] animate-glow1"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.08),transparent_70%)] animate-glow2"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.06),transparent_75%)] animate-glow3"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.12),transparent_70%)] animate-glow1"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.12),transparent_70%)] animate-glow2"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_75%)] animate-glow3"></div>
             </div>
 
             {/* 🌫️ 展厅薄雾层 */}
@@ -33,12 +33,12 @@ export default function Collection1() {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
-                            className="text-center mb-16 bg-black/30 backdrop-blur-sm rounded-2xl p-6"
+                            className="text-center mb-16 bg-white/10 backdrop-blur-2xl border border-white/30 shadow-[0_0_40px_rgba(200,240,255,0.25)] rounded-3xl p-8 md:p-10 transition-all duration-700 hover:shadow-[0_0_60px_rgba(220,250,255,0.4)]"
                         >
                             <h1 className="text-4xl md:text-4xl font-bold mb-6 hover:text-[#bde0fe] transition-colors duration-500">
                                 {isChinese ? "清代锡一品锅" : "Qing Dynasty Pewter Yi Pin Guo"}
                             </h1>
-                            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+                            <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
                                 {isChinese
                                     ? "古雅精工，展现清代宫廷器物的匠心与礼制之美"
                                     : "Elegant craftsmanship reflecting the harmony and refinement of Qing imperial utensils"}
@@ -52,7 +52,7 @@ export default function Collection1() {
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 0.3 }}
-                                className="space-y-6 bg-white/5 backdrop-blur-md p-4 rounded-xl shadow-lg"
+                                className="space-y-6 bg-white/10 backdrop-blur-2xl border border-white/25 rounded-2xl p-5 shadow-[0_0_40px_rgba(200,240,255,0.2)] hover:shadow-[0_0_60px_rgba(200,240,255,0.35)] transition-all duration-700"
                             >
                                 <img
                                     src="/images/collection/collection1.jpg"
@@ -80,7 +80,7 @@ export default function Collection1() {
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 0.5 }}
-                                className="space-y-8 bg-white/5 backdrop-blur-md p-8 rounded-xl shadow-lg"
+                                className="space-y-8 bg-white/10 backdrop-blur-2xl border border-white/25 rounded-2xl p-8 shadow-[0_0_40px_rgba(200,240,255,0.2)] hover:shadow-[0_0_60px_rgba(200,240,255,0.35)] transition-all duration-700"
                             >
                                 <div>
                                     <h2 className="text-2xl font-semibold mb-4 text-[#cce7ff]">
@@ -131,7 +131,7 @@ export default function Collection1() {
                 </section>
 
                 {/* 页脚 */}
-                <footer className="bg-black/40 backdrop-blur-md text-center py-8 text-gray-300 text-sm mt-16">
+                <footer className="bg-white/10 backdrop-blur-2xl border-t border-white/20 text-center py-8 text-gray-200 text-sm mt-16 shadow-inner">
                     <p>
                         {isChinese
                             ? "© 2025 中国锡器博物馆 | 传承匠心，用心设计"
@@ -142,18 +142,15 @@ export default function Collection1() {
 
             {/* 🔙 返回按钮 */}
             <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-3">
-                {/* 返回上一页 */}
                 <button
                     onClick={() => navigate(-1)}
-                    className="bg-white/10 backdrop-blur-md text-white px-4 py-3 rounded-full shadow-lg hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300 border border-white/20"
+                    className="bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-4 py-3 rounded-full shadow-lg hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300"
                 >
                     {isChinese ? "返回" : "Back"}
                 </button>
-
-                {/* 返回主页 */}
                 <button
                     onClick={() => navigate("/")}
-                    className="bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-md hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300 border border-white/20 text-sm"
+                    className="bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-4 py-2 rounded-full shadow-md hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300 text-sm"
                 >
                     {isChinese ? "主页" : "Home"}
                 </button>
@@ -161,7 +158,6 @@ export default function Collection1() {
 
             {/* ✨ 动画样式 */}
             <style>{`
-        /* 微动光泽动画 */
         @keyframes glowMove1 {
           0%, 100% { transform: translate(0, 0); }
           50% { transform: translate(30px, -20px); }
@@ -178,7 +174,6 @@ export default function Collection1() {
         .animate-glow2 { animation: glowMove2 18s ease-in-out infinite alternate; }
         .animate-glow3 { animation: glowMove3 22s ease-in-out infinite alternate; }
 
-        /* 展厅薄雾动画 */
         @keyframes mistMove {
           0% { transform: translate(0, 0) scale(1); opacity: 0.25; }
           50% { transform: translate(20px, -15px) scale(1.05); opacity: 0.35; }
@@ -192,4 +187,5 @@ export default function Collection1() {
         </main>
     );
 }
+
 

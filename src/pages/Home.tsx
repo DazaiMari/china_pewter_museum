@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
     const [isChinese, setIsChinese] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const sections = document.querySelectorAll("section.fade");
@@ -88,40 +89,77 @@ export default function Home() {
         <main className="bg-gray-900 text-white font-sans overflow-x-hidden">
 
             {/* Navigation */}
-            <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-10 z-50 flex justify-center items-center gap-8 text-sm md:text-base">
-                <div className="flex items-center gap-3">
-                    <img src="/images/logo.png" alt="logo" className="w-10 h-10" />
-                    <p className="text-1xl font-bold whitespace-nowrap">
-                        {isChinese ? "中国锡器博物馆" : "CHINA PEWTER MUSEUM"}
-                    </p>
+            <nav className="fixed top-0 w-full bg-black/60 backdrop-blur-md text-gray-100 shadow-md z-50">
+                <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10 py-3">
+                    {/* 左侧 Logo */}
+                    <div className="flex items-center gap-3">
+                        <img
+                            src="/images/logo.jpg"
+                            alt="logo"
+                            className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                        />
+                        <p className="text-sm md:text-lg font-bold tracking-wide whitespace-nowrap">
+                            {isChinese ? "中国锡器博物馆" : "CHINA PEWTER MUSEUM"}
+                        </p>
+                    </div>
+
+                    {/* 中间导航链接 */}
+                    <div className="hidden md:flex flex-wrap justify-center gap-6 text-sm md:text-base">
+                        <a href="#hero" className="hover:text-red-400 transition-colors duration-300">
+                            {isChinese ? "首页" : "Home"}
+                        </a>
+                        <a href="#about" className="hover:text-red-400 transition-colors duration-300">
+                            {isChinese ? "关于" : "About"}
+                        </a>
+                        <a
+                            href="#Exhibitions & Collections"
+                            className="hover:text-red-400 transition-colors duration-300"
+                        >
+                            {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
+                        </a>
+                        <a
+                            href="#Craft & Culture"
+                            className="hover:text-red-400 transition-colors duration-300"
+                        >
+                            {isChinese ? "工艺与文化" : "Craft & Culture"}
+                        </a>
+                        <a
+                            href="#Learning & Discovery"
+                            className="hover:text-red-400 transition-colors duration-300"
+                        >
+                            {isChinese ? "研学与教育" : "Learning & Discovery"}
+                        </a>
+                        <a
+                            href="#Events & Partnerships"
+                            className="hover:text-red-400 transition-colors duration-300"
+                        >
+                            {isChinese ? "活动与交流" : "Events & Partnerships"}
+                        </a>
+                    </div>
+
+                    {/* 右侧语言切换按钮（强制居右） */}
+                    <motion.button
+                        onClick={() => setIsChinese(!isChinese)}
+                        className="bg-[#7a1c13] hover:bg-[#a8281f] text-white text-xs font-semibold tracking-wider px-4 py-1.5 rounded-md border border-[#a8281f]/50 transition-all duration-300 focus:outline-none focus:ring-0 shadow-inner hover:shadow-red-900/40"
+                        whileHover={{ scale: 1.06 }}
+                        whileTap={{ scale: 0.94 }}
+                    >
+                        {isChinese ? "EN" : "中文"}
+                    </motion.button>
                 </div>
-                <a href="#hero" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
-                    {isChinese ? "首页" : "Home"}
-                </a>
-                <a href="#about" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
-                    {isChinese ? "关于" : "About"}
-                </a>
-                <a href="#Exhibitions & Collections" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
-                    {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
-                </a>
-                <a href="#Craft & Culture" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
-                    {isChinese ? "工艺与文化" : "Craft & Culture"}
-                </a>
-                <a href="#Learning & Discovery" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
-                    {isChinese ? "研学与教育" : "Learning & Discovery"}
-                </a>
-                <a href="#Events & Partnerships" className="hover:text-red-400 transition whitespace-nowrap min-w-[60px] text-center">
-                    {isChinese ? "活动与交流" : "Events & Partnerships"}
-                </a>
-                <motion.button
-                    onClick={() => setIsChinese(!isChinese)}
-                    className="bg-red-800 hover:bg-red-700 px-3 py-1 rounded-md text-white text-xs font-medium transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    {isChinese ? "EN" : "中文"}
-                </motion.button>
+
+                {/* 小屏导航栏（自动折叠） */}
+                <div className="flex md:hidden flex-col items-center text-sm py-3 bg-black/80 backdrop-blur-md space-y-2">
+                    <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
+                    <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
+                    <a href="#Exhibitions & Collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
+                    <a href="#Craft & Culture" className="hover:text-red-400">{isChinese ? "工艺与文化" : "Craft & Culture"}</a>
+                    <a href="#Learning & Discovery" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
+                    <a href="#Events & Partnerships" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
+                </div>
             </nav>
+
+
 
             {/* Hero Section */}
             <section id="hero" className="relative h-screen flex items-end justify-start overflow-hidden">
@@ -351,8 +389,11 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                             <p>
                                 {isChinese
                                     ? `博物馆通过常设展与专题展，系统展示锡器的多样面貌。
-展厅按主题分区陈列，涵盖食具、茶具、酒具、闺房用具、文房用具、照明用具、祭祀用具及雕像饰品等类别。
-观众可在器物之间感受古人生活的节奏与审美秩序，体会锡在饮食、居家、礼仪与精神生活中的广泛应用。
+展厅按主题分区陈列，
+涵盖食具、茶具、酒具、闺房用具、
+文房用具、照明用具、祭祀用具及雕像饰品等类别。
+观众可在器物之间感受古人生活的节奏与审美秩序，
+体会锡在饮食、居家、礼仪与精神生活中的广泛应用。
 
 海外展区收藏来自日本、英国与荷兰的锡器作品，
 以对照的方式呈现这一材料跨越地域与文化的共通审美。
@@ -365,7 +406,25 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
 
 每一件展品，都记录着人类与金属共生的故事。
 在光影与陈列之间，锡的光泽仍在缓缓诉说着生活的温度与时代的记忆。`
-                                    : `Through both permanent and special exhibitions, the museum presents the diversity of Chinese pewter...`}
+                                    : `Through permanent and special exhibitions,
+the museum presents the many faces of pewter in Chinese life and culture.
+The galleries are organized thematically, 
+featuring pewter tableware, teaware, wine vessels, 
+boudoir articles, scholar’s objects, lighting pieces, ritual wares and decorative figures.
+each revealing a distinct aspect of daily use and aesthetic sensibility.
+An international section features pewter works from Japan, Britain and the Netherlands,
+highlighting the shared appreciation of this gentle metal across cultures.
+Here, visitors can see that pewter belongs not only to China, but to the world.
+From the sixteenth century onward, 
+Chinese pewter craftsmanship traveled along the Maritime Silk Road to Southeast Asia, 
+India and Europe.
+By the mid-eighteenth century, 
+pewter stood alongside porcelain and lacquerware as a symbol of China’s artistry reaching the world.
+The museum’s collection preserves export pewter from this era ,
+living records of exchange between East and West, where craft and civilization met in quiet dialogue.
+Every object in the gallery carries its own story.
+In the play of light and shadow, pewter continues to speak,
+its sheen holding the warmth of life and the memory of time.`}
                             </p>
                         </div>
 
@@ -450,7 +509,7 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                 >
                     {/* 标题带链接 + hover 微亮 */}
                     <a
-                        href="https://www.youtube.com/watch?v=Jh-MCwFMsJk"
+                        href="https://v.douyin.com/tzGpN1S5tlw/ a@A.GI qeB:/ 04/28"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-colors duration-300 hover:text-red-500"
@@ -460,19 +519,46 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                         </h2>
                     </a>
 
-                    {/* 段落说明 */}
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-left space-y-6">
+                    {/* 段落说明（✅ 已改为居中） */}
+                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-center whitespace-pre-line space-y-6">
                         <p>
                             {isChinese
-                                ? "锡，柔而不弱，润而不寒，素光含静气。在它的延展与回收之间，蕴藏着金属最温柔的秩序。自古以来，锡被视为调和之材——既能与铜成青，又能与银共白，在火与手的交替中，显露出东方文化中‘中和’之美。"
-                                : "Pewter is soft yet enduring, gentle yet firm — its muted glow carrying the quiet spirit of balance. For centuries, it has been known as a metal of harmony, blending with copper to form bronze or with silver to yield light brilliance — a reflection of the Eastern pursuit of balance between strength and grace."}
+                                ? `锡，柔而不弱，润而不寒，素光含静气。  
+在它的延展与回收之间，蕴藏着金属最温柔的秩序。  
+
+自古以来，锡被视为调和之材，  
+既能与铜成青，又能与银共白，  
+在火与手的交替中，显露出东方文化中的中和之美。`
+                                : `Pewter — soft yet enduring, gentle yet firm, its muted sheen carries quiet grace.  
+Between its stretch and return lies the most tender order of metal.  
+
+Since ancient times, pewter has been regarded as a metal of harmony —  
+able to form bronze with copper and shine silver with white,  
+revealing the Eastern beauty of balance through fire and hand.`}
                         </p>
+
                         <p>
                             {isChinese
-                                ? "制锡之道，不止于技。冶炼、浇铸、锤打、焊接、打磨、抛光，每一道工序，都是人与物的对话：力量、节奏与心性的平衡。打锡之人，在敲击的回声中体会静气；观锡之人，在光泽的流转中感受时间。工艺的意义，在于以形入心，以物见道。"
-                                : "The making of pewter is more than skill — it is a dialogue between hand and material, between strength, rhythm, and patience. The craftsman listens through the hammer’s rhythm, and the viewer feels through the shifting glow. Here, technique becomes meditation, and form leads to insight."}
+                                ? `制锡之道，不止于技。  
+冶炼、浇铸、锤打、焊接、打磨、抛光，  
+每一道工序，都是人与物的对话：  
+力量、节奏与心性的平衡。  
+
+打锡之人，在敲击的回声中体会静气；  
+观锡之人，在光泽的流转中感受时间。  
+工艺的意义，在于以形入心，以物见道。`
+                                : `The way of pewter-making goes beyond technique.  
+Smelting, casting, hammering, welding, grinding, polishing —  
+each process is a dialogue between human and material,  
+a balance of strength, rhythm, and inner calm.  
+
+The craftsman, through the echo of hammer strikes, finds stillness;  
+the observer, through the shimmer of light, feels the passage of time.  
+The meaning of craft lies in shaping the heart through form,  
+and seeking the Way through the object.`}
                         </p>
                     </div>
+
 
                     {/* 打锡工艺流程 */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
@@ -536,27 +622,26 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                             </div>
                         </div>
 
-                        {/* ✅ 样式定义 */}
                         <style>{`
-    .glass-step {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow:
-        0 2px 8px rgba(255, 255, 255, 0.08),
-        inset 0 0 10px rgba(180, 220, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      transition: all 0.4s ease;
-    }
-    .glass-step:hover {
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow:
-        0 4px 14px rgba(180, 220, 255, 0.15),
-        inset 0 0 15px rgba(200, 240, 255, 0.1);
-      transform: translateY(-3px) scale(1.03);
-    }
-  `}</style>
+.glass-step {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 2px 8px rgba(255, 255, 255, 0.08),
+    inset 0 0 10px rgba(180, 220, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.4s ease;
+}
+.glass-step:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 4px 14px rgba(180, 220, 255, 0.15),
+    inset 0 0 15px rgba(200, 240, 255, 0.1);
+  transform: translateY(-3px) scale(1.03);
+}
+`}</style>
                     </div>
 
                     {/* 工艺过程九图滑动展示 */}
@@ -632,9 +717,9 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                         </div>
 
                         <style>{`
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-      `}</style>
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+`}</style>
                     </div>
 
                     {/* 结语 */}
@@ -647,6 +732,7 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                     </div>
                 </section>
             </div>
+
 
 
             {/* Learning & Discovery Section */}
@@ -689,7 +775,20 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
 then the workshop is a classroom of creation.
 The China Pewter Museum integrates traditional craftsmanship education
 into everyday experience,
-inviting visitors to “learn by doing” and “reflect through making.”`}
+inviting visitors to “learn by doing” and “reflect through making.
+Each touch of pewter, each rhythm of hammer and hand,
+
+becomes a quiet journey from the senses to the spirit.
+Combining craftsmanship, cultural narrative, and creative thinking,
+the museum offers a range of programs for youth, families, and international visitors.
+Through hands-on pewter work, mold design, and creative exercises,
+learners discover the logic of craft and the soul of culture through practice.
+
+At the same time, pewter culture enters schools.
+Through talks and lectures,
+the museum brings craftsmanship and cultural awareness into the classroom.
+Students encounter the history and modern relevance of pewter,
+finding curiosity and inspiration through direct experience.”`}
                             </p>
                         </div>
 
