@@ -90,7 +90,7 @@ export default function Home() {
             {/* Navigation */}
             <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-sm text-gray-100 py-10 z-50 flex justify-center items-center gap-8 text-sm md:text-base">
                 <div className="flex items-center gap-3">
-                    <img src="/images/logo.jpg" alt="logo" className="w-10 h-10" />
+                    <img src="/images/logo.png" alt="logo" className="w-10 h-10" />
                     <p className="text-1xl font-bold whitespace-nowrap">
                         {isChinese ? "中国锡器博物馆" : "CHINA PEWTER MUSEUM"}
                     </p>
@@ -179,20 +179,69 @@ export default function Home() {
                 </div>
             </section>
 
-
             {/* Intro Section */}
-            <section id="intro" className="relative bg-black py-12 md:py-16 px-6 md:px-16 text-center fade z-10">
-                <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest crystal-text">
-                    {isChinese ? "让金属有温度，让文化会呼吸" : "Where Metal Breathes and Culture Lives"}
-                </h2>
-                <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed space-y-4 text-base md:text-lg tracking-wide">
-                    <p>
-                        {isChinese
-                            ? "在黎里古镇的古巷与河湾间，一座明代古宅温润如锡，沉静如诗。中国锡器博物馆，于此安放光影与匠心。这里没有冷冰冰的展柜，而是一场跨越千年的对话——人与器、心与文明。"
-                            : "Amid the alleys and waterways of Lili Ancient Town, a Ming Dynasty mansion stands—serene as pewter, timeless as poetry. Here, the China Pewter Museum breathes new life into craft and heritage. This is not a hall of silent objects, but a living dialogue between people and things, between touch and time."}
-                    </p>
+            <section
+                id="intro"
+                className="relative py-16 px-6 md:px-16 text-center z-10"
+            >
+                {/* ✨ 半透明水晶背景层 */}
+                <div className="absolute inset-0 bg-[rgba(255,255,255,0.08)] backdrop-blur-xl border border-white/20 shadow-[0_4px_20px_rgba(255,255,255,0.08)] rounded-3xl mx-auto w-[92%] md:w-[80%]"></div>
+
+                {/* 文字内容 */}
+                <div className="relative z-10">
+                    <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest crystal-text">
+                        {isChinese ? "让金属有温度，让文化会呼吸" : "Where Metal Breathes and Culture Lives"}
+                    </h2>
+
+                    <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed space-y-5 text-base md:text-lg tracking-wide">
+                        <p>
+                            {isChinese
+                                ? "在黎里古镇的古巷与河湾间，一座明代古宅温润如锡，沉静如诗。中国锡器博物馆，于此安放光影与匠心。这里没有冷冰冰的展柜，而是一场跨越千年的对话——人与器、心与文明。"
+                                : "Amid the alleys and waterways of Lili Ancient Town, a Ming Dynasty mansion stands—serene as pewter, timeless as poetry. Here, the China Pewter Museum breathes new life into craft and heritage. This is not a hall of silent objects, but a living dialogue between people and things, between touch and time."}
+                        </p>
+                    </div>
                 </div>
+
+                {/* ✨ 层叠柔光动画样式 */}
+                <style>{`
+    #intro::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 20% 30%,
+        rgba(255, 255, 255, 0.1),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        rgba(150, 200, 255, 0.1),
+        transparent 70%
+      );
+      filter: blur(40px);
+      z-index: 0;
+      opacity: 0.8;
+      animation: introGlow 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes introGlow {
+      0% {
+        opacity: 0.8;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+      100% {
+        opacity: 0.8;
+        transform: scale(1);
+      }
+    }
+  `}</style>
             </section>
+
+
             {/* About Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
@@ -274,26 +323,34 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
 
 
             {/* Exhibitions & Collections Section */}
-            <div className="relative z-10 bg-black">
+            <div className="relative z-10 bg-transparent">
                 <section
                     id="Exhibitions & Collections"
-                    className="bg-black text-white py-24 px-4 md:px-10 text-center fade"
+                    className="relative text-white py-24 px-4 md:px-10 text-center fade overflow-hidden"
                 >
-                    <a
-                        href="https://v.douyin.com/JV1vrG3QLUY/ pdn:/ r@E.hb 01/04"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-colors duration-300 hover:text-red-500"
-                    >
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
-                            {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
-                        </h2>
-                    </a>
+                    {/* ✨ 背景层：水晶流光 */}
+                    <div className="absolute inset-0 bg-[rgba(255,255,255,0.05)] backdrop-blur-2xl border-t border-b border-white/10 shadow-[inset_0_0_30px_rgba(180,220,255,0.05)]"></div>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
-                        <p>
-                            {isChinese
-                                ? `博物馆通过常设展与专题展，系统展示锡器的多样面貌。
+                    {/* ✨ 流动光层 */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.1),transparent_70%),radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.08),transparent_75%)] animate-glowFlow"></div>
+
+                    {/* 内容层 */}
+                    <div className="relative z-10">
+                        <a
+                            href="https://v.douyin.com/JV1vrG3QLUY/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-all duration-500 hover:scale-105 inline-block"
+                        >
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                                {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
+                            </h2>
+                        </a>
+
+                        <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg">
+                            <p>
+                                {isChinese
+                                    ? `博物馆通过常设展与专题展，系统展示锡器的多样面貌。
 展厅按主题分区陈列，涵盖食具、茶具、酒具、闺房用具、文房用具、照明用具、祭祀用具及雕像饰品等类别。
 观众可在器物之间感受古人生活的节奏与审美秩序，体会锡在饮食、居家、礼仪与精神生活中的广泛应用。
 
@@ -308,138 +365,81 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
 
 每一件展品，都记录着人类与金属共生的故事。
 在光影与陈列之间，锡的光泽仍在缓缓诉说着生活的温度与时代的记忆。`
-                                : `Through both permanent and special exhibitions, the museum presents the rich diversity of Chinese pewter. The galleries are arranged by theme, ranging from tableware, teaware, and wine vessels to boudoir articles, scholar’s objects, lighting tools, ritual implements, and decorative sculptures. Walking among these artifacts, visitors can sense the rhythm and aesthetic order of traditional life, and appreciate pewter’s integral role in dining, domestic, ceremonial, and spiritual culture.
-
-The international section features pewter works from Japan, Britain and the Netherlands, highlighting the shared appreciation of this gentle metal across cultures. Here, visitors see that pewter belongs not only to China but to the world.
-
-From the sixteenth century onward, Chinese pewter craftsmanship traveled along the Maritime Silk Road to Southeast Asia, India and Europe. By the mid-eighteenth century, pewter stood alongside porcelain and lacquerware as a symbol of China’s artistry reaching the world. The museum’s collection preserves export pewter from this era, living records of exchange between East and West, where craft and civilization met in quiet dialogue.
-
-Every object in the gallery carries its own story. In the play of light and shadow, pewter continues to speak, its sheen holding the warmth of life and the memory of time.`}
-                        </p>
-                    </div>
-
-                    {/* 滚动容器 */}
-                    <div className="relative max-w-[1600px] mx-auto">
-                        <button
-                            id="scrollLeft"
-                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-[#000000b0] to-transparent text-white p-5 rounded-full z-30 hover:scale-110 transition duration-300"
-                        >
-                            ‹
-                        </button>
-                        <button
-                            id="scrollRight"
-                            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-[#000000b0] to-transparent text-white p-5 rounded-full z-30 hover:scale-110 transition duration-300"
-                        >
-                            ›
-                        </button>
-
-                        <div
-                            id="scrollContainer"
-                            className="grid grid-flow-col auto-cols-[90%] sm:auto-cols-[48%] md:auto-cols-[23%] overflow-x-auto scroll-smooth gap-8 px-4 md:px-6 pb-4 hide-scrollbar snap-x snap-mandatory"
-                        >
-                            {[
-                                {
-                                    id: 1,
-                                    title: isChinese ? "食具" : "Tableware",
-                                    desc: isChinese
-                                        ? "以实用为先，形制规整，体现锡器在饮食文化中的温润气度。"
-                                        : "Functional and elegant, reflecting pewter’s graceful presence in Chinese dining culture.",
-                                    img: "/images/collection/collection1.jpg",
-                                },
-                                {
-                                    id: 2,
-                                    title: isChinese ? "茶具" : "Tea Ware",
-                                    desc: isChinese
-                                        ? "以锡保香、避湿之特性，承载千年茶文化的清雅与仪式感。"
-                                        : "Known for preserving aroma and freshness, pewter vessels embody the spirit of Chinese tea rituals.",
-                                    img: "/images/collection/collection2.jpg",
-                                },
-                                {
-                                    id: 3,
-                                    title: isChinese ? "酒具" : "Wine Ware",
-                                    desc: isChinese
-                                        ? "温润如玉的锡酒器，凝结古人待客的礼节与风雅。"
-                                        : "Pewter wine sets, warm and refined, capture the etiquette and elegance of ancient gatherings.",
-                                    img: "/images/collection/collection3.jpg",
-                                },
-                                {
-                                    id: 4,
-                                    title: isChinese ? "闺房用具" : "Boudoir Utensils",
-                                    desc: isChinese
-                                        ? "精巧雅致，寄寓生活情趣与东方审美的温柔格调。"
-                                        : "Delicate and refined, reflecting the grace and elegance of traditional domestic life.",
-                                    img: "/images/collection/collection4.jpg",
-                                },
-                                {
-                                    id: 5,
-                                    title: isChinese ? "文房用具" : "Scholar’s Utensils",
-                                    desc: isChinese
-                                        ? "炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息。"
-                                        : "Incense burners and ink boxes blending artistry and scholarly refinement.",
-                                    img: "/images/collection/collection5.jpg",
-                                },
-                                {
-                                    id: 6,
-                                    title: isChinese ? "照明用具" : "Lighting Ware",
-                                    desc: isChinese
-                                        ? "烛台灯具，形制多样，映照古人的审美与生活之光。"
-                                        : "Candleholders and lamps that illuminate both craft and culture.",
-                                    img: "/images/collection/collection6.jpg",
-                                },
-                                {
-                                    id: 7,
-                                    title: isChinese ? "祭供用具" : "Ritual Utensils",
-                                    desc: isChinese
-                                        ? "承载敬祖礼仪，融信仰与美学于一体的锡制供器。"
-                                        : "Ritual pewter vessels uniting belief, heritage, and artistry.",
-                                    img: "/images/collection/collection7.jpg",
-                                },
-                                {
-                                    id: 8,
-                                    title: isChinese ? "雕像 饰件 花瓶 烟具" : "Sculptures & Decorative Pewter",
-                                    desc: isChinese
-                                        ? "从雕像到饰件，锡以柔韧之性塑造生命与纪念的艺术。"
-                                        : "From figurines to vases and smoking sets, pewter conveys artistry and remembrance.",
-                                    img: "/images/collection/collection8.jpg",
-                                },
-                                {
-                                    id: 9,
-                                    title: isChinese ? "国外锡器" : "Overseas Pewter",
-                                    desc: isChinese
-                                        ? "展示世界各地锡文化的交流与融合。"
-                                        : "Showcasing global influences and the dialogue of pewter across cultures.",
-                                    img: "/images/collection/collection9.jpg",
-                                },
-                            ].map((item) => (
-                                <a
-                                    key={item.id}
-                                    href={`/collections/${item.id}`}
-                                    className="backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-500 shadow-lg rounded-lg snap-start border border-white/20"
-                                >
-                                    <div className="h-64 overflow-hidden">
-                                        <img
-                                            src={item.img}
-                                            alt={item.title}
-                                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                                        />
-                                    </div>
-                                    <div className="text-left p-6">
-                                        <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                                        <p className="text-gray-300 text-sm leading-relaxed">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-                                </a>
-                            ))}
+                                    : `Through both permanent and special exhibitions, the museum presents the diversity of Chinese pewter...`}
+                            </p>
                         </div>
-                    </div>
 
-                    <style>{`
-      .hide-scrollbar::-webkit-scrollbar { display: none; }
-      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    `}</style>
+                        {/* 滚动容器 */}
+                        <div className="relative max-w-[1600px] mx-auto">
+                            {/* 左右按钮 */}
+                            <button
+                                id="scrollLeft"
+                                className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-[#000000b0] to-transparent text-white p-5 rounded-full z-30 hover:scale-110 transition duration-300"
+                            >
+                                ‹
+                            </button>
+                            <button
+                                id="scrollRight"
+                                className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-[#000000b0] to-transparent text-white p-5 rounded-full z-30 hover:scale-110 transition duration-300"
+                            >
+                                ›
+                            </button>
+
+                            {/* 卡片区域 */}
+                            <div
+                                id="scrollContainer"
+                                className="grid grid-flow-col auto-cols-[90%] sm:auto-cols-[48%] md:auto-cols-[23%] overflow-x-auto scroll-smooth gap-8 px-4 md:px-6 pb-4 hide-scrollbar snap-x snap-mandatory"
+                            >
+                                {[
+                                    { id: 1, title: isChinese ? "食具" : "Tableware", desc: isChinese ? "以实用为先，形制规整，体现锡器在饮食文化中的温润气度。" : "Functional and elegant, reflecting pewter’s presence in Chinese dining culture.", img: "/images/collection/collection1.jpg" },
+                                    { id: 2, title: isChinese ? "茶具" : "Tea Ware", desc: isChinese ? "以锡保香、避湿之特性，承载千年茶文化的清雅与仪式感。" : "Known for preserving aroma and freshness, pewter vessels embody tea rituals.", img: "/images/collection/collection2.jpg" },
+                                    { id: 3, title: isChinese ? "酒具" : "Wine Ware", desc: isChinese ? "温润如玉的锡酒器，凝结古人待客的礼节与风雅。" : "Pewter wine sets capture the elegance of gatherings.", img: "/images/collection/collection3.jpg" },
+                                    { id: 4, title: isChinese ? "闺房用具" : "Boudoir Utensils", desc: isChinese ? "精巧雅致，寄寓生活情趣与东方审美的温柔格调。" : "Delicate and refined, reflecting domestic elegance.", img: "/images/collection/collection4.jpg" },
+                                    { id: 5, title: isChinese ? "文房用具" : "Scholar’s Utensils", desc: isChinese ? "炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息。" : "Blending artistry and scholarly refinement.", img: "/images/collection/collection5.jpg" },
+                                    { id: 6, title: isChinese ? "照明用具" : "Lighting Ware", desc: isChinese ? "烛台灯具，映照古人的审美与生活之光。" : "Candleholders illuminating culture.", img: "/images/collection/collection6.jpg" },
+                                    { id: 7, title: isChinese ? "祭供用具" : "Ritual Utensils", desc: isChinese ? "承载敬祖礼仪，融信仰与美学于一体。" : "Ritual pewter uniting belief and beauty.", img: "/images/collection/collection7.jpg" },
+                                    { id: 8, title: isChinese ? "雕像 饰件 花瓶 烟具" : "Sculptures & Decorative Pewter", desc: isChinese ? "从雕像到饰件，锡以柔韧之性塑造生命之美。" : "Pewter conveys artistry and remembrance.", img: "/images/collection/collection8.jpg" },
+                                    { id: 9, title: isChinese ? "国外锡器" : "Overseas Pewter", desc: isChinese ? "展示世界各地锡文化的交流与融合。" : "Global pewter aesthetics.", img: "/images/collection/collection9.jpg" },
+                                ].map((item) => (
+                                    <a
+                                        key={item.id}
+                                        href={`/collections/${item.id}`}
+                                        className="group block backdrop-blur-xl bg-[rgba(255,255,255,0.08)] border border-white/20 hover:bg-[rgba(255,255,255,0.15)] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+                                    >
+                                        <div className="h-64 overflow-hidden">
+                                            <img
+                                                src={item.img}
+                                                alt={item.title}
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            />
+                                        </div>
+                                        <div className="text-left p-6">
+                                            <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                                            <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* 样式定义 */}
+                        <style>{`
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes glowFlow {
+          0% { opacity: 0.9; transform: scale(1) translate(0,0); }
+          50% { opacity: 1; transform: scale(1.02) translate(10px,-8px); }
+          100% { opacity: 0.9; transform: scale(1) translate(0,0); }
+        }
+        .animate-glowFlow {
+          animation: glowFlow 14s ease-in-out infinite alternate;
+        }
+      `}</style>
+                    </div>
                 </section>
             </div>
+
 
 
             {/* Craft & Culture Section */}
@@ -650,19 +650,26 @@ Every object in the gallery carries its own story. In the play of light and shad
 
 
             {/* Learning & Discovery Section */}
-            <div className="relative z-10 bg-black">
+            <div className="relative z-10 bg-transparent">
                 <section
                     id="Learning & Discovery"
-                    className="bg-black text-white py-24 px-6 md:px-20 text-center fade"
+                    className="relative text-white py-24 px-6 md:px-20 text-center fade overflow-hidden"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
-                        {isChinese ? "研学与教育" : "Learning & Discovery"}
-                    </h2>
+                    {/* ✨ 水晶流光背景 */}
+                    <div className="absolute inset-0 bg-[rgba(255,255,255,0.05)] backdrop-blur-2xl border-t border-b border-white/10 shadow-[inset_0_0_30px_rgba(180,220,255,0.05)]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_30%,rgba(255,255,255,0.1),transparent_70%),radial-gradient(circle_at_85%_70%,rgba(150,200,255,0.08),transparent_80%)] animate-glowFlow"></div>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
-                        <p>
-                            {isChinese
-                                ? `如果说展厅是静观的课堂，工坊便是动手的学堂。
+                    {/* 内容区 */}
+                    <div className="relative z-10">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                            {isChinese ? "研学与教育" : "Learning & Discovery"}
+                        </h2>
+
+                        {/* 段落文字 */}
+                        <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg">
+                            <p>
+                                {isChinese
+                                    ? `如果说展厅是静观的课堂，工坊便是动手的学堂。
 中国锡器博物馆将传统工艺教育融入日常体验，
 让观众在“做中学”、在“造中悟”。
 每一次触摸锡片的温度、聆听锤击的节奏，
@@ -678,94 +685,94 @@ Every object in the gallery carries its own story. In the play of light and shad
 将“匠心”“文化自觉”与“工艺精神”带入课堂。
 学生了解锡器的历史脉络与当代表达，
 在近距离的接触中激发兴趣，启发思考。`
-                                : `If the exhibition hall is a classroom of contemplation,
+                                    : `If the exhibition hall is a classroom of contemplation,
 then the workshop is a classroom of creation.
 The China Pewter Museum integrates traditional craftsmanship education
 into everyday experience,
-inviting visitors to “learn by doing” and “reflect through making.”
-Each touch of pewter, each rhythm of hammer and hand,
-becomes a quiet journey from the senses to the spirit.
+inviting visitors to “learn by doing” and “reflect through making.”`}
+                            </p>
+                        </div>
 
-Combining craftsmanship, cultural narrative, and creative thinking,
-the museum offers a range of programs for youth, families, and international visitors.
-Through hands-on pewter work, mold design, and creative exercises,
-learners discover the logic of craft and the soul of culture through practice.
+                        {/* ✨ 研学课程卡片 */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+                            {[
+                                {
+                                    id: 1,
+                                    title: isChinese ? "打锡体验课程" : "Pewter Workshop",
+                                    desc: isChinese
+                                        ? "亲手完成一件锡器作品，从敲打、焊接到打磨，体验传统工艺的全流程。"
+                                        : "Create your own pewter piece—from hammering and joining to polishing—experiencing the full craft journey.",
+                                    img: "/images/learning/learning1.jpg",
+                                    link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
+                                },
+                                {
+                                    id: 2,
+                                    title: isChinese ? "青少年创意课堂" : "Youth Creative Class",
+                                    desc: isChinese
+                                        ? "结合艺术与科学，让学生在设计与实践中培养动手力与审美力。"
+                                        : "Combining art and science, these classes help students cultivate creativity through design and making.",
+                                    img: "/images/learning/learning2.jpg",
+                                    link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
+                                },
+                                {
+                                    id: 3,
+                                    title: isChinese ? "国际文化交流营" : "International Cultural Camp",
+                                    desc: isChinese
+                                        ? "海外游客踊跃参与打锡体验，在锤炼与光泽之间，感受中国手工的温度与细腻。"
+                                        : "Overseas visitors participate in pewter-craft workshops, experiencing the warmth and refinement of Chinese craftsmanship.",
+                                    img: "/images/learning/learning3.jpg",
+                                    link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
+                                },
+                            ].map((item) => (
+                                <a
+                                    key={item.id}
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block backdrop-blur-xl bg-[rgba(255,255,255,0.08)] border border-white/20 hover:bg-[rgba(255,255,255,0.15)] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+                                >
+                                    <div className="relative">
+                                        <img
+                                            src={item.img}
+                                            alt={item.title}
+                                            className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
+                                    </div>
+                                    <div className="p-6 text-left">
+                                        <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
 
-At the same time, pewter culture enters schools.
-Through talks and lectures,
-the museum brings craftsmanship and cultural awareness into the classroom.
-Students encounter the history and modern relevance of pewter,
-finding curiosity and inspiration through direct experience.`}
-                        </p>
+                        {/* ✨ 结语 */}
+                        <div className="max-w-4xl mx-auto text-gray-300 italic leading-relaxed text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl py-6 px-10 shadow-inner">
+                            <p>
+                                {isChinese
+                                    ? "学习的终点，不是记忆，而是发现。唯有亲手触摸文化，方能真正理解文化的温度。"
+                                    : "The goal of learning is not memory, but discovery. Only through touch can we truly understand the warmth of culture."}
+                            </p>
+                        </div>
                     </div>
 
-                    {/* 研学课程卡片 */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-                        {[
-                            {
-                                id: 1,
-                                title: isChinese ? "打锡体验课程" : "Pewter Workshop",
-                                desc: isChinese
-                                    ? "亲手完成一件锡器作品，从敲打、焊接到打磨，体验传统工艺的全流程。"
-                                    : "Create your own pewter piece—from hammering and joining to polishing—experiencing the full craft journey.",
-                                img: "/images/learning/learning1.jpg",
-                                link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
-                            },
-                            {
-                                id: 2,
-                                title: isChinese ? "青少年创意课堂" : "Youth Creative Class",
-                                desc: isChinese
-                                    ? "结合艺术与科学，让学生在设计与实践中培养动手力与审美力。"
-                                    : "Combining art and science, these classes help students cultivate creativity through design and hands-on making.",
-                                img: "/images/learning/learning2.jpg",
-                                link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
-                            },
-                            {
-                                id: 3,
-                                title: isChinese ? "国际文化交流营" : "International Cultural Experience Camp",
-                                desc: isChinese
-                                    ? "海外游客踊跃参与打锡体验，在锤炼与光泽之间，感受中国手工的温度与细腻。"
-                                    : "Overseas visitors actively take part in pewter-craft workshops, experiencing the warmth and refinement of Chinese craftsmanship.",
-                                img: "/images/learning/learning3.jpg",
-                                link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
-                            },
-                        ].map((item) => (
-                            <a
-                                key={item.id}
-                                href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group block backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-1"
-                            >
-                            <div className="relative">
-                                    <img
-                                        src={item.img}
-                                        alt={item.title}
-                                        className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
-                                </div>
-                                <div className="p-6 text-left">
-                                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
-                                </div>
-                            </a>
-                        ))}
-                    </div>
-
-
-                    {/* 结语 */}
-                    <div className="max-w-4xl mx-auto text-gray-400 italic leading-relaxed text-center">
-                        <p>
-                            {isChinese
-                                ? "学习的终点，不是记忆，而是发现。唯有亲手触摸文化，方能真正理解文化的温度。"
-                                : "The goal of learning is not memory, but discovery. Only through touch can we truly understand the warmth of culture."}
-                        </p>
-                    </div>
+                    {/* 样式定义 */}
+                    <style>{`
+      @keyframes glowFlow {
+        0% { opacity: 0.9; transform: scale(1) translate(0,0); }
+        50% { opacity: 1; transform: scale(1.02) translate(12px,-10px); }
+        100% { opacity: 0.9; transform: scale(1) translate(0,0); }
+      }
+      .animate-glowFlow {
+        animation: glowFlow 14s ease-in-out infinite alternate;
+      }
+    `}</style>
                 </section>
             </div>
+
 
             {/* Events & Partnerships Section */}
             <div className="relative z-10 bg-gray-450">

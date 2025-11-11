@@ -161,7 +161,7 @@ export default function Collection1() {
 
             {/* ✨ 动画样式 */}
             <style>{`
-        /* 卫东光泽动画 */
+        /* 微动光泽动画 */
         @keyframes glowMove1 {
           0%, 100% { transform: translate(0, 0); }
           50% { transform: translate(30px, -20px); }

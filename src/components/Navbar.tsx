@@ -11,7 +11,7 @@ export default function Navbar({ isChinese, onLanguageToggle }: NavBarProps) {
       <div className="flex items-center gap-3">
         <a href="/">
           <div className="flex items-center gap-3">
-            <img src="/images/logo.jpg" alt="logo" className="w-10 h-10" />
+            <img src="/images/logo.png" alt="logo" className="w-10 h-10" />
             <p className="text-1xl font-bold whitespace-nowrap">{isChinese ? '中国锡器博物馆' : 'CHINA PEWTER MUSEUM'}</p>
           </div>
         </a>

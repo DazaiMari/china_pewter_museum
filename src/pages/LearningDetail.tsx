@@ -94,7 +94,7 @@ export default function LearningDetail() {
             loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = '/images/logo.jpg'; // Fallback image
+              target.src = '/images/logo.png'; // Fallback image
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 transition-all duration-500" />
