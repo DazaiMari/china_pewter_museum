@@ -280,7 +280,7 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                     className="bg-black text-white py-24 px-4 md:px-10 text-center fade"
                 >
                     <a
-                        href="https://www.youtube.com/watch?v=Jh-MCwFMsJk"
+                        href="https://v.douyin.com/JV1vrG3QLUY/ pdn:/ r@E.hb 01/04"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-colors duration-300 hover:text-red-500"
@@ -476,43 +476,48 @@ Every object in the gallery carries its own story. In the play of light and shad
 
                     {/* 打锡工艺流程 */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
-                        <h3 className="text-2xl font-bold mb-8">
+                        <h3 className="text-2xl font-bold mb-8 crystal-text">
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
-                        <div className="grid grid-cols-12 gap-1 justify-items-center text-base md:text-lg leading-relaxed">
-                            <div className="col-span-2 bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                        <div className="grid grid-cols-12 gap-2 justify-items-center text-base md:text-lg leading-relaxed">
+                            {/* 第一行主流程 */}
+                            <div className="col-span-2 glass-step">
                                 {isChinese ? "原料锡" : "Raw Tin"}
                             </div>
                             <span className="col-span-1 text-gray-400 text-2xl">→</span>
 
-                            <div className="col-span-2 bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                            <div className="col-span-2 glass-step">
                                 {isChinese ? "熔锡" : "Melting"}
                             </div>
                             <span className="col-span-1 text-gray-400 text-2xl">→</span>
 
+                            {/* 分支 */}
                             <div className="col-span-6 flex flex-col items-center gap-4">
+                                {/* 上支线 */}
                                 <div className="flex items-center gap-2">
-                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="glass-step">
                                         {isChinese ? "压锡片" : "Sheet Rolling"}
                                     </div>
                                     <span className="text-gray-400 text-2xl">→</span>
-                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="glass-step">
                                         {isChinese ? "打样裁剪" : "Pattern Cutting"}
                                     </div>
                                     <span className="text-gray-400 text-2xl">→</span>
-                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="glass-step">
                                         {isChinese ? "冷锻捶打" : "Cold Hammering"}
                                     </div>
                                 </div>
 
+                                {/* 中支线 */}
                                 <div className="flex items-center gap-2">
-                                    <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
+                                    <div className="glass-step">
                                         {isChinese ? "模铸" : "Casting"}
                                     </div>
                                 </div>
                             </div>
 
+                            {/* 下行主干 */}
                             <div className="col-span-12 mt-8 flex justify-center items-center gap-2 flex-wrap">
                                 <span className="text-gray-400 text-2xl">↓</span>
                                 {[
@@ -524,14 +529,34 @@ Every object in the gallery carries its own story. In the play of light and shad
                                     { zh: "纹饰", en: "Decoration" },
                                 ].map((step, index) => (
                                     <React.Fragment key={index}>
-                                        <div className="bg-black px-6 py-3 flex items-center justify-center rounded-md shadow-md hover:scale-105 transition-all duration-300">
-                                            {isChinese ? step.zh : step.en}
-                                        </div>
+                                        <div className="glass-step">{isChinese ? step.zh : step.en}</div>
                                         {index < 5 && <span className="text-gray-400 text-2xl">→</span>}
                                     </React.Fragment>
                                 ))}
                             </div>
                         </div>
+
+                        {/* ✅ 样式定义 */}
+                        <style>{`
+    .glass-step {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow:
+        0 2px 8px rgba(255, 255, 255, 0.08),
+        inset 0 0 10px rgba(180, 220, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.4s ease;
+    }
+    .glass-step:hover {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 4px 14px rgba(180, 220, 255, 0.15),
+        inset 0 0 15px rgba(200, 240, 255, 0.1);
+      transform: translateY(-3px) scale(1.03);
+    }
+  `}</style>
                     </div>
 
                     {/* 工艺过程九图滑动展示 */}
