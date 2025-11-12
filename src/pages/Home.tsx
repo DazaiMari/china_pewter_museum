@@ -106,7 +106,7 @@ export default function Home() {
                     {/* 中间导航链接 */}
                     <div className="hidden md:flex flex-wrap justify-center gap-6 text-sm md:text-base">
                         <a href="#hero" className="hover:text-red-400 transition-colors duration-300">
-                            {isChinese ? "首页" : "Home"}
+                            {isChinese ? "首 页" : "Home"}
                         </a>
                         <a href="#about" className="hover:text-red-400 transition-colors duration-300">
                             {isChinese ? "关于" : "About"}
