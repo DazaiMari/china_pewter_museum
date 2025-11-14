@@ -31,6 +31,14 @@ COPY src ./src
 # 设置构建环境变量
 ENV NODE_ENV=production
 
+# 支持 CDN 配置（通过构建参数传入）
+# 使用方式: docker build --build-arg VITE_CDN_URL=https://cdn.example.com .
+ARG VITE_CDN_URL
+ENV VITE_CDN_URL=$VITE_CDN_URL
+
+# 如果存在 .env.production 文件，也会被使用
+# 优先级: 构建参数 > .env.production > 默认值（空）
+
 # 构建前端项目
 # Vite 会自动：
 # 1. 通过 PostCSS 处理 Tailwind CSS 的编译

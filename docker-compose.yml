@@ -5,6 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # CDN 配置：通过构建参数传入 CDN 域名
+      # 取消注释下面的 args 并填入你的 CDN 域名
+      # args:
+      #   VITE_CDN_URL: "https://your-cdn-domain.com"
     container_name: china-pewter-museum
     ports:
       - "3000:80"  # 使用 3000 端口，避免权限问题

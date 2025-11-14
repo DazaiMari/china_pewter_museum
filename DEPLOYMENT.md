@@ -120,6 +120,51 @@ netstat -ano | findstr :3000
 sudo chown -R $USER:$USER .
 ```
 
+## CDN 加速配置（推荐海外部署）
+
+### 为什么需要 CDN？
+如果服务器部署在北京，海外用户（如澳洲）访问时图片加载会很慢。使用 CDN 可以将图片缓存到全球节点，大幅提升访问速度。
+
+### 快速配置 CDN
+
+#### 方式一：使用 docker-compose.yml（推荐）
+
+1. 编辑 `docker-compose.yml`，取消注释并填入 CDN 域名：
+```yaml
+build:
+  context: .
+  dockerfile: Dockerfile
+  args:
+    VITE_CDN_URL: "https://your-cdn-domain.com"  # 填入你的 CDN 域名
+```
+
+2. 重新构建并启动：
+```bash
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+#### 方式二：使用 Docker 构建参数
+
+```bash
+docker build --build-arg VITE_CDN_URL=https://your-cdn-domain.com -t china-pewter-museum .
+docker run -d -p 3000:80 china-pewter-museum
+```
+
+### CDN 服务商推荐
+
+- **国内用户**：阿里云 CDN、腾讯云 CDN
+- **海外用户**：AWS CloudFront、Cloudflare
+- **全球用户**：Cloudflare（免费）、AWS CloudFront
+
+### 详细配置指南
+
+请参考 [CDN_SETUP.md](./CDN_SETUP.md) 获取完整的 CDN 配置说明，包括：
+- 各 CDN 服务商的详细配置步骤
+- 图片上传到 CDN 的方法
+- 测试验证方法
+- 故障排查
+
 ## 性能优化
 
 ### 1. 启用 Gzip 压缩
@@ -128,7 +173,10 @@ Nginx 配置已包含 Gzip 压缩设置。
 ### 2. 静态资源缓存
 静态资源（JS、CSS、图片）已配置长期缓存。
 
-### 3. 镜像优化
+### 3. CDN 加速
+配置 CDN 后，图片将从全球 CDN 节点加载，大幅提升海外访问速度。详见上方 CDN 配置说明。
+
+### 4. 镜像优化
 - 使用 Alpine Linux 减小镜像大小
 - 多阶段构建分离构建和运行环境
 
