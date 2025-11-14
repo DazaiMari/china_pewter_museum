@@ -44,7 +44,7 @@ export default function LearningDetail() {
         desc: isChinese
           ? '了解锡的低熔点科学，在物理与艺术交融中发现奥秘。'
           : 'Discover the science of tin’s low melting point—where physics meets art.',
-        img: '/images/learning1.jpg',
+        img: '/images/learning/learning1.jpg',
       },
       {
         id: 2,
@@ -53,7 +53,7 @@ export default function LearningDetail() {
         desc: isChinese
           ? '感受金属成形的节奏与韵律。'
           : 'Feel the rhythm of metal taking form.',
-        img: '/images/learning2.jpg',
+        img: '/images/learning/learning2.jpg',
       },
       {
         id: 3,
@@ -62,7 +62,7 @@ export default function LearningDetail() {
         desc: isChinese
           ? '一场耐心与创造力的考验。'
           : 'A test of patience and creativity.',
-        img: '/images/learning3.jpg',
+        img: '/images/learning/learning3.jpg',
       },
       {
         id: 4,
@@ -71,7 +71,7 @@ export default function LearningDetail() {
         desc: isChinese
           ? '使用结节草进行传统打磨，感受时间与光的流动。'
           : 'Polish with traditional Jiejie grass, where sunlight and time flow together.',
-        img: '/images/learning4.jpg',
+        img: '/images/learning/learning3.jpg',
       },
     ].map((item, index) => (
       <article
