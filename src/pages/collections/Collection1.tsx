@@ -8,15 +8,15 @@ export default function Collection1() {
     const navigate = useNavigate();
 
     return (
-        <main className="relative min-h-screen font-sans text-white overflow-hidden bg-gradient-to-b from-gray-800 via-gray-700 to-gray-500">
-            {/* ✨ 微动光泽背景层 */}
-            <div className="absolute inset-0 overflow-hidden">
+        <main className="relative min-h-screen font-sans text-white overflow-hidden bg-gradient-to-b from-[#1f2937] via-[#374151] to-[#64748b]">
+            {/* ✨ 光晕层 */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.12),transparent_70%)] animate-glow1"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.12),transparent_70%)] animate-glow2"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.15),transparent_70%)] animate-glow2"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_75%)] animate-glow3"></div>
             </div>
 
-            {/* 🌫️ 展厅薄雾层 */}
+            {/* 🌫️ 薄雾纹理 */}
             <div className="absolute inset-0 bg-[url('/images/mist-texture.png')] opacity-25 mix-blend-screen animate-mist"></div>
 
             {/* ✅ 内容层 */}
@@ -187,5 +187,6 @@ export default function Collection1() {
         </main>
     );
 }
+
 
 

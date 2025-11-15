@@ -8,16 +8,25 @@ export default function Collection2() {
     const navigate = useNavigate();
 
     return (
-        <main className="relative min-h-screen font-sans text-white overflow-hidden bg-gradient-to-b from-gray-800 via-gray-700 to-gray-500">
-            {/* ✨ 微动光泽背景层 */}
+        <main className="relative min-h-screen font-sans text-white overflow-hidden">
+            {/* 🌌 苹果夜空 + 流星背景 */}
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_30%,rgba(255,255,255,0.12),transparent_70%)] animate-glow1"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(180,220,255,0.12),transparent_70%)] animate-glow2"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_75%)] animate-glow3"></div>
-            </div>
+                {/* 深蓝渐变背景 */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0b132b] via-[#1c2541] to-[#3a506b]" />
 
-            {/* 🌫️ 展厅薄雾层 */}
-            <div className="absolute inset-0 bg-[url('/images/mist-texture.png')] opacity-25 mix-blend-screen animate-mist"></div>
+                {/* 星点层 */}
+                <div className="absolute inset-0 bg-[radial-gradient(white_1px,transparent_1px)] bg-[size:2px_2px] opacity-30 animate-twinkle" />
+
+                {/* 柔光漂浮层 */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_70%)] animate-skyGlow" />
+
+                {/* 🌠 流星层 */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="shooting-star" />
+                    <div className="shooting-star delay-2" />
+                    <div className="shooting-star delay-4" />
+                </div>
+            </div>
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
@@ -92,7 +101,7 @@ export default function Collection2() {
                                     </h2>
                                     <p className="text-gray-200 leading-relaxed">
                                         {isChinese
-                                            ? "威海卫紫砂锡镶壶兴起于十九世纪末至二十世纪初，源于当时租界贸易与工艺创新的活跃。当地匠人结合紫砂成型与锡雕装饰技艺，创制出外覆金属纹饰的壶具。二十世纪二三十年代，威海卫锡镶业达到鼎盛，作坊林立，产品远销海外，成为中国北方金属工艺的重要代表。"
+                                            ? "威海卫紫砂锡镶壶兴起于十九世纪末至二十世纪初，源于当时的租界贸易与工艺创新的活跃。当地产匠人结合紫砂与锡雕装饰技艺，创制出外覆金属纹饰的壶具。二十世纪二三十年代，威海卫锡镶业达到鼎盛，作坊林立，产品远销海外，成为中国北方金属工艺的重要代表。"
                                             : "The pewter-inlaid Yixing teapot of Weihaiwei emerged in the late 19th to early 20th century, a period marked by vibrant trade and artisanal innovation in the leased territory. Local craftsmen combined traditional Yixing clay techniques with decorative pewter craftsmanship to create teapots adorned with metal reliefs. By the 1920s and 1930s, the pewter-inlay industry in Weihaiwei had reached its peak, exporting its works across Asia and Europe as a hallmark of northern Chinese metal artistry."}
                                     </p>
                                 </div>
@@ -162,42 +171,54 @@ export default function Collection2() {
 
             {/* ✨ 动画样式 */}
             <style>{`
-        @keyframes glowMove1 {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(30px, -20px); }
-        }
-        @keyframes glowMove2 {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(-40px, 25px); }
-        }
-        @keyframes glowMove3 {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(20px, 30px); }
-        }
-        .animate-glow1 { animation: glowMove1 14s ease-in-out infinite alternate; }
-        .animate-glow2 { animation: glowMove2 18s ease-in-out infinite alternate; }
-        .animate-glow3 { animation: glowMove3 22s ease-in-out infinite alternate; }
+                @keyframes twinkle {
+                    0%, 100% { opacity: 0.3; }
+                    50% { opacity: 0.6; }
+                }
+                .animate-twinkle {
+                    animation: twinkle 3s ease-in-out infinite alternate;
+                }
 
-        @keyframes mistMove {
-          0% { transform: translate(0, 0) scale(1); opacity: 0.25; }
-          50% { transform: translate(20px, -15px) scale(1.05); opacity: 0.35; }
-          100% { transform: translate(-10px, 10px) scale(1); opacity: 0.25; }
-        }
-        .animate-mist {
-          animation: mistMove 30s ease-in-out infinite alternate;
-          background-size: cover;
-        }
+                @keyframes skyGlow {
+                    0%, 100% { transform: translate(0,0); opacity: 0.15; }
+                    50% { transform: translate(10px, -5px); opacity: 0.25; }
+                }
+                .animate-skyGlow {
+                    animation: skyGlow 20s ease-in-out infinite alternate;
+                }
 
-        /* 按钮悬浮微动 */
-        @keyframes floatBtn {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-4px); }
-        }
-        .animate-float {
-          animation: floatBtn 4s ease-in-out infinite;
-        }
-      `}</style>
+                .shooting-star {
+                    position: absolute;
+                    top: -10%;
+                    left: 60%;
+                    width: 2px;
+                    height: 80px;
+                    background: linear-gradient(45deg, rgba(255,255,255,0.9), transparent);
+                    opacity: 0;
+                    transform: rotate(45deg);
+                    animation: shooting 8s linear infinite;
+                }
+
+                .shooting-star.delay-2 { animation-delay: 2s; left: 40%; }
+                .shooting-star.delay-4 { animation-delay: 4s; left: 75%; }
+
+                @keyframes shooting {
+                    0% { opacity: 0; transform: translate(0,0) rotate(45deg); }
+                    5% { opacity: 1; }
+                    20% { transform: translate(-200px, 200px) rotate(45deg); opacity: 0.5; }
+                    30%, 100% { opacity: 0; transform: translate(-200px, 200px) rotate(45deg); }
+                }
+
+                @keyframes floatBtn {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-4px); }
+                }
+                .animate-float {
+                    animation: floatBtn 4s ease-in-out infinite;
+                }
+            `}</style>
         </main>
     );
 }
+
 

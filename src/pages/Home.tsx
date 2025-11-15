@@ -106,7 +106,7 @@ export default function Home() {
                     {/* 中间导航链接 */}
                     <div className="hidden md:flex flex-wrap justify-center gap-6 text-sm md:text-base">
                         <a href="#hero" className="hover:text-red-400 transition-colors duration-300">
-                            {isChinese ? "首 页" : "Home"}
+                            {isChinese ? "首页" : "Home"}
                         </a>
                         <a href="#about" className="hover:text-red-400 transition-colors duration-300">
                             {isChinese ? "关于" : "About"}
@@ -148,8 +148,8 @@ export default function Home() {
                     </motion.button>
                 </div>
 
-                {/* 小屏导航栏（自动折叠） */}
-                <div className="flex md:hidden flex-col items-center text-sm py-3 bg-black/80 backdrop-blur-md space-y-2">
+                {/* 小屏导航栏（自动折叠为两行） */}
+                <div className="flex md:hidden flex-wrap justify-center gap-x-6 gap-y-2 text-sm py-3 bg-black/80 backdrop-blur-md">
                     <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
                     <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
                     <a href="#Exhibitions & Collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
@@ -162,49 +162,30 @@ export default function Home() {
 
             {/* Hero Section */}
             <section id="hero" className="relative h-screen flex items-end justify-start overflow-hidden">
-                {/* 背景自动切换 */}
+
+                {/* 固定单张背景 */}
                 <div className="fixed inset-0 z-0">
-                    {(() => {
-                        const images = [
-                            "/images/welcome1.png",
-                            "/images/welcome2.png",
-                            "/images/welcome3.png",
-                        ];
-                        const [current, setCurrent] = React.useState(0);
-
-                        React.useEffect(() => {
-                            const timer = setInterval(() => {
-                                setCurrent((prev) => (prev + 1) % images.length);
-                            }, 4000);
-                            return () => clearInterval(timer);
-                        }, []);
-
-                        return images.map((src, index) => (
-                            <img
-                                key={index}
-                                src={src}
-                                alt="Museum Background"
-                                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                                    index === current ? "opacity-100" : "opacity-0"
-                                }`}
-                            />
-                        ));
-                    })()}
+                    <img
+                        src="/images/bg-museum.jpg"
+                        alt="Museum Background"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-black/40" />
                 </div>
 
-                {/* 前景文字 */}
+
+            {/* 前景文字 */}
                 <div className="relative z-10 p-6 md:p-10 text-left">
                     <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug crystal-text">
                         {isChinese ? (
                             <>
-                                <span className="text-xl md:text-4xl">欢迎来到</span>
+                                <span className="text-3xl md:text-4xl">欢迎来到</span>
                                 <br />
                                 <span className="text-3xl md:text-4xl">中国锡器博物馆</span>
                             </>
                         ) : (
                             <>
-                                <span className="text-xl md:text-4xl">WELCOME TO</span>
+                                <span className="text-3xl md:text-4xl">WELCOME TO</span>
                                 <br />
                                 <span className="text-3xl md:text-4xl">CHINA PEWTER MUSEUM</span>
                             </>
@@ -226,10 +207,21 @@ export default function Home() {
 
                 {/* 文字内容 */}
                 <div className="relative z-10">
-                    <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest crystal-text">
-                        {isChinese ? "让金属有温度，让文化会呼吸" : "Where Metal Breathes and Culture Lives"}
-                    </h2>
+                    {/* 主标题加上超链接 */}
+                    <a
+                        href="https://v.douyin.com/2Ep06fmhBaA/ hOx:/ 01/07 W@z.tr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]"
+                    >
+                        <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest crystal-text">
+                            {isChinese
+                                ? "让金属有温度，让文化会呼吸"
+                                : "Where Metal Breathes and Culture Lives"}
+                        </h2>
+                    </a>
 
+                    {/* 段落内容 */}
                     <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed space-y-5 text-base md:text-lg tracking-wide">
                         <p>
                             {isChinese
@@ -279,6 +271,7 @@ export default function Home() {
             </section>
 
 
+
             {/* About Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
@@ -288,15 +281,16 @@ export default function Home() {
                     {/* Left side: Text */}
                     <div>
                         <a
-                            href="https://v.douyin.com/VOMXkDBZLgk/ 03/25 foD:/ q@r.eO"
+                            href="https://v.douyin.com/VOMXkDBZLgk/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="transition-colors duration-300 hover:text-red-500"
+                            className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] hover:brightness-125"
                         >
                             <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
                                 {isChinese ? "关于锡器博物馆" : "About the Museum"}
                             </h2>
                         </a>
+
 
                         <p className="text-white leading-relaxed text-lg mb-4 whitespace-pre-line">
                             {isChinese
@@ -377,12 +371,13 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                             href="https://v.douyin.com/JV1vrG3QLUY/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="transition-all duration-500 hover:scale-105 inline-block"
+                            className="inline-block transition-all duration-500 hover:scale-105 hover:-translate-y-[2px] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:brightness-125"
                         >
                             <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
                                 {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
                             </h2>
                         </a>
+
 
                         <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg">
                             <p>
@@ -446,7 +441,7 @@ its sheen holding the warmth of life and the memory of time.`}
                                 {[
                                     { id: 1, title: isChinese ? "食具" : "Tableware", desc: isChinese ? "以实用为先，形制规整，体现锡器在饮食文化中的温润气度。" : "Functional and elegant, reflecting pewter’s presence in Chinese dining culture.", img: "/images/collection/collection1.jpg" },
                                     { id: 2, title: isChinese ? "茶具" : "Tea Ware", desc: isChinese ? "以锡保香、避湿之特性，承载千年茶文化的清雅与仪式感。" : "Known for preserving aroma and freshness, pewter vessels embody tea rituals.", img: "/images/collection/collection2.jpg" },
-                                    { id: 3, title: isChinese ? "酒具" : "Wine Ware", desc: isChinese ? "温润如玉的锡酒器，凝结古人待客的礼节与风雅。" : "Pewter wine sets capture the elegance of gatherings.", img: "/images/collection/collection3.jpg" },
+                                    { id: 3, title: isChinese ? "酒具" : "wine vessels", desc: isChinese ? "温润如玉的锡酒器，凝结古人待客的礼节与风雅。" : "Pewter wine vessels capture the elegance of gatherings.", img: "/images/collection/collection3.jpg" },
                                     { id: 4, title: isChinese ? "闺房用具" : "Boudoir Utensils", desc: isChinese ? "精巧雅致，寄寓生活情趣与东方审美的温柔格调。" : "Delicate and refined, reflecting domestic elegance.", img: "/images/collection/collection4.jpg" },
                                     { id: 5, title: isChinese ? "文房用具" : "Scholar’s Utensils", desc: isChinese ? "炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息。" : "Blending artistry and scholarly refinement.", img: "/images/collection/collection5.jpg" },
                                     { id: 6, title: isChinese ? "照明用具" : "Lighting Ware", desc: isChinese ? "烛台灯具，映照古人的审美与生活之光。" : "Candleholders illuminating culture.", img: "/images/collection/collection6.jpg" },
@@ -503,15 +498,16 @@ its sheen holding the warmth of life and the memory of time.`}
                 >
                     {/* 标题带链接 + hover 微亮 */}
                     <a
-                        href="https://v.douyin.com/nzv52idyXEM/ g@B.gO yTY:/ 04/24"
+                        href="https://tv.cctv.com/2017/04/30/VIDE1TN0n6CYGeowtALickku170430.shtml"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-colors duration-300 hover:text-red-500"
+                        className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:brightness-125 hover:-translate-y-[2px]"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
                             {isChinese ? "工艺与文化" : "Craft & Culture"}
                         </h2>
                     </a>
+
 
                     {/* 段落说明（✅ 已改为居中） */}
                     <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-center whitespace-pre-line space-y-6">
@@ -553,73 +549,89 @@ and seeking the Way through the object.`}
                         </p>
                     </div>
 
-
                     {/* 打锡工艺流程 */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
-                        <h3 className="text-2xl font-bold mb-8 crystal-text">
+                        <h3 className="text-2xl font-bold mb-10 crystal-text">
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
-                        <div className="grid grid-cols-12 gap-2 justify-items-center text-base md:text-lg leading-relaxed">
-                            {/* 第一行主流程 */}
-                            <div className="col-span-2 glass-step">
-                                {isChinese ? "原料锡" : "Raw Tin"}
+                        <div className="flex flex-col items-center justify-center space-y-10">
+
+                            {/* ===== 上层主工艺线 ===== */}
+                            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+                                {[
+                                    { zh: "原料锡", en: "Raw Tin" },
+                                    { zh: "熔锡", en: "Melting" },
+                                    { zh: "压锡片", en: "Sheet Rolling" },
+                                    { zh: "打样裁剪", en: "Pattern Cutting" },
+                                    { zh: "冷锻捶打", en: "Cold Hammering" },
+                                ].map((step, index, arr) => (
+                                    <React.Fragment key={index}>
+                                        <div className="glass-step min-w-[110px] md:min-w-[140px]">
+                                            {isChinese ? step.zh : step.en}
+                                        </div>
+                                        {index < arr.length - 1 && (
+                                            <span className="text-gray-400 text-2xl md:text-3xl">→</span>
+                                        )}
+                                    </React.Fragment>
+                                ))}
                             </div>
-                            <span className="col-span-1 text-gray-400 text-2xl">→</span>
 
-                            <div className="col-span-2 glass-step">
-                                {isChinese ? "熔锡" : "Melting"}
-                            </div>
-                            <span className="col-span-1 text-gray-400 text-2xl">→</span>
-
-                            {/* 分支 */}
-                            <div className="col-span-6 flex flex-col items-center gap-4">
-                                {/* 上支线 */}
-                                <div className="flex items-center gap-2">
-                                    <div className="glass-step">
-                                        {isChinese ? "压锡片" : "Sheet Rolling"}
-                                    </div>
-                                    <span className="text-gray-400 text-2xl">→</span>
-                                    <div className="glass-step">
-                                        {isChinese ? "打样裁剪" : "Pattern Cutting"}
-                                    </div>
-                                    <span className="text-gray-400 text-2xl">→</span>
-                                    <div className="glass-step">
-                                        {isChinese ? "冷锻捶打" : "Cold Hammering"}
-                                    </div>
-                                </div>
-
-                                {/* 中支线 */}
-                                <div className="flex items-center gap-2">
-                                    <div className="glass-step">
+                            {/* ===== 模铸（与冷锻捶打并列） ===== */}
+                            <div className="flex flex-col items-center mt-[-0.5rem]">
+                                <div className="flex justify-center items-center gap-3 md:gap-4">
+                                    <span className="text-gray-400 text-2xl">↳</span>
+                                    <div className="glass-step min-w-[110px] md:min-w-[140px]">
                                         {isChinese ? "模铸" : "Casting"}
                                     </div>
                                 </div>
                             </div>
 
-                            {/* 下行主干 */}
-                            <div className="col-span-12 mt-8 flex justify-center items-center gap-2 flex-wrap">
-                                <span className="text-gray-400 text-2xl">↓</span>
-                                {[
-                                    { zh: "焊接组合", en: "Joining & Assembly" },
-                                    { zh: "挫修", en: "Filing & Finishing" },
-                                    { zh: "削光", en: "Polishing" },
-                                    { zh: "砂磨", en: "Sanding" },
-                                    { zh: "擦洗", en: "Cleaning" },
-                                    { zh: "纹饰", en: "Decoration" },
-                                ].map((step, index) => (
-                                    <React.Fragment key={index}>
-                                        <div className="glass-step">{isChinese ? step.zh : step.en}</div>
-                                        {index < 5 && <span className="text-gray-400 text-2xl">→</span>}
-                                    </React.Fragment>
-                                ))}
+                            {/* ===== 下层收尾工艺线（两行，完全对齐） ===== */}
+                            <div className="flex flex-col items-center space-y-6 mt-4">
+                                {/* 第一行 */}
+                                <div className="flex justify-center items-center gap-4 md:gap-6">
+                                    {[
+                                        { zh: "焊接组合", en: "Joining & Assembly" },
+                                        { zh: "挫修", en: "Filing & Finishing" },
+                                        { zh: "削光", en: "Polishing" },
+                                    ].map((step, index, arr) => (
+                                        <React.Fragment key={index}>
+                                            <div className="glass-step min-w-[110px] md:min-w-[140px]">
+                                                {isChinese ? step.zh : step.en}
+                                            </div>
+                                            {index < arr.length - 1 && (
+                                                <span className="text-gray-400 text-2xl md:text-3xl">→</span>
+                                            )}
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+
+                                {/* 第二行 */}
+                                <div className="flex justify-center items-center gap-4 md:gap-6">
+                                    {[
+                                        { zh: "砂磨", en: "Sanding" },
+                                        { zh: "擦洗", en: "Cleaning" },
+                                        { zh: "纹饰", en: "Decoration" },
+                                    ].map((step, index, arr) => (
+                                        <React.Fragment key={index}>
+                                            <div className="glass-step min-w-[110px] md:min-w-[140px]">
+                                                {isChinese ? step.zh : step.en}
+                                            </div>
+                                            {index < arr.length - 1 && (
+                                                <span className="text-gray-400 text-2xl md:text-3xl">→</span>
+                                            )}
+                                        </React.Fragment>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
+                        {/* ✨ 样式部分 */}
                         <style>{`
 .glass-step {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow:
     0 2px 8px rgba(255, 255, 255, 0.08),
     inset 0 0 10px rgba(180, 220, 255, 0.05);
@@ -635,8 +647,35 @@ and seeking the Way through the object.`}
     inset 0 0 15px rgba(200, 240, 255, 0.1);
   transform: translateY(-3px) scale(1.03);
 }
-`}</style>
+
+/* ✨ 手机端视觉优化 */
+@media (max-width: 768px) {
+  .glass-step {
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+    min-width: 90px;
+  }
+  .text-gray-400.text-2xl {
+    font-size: 1.4rem;
+  }
+  .space-y-10 {
+    gap: 2rem !important;
+  }
+}
+
+/* ✨ 箭头动画 */
+@keyframes arrowFloat {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+.text-gray-400.text-2xl,
+.text-gray-400.text-3xl {
+  animation: arrowFloat 3s ease-in-out infinite;
+}
+  `}</style>
                     </div>
+
+
 
                     {/* 工艺过程九图滑动展示 */}
                     <div className="max-w-[1600px] mx-auto mt-20 relative">
@@ -938,7 +977,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 ? "博物馆代表分享民间工艺的创新保护经验。"
                                 : "Museum representatives share experiences in heritage innovation.",
                             img: "/images/events/event2.jpg",
-                            link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
+                            link: "https://youtu.be/4mKTwch1Ivo?si=SSL1lw_WH-K_XiT2",
                         },
                         {
                             id: 3,
@@ -956,7 +995,7 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                                 ? "让传统工艺走进生活，传递手作的温度与美感。"
                                 : "Bringing pewter craft into daily life through interactive festivals.",
                             img: "/images/events/event4.jpg",
-                            link: "https://www.youtube.com/watch?v=Jh-MCwFMsJk",
+                            link: "https://youtu.be/4mKTwch1Ivo?si=SSL1lw_WH-K_XiT2",
                         },
                     ].map((item) => (
                         <a
@@ -966,14 +1005,17 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                             rel="noopener noreferrer"
                             className="group block overflow-hidden backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
                         >
-                            <div className="relative">
+                            {/* 保持竖向比例：3:4 */}
+                            <div className="relative aspect-[3/4] overflow-hidden rounded-t-lg">
                                 <img
                                     src={item.img}
                                     alt={item.title}
-                                    className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
                             </div>
+
+                            {/* 文本区域 */}
                             <div className="p-6 text-left">
                                 <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
                                     {item.title}
@@ -984,24 +1026,26 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                     ))}
                 </div>
 
+
             </div>
 
             {/* 结语区块 */}
             <div className="relative z-20 text-center text-gray-100 text-xl leading-loose mt-20 mb-24 border-t border-gray-700/40 pt-12 pb-12 bg-black/40 backdrop-blur-sm rounded-2xl w-fit mx-auto px-8 space-y-3">
                 {isChinese ? (
                     <>
-                        <p className="font-medium tracking-widest crystal-text">手艺无界</p>
-                        <p className="font-medium tracking-widest crystal-text">心意相通</p>
-                        <p className="font-medium tracking-widest crystal-text">让锡声在世界回响</p>
+                        <p className="font-medium tracking-widest crystal-text">锤锻锡器，点燃热忱</p>
+                        <p className="font-medium tracking-widest crystal-text">在此携手，文化交融</p>
+                        <p className="font-medium tracking-widest crystal-text">永恒锡器，注入呼吸</p>
                     </>
                 ) : (
                     <>
-                        <p className="font-light tracking-wider crystal-text">Craft knows no borders</p>
-                        <p className="font-light tracking-wider crystal-text">Hearts speak one language</p>
-                        <p className="font-light tracking-wider crystal-text">Let the voice of pewter echo worldwide</p>
+                        <p className="font-light tracking-wider crystal-text">Hammering Pewter, Fuelling Passion.</p>
+                        <p className="font-light tracking-wider crystal-text">Where Hands Connect, Cultures Converge</p>
+                        <p className="font-light tracking-wider crystal-text">Breathe Life Into Timeless Pewter.</p>
                     </>
                 )}
             </div>
+
 
 
 
