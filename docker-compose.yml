@@ -4,14 +4,13 @@ services:
   china-pewter-museum:
     build:
       context: .
-      dockerfile: Dockerfile
     container_name: china-pewter-museum
     ports:
-      - "80:80"   # HTTP 端口
-      - "443:443" # HTTPS 端口
+      - "80:80"    # HTTP
+      - "443:443"  # HTTPS
     volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
+      - /etc/letsencrypt:/etc/letsencrypt   # 挂载宿主机真实证书目录
+      - ./certbot/www:/var/www/certbot      # ACME HTTP 验证目录
     restart: unless-stopped
     environment:
       - NODE_ENV=production
@@ -26,7 +25,12 @@ services:
     image: certbot/certbot
     container_name: certbot
     volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+      - /etc/letsencrypt:/etc/letsencrypt   # 使用宿主机真实证书目录
+      - ./certbot/www:/var/www/certbot      # ACME HTTP 验证目录
+    entrypoint: >
+      /bin/sh -c 'trap exit TERM;
+      while :;
+      do certbot renew --webroot -w /var/www/certbot;
+      sleep 12h & wait $${!};
+      done;'
     restart: unless-stopped
