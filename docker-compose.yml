@@ -7,7 +7,11 @@ services:
       dockerfile: Dockerfile
     container_name: china-pewter-museum
     ports:
-      - "3000:80"  # 使用 3000 端口，避免权限问题
+      - "80:80"   # HTTP 端口
+      - "443:443" # HTTPS 端口
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
     restart: unless-stopped
     environment:
       - NODE_ENV=production
@@ -17,3 +21,12 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    restart: unless-stopped
