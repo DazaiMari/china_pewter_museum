@@ -842,7 +842,7 @@ finding curiosity and inspiration through direct experience.”`}
                                         ? "结合艺术与科学，让学生在设计与实践中培养动手力与审美力。"
                                         : "Combining art and science, these classes help students cultivate creativity through design and making.",
                                     img: "/images/learning/learning2.jpg",
-                                    link: "https://v.douyin.com/uljWNZYyYB4/ dAg:/ x@S.Lj 11/11",
+                                    link: "https://v.douyin.com/UQLESpHubn8/ u@s.Eh Syg:/ 05/12",
                                 },
                                 {
                                     id: 3,
@@ -1029,22 +1029,30 @@ exploring how traditional craftsmanship can find new life in modern society.`}
 
             </div>
 
-            {/* 结语区块 */}
-            <div className="relative z-20 text-center text-gray-100 text-xl leading-loose mt-20 mb-24 border-t border-gray-700/40 pt-12 pb-12 bg-black/40 backdrop-blur-sm rounded-2xl w-fit mx-auto px-8 space-y-3">
-                {isChinese ? (
-                    <>
-                        <p className="font-medium tracking-widest crystal-text">锤锻锡器，点燃热忱</p>
-                        <p className="font-medium tracking-widest crystal-text">在此携手，文化交融</p>
-                        <p className="font-medium tracking-widest crystal-text">永恒锡器，注入呼吸</p>
-                    </>
-                ) : (
-                    <>
-                        <p className="font-light tracking-wider crystal-text">Hammering Pewter, Fuelling Passion.</p>
-                        <p className="font-light tracking-wider crystal-text">Where Hands Connect, Cultures Converge</p>
-                        <p className="font-light tracking-wider crystal-text">Breathe Life Into Timeless Pewter.</p>
-                    </>
-                )}
-            </div>
+            {/* 结语区块（整块可点击） */}
+            <a
+                href="https://v.douyin.com/Va4fOio7ZQs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+            >
+                <div className="relative z-20 text-center text-gray-100 text-xl leading-loose mt-20 mb-24 border-t border-gray-700/40 pt-12 pb-12 bg-black/40 backdrop-blur-sm rounded-2xl w-fit mx-auto px-8 space-y-3 cursor-pointer hover:bg-black/50 transition">
+                    {isChinese ? (
+                        <>
+                            <p className="font-medium tracking-widest crystal-text">锤锻锡器，点燃热忱</p>
+                            <p className="font-medium tracking-widest crystal-text">在此携手，文化交融</p>
+                            <p className="font-medium tracking-widest crystal-text">永恒锡器，注入呼吸</p>
+                        </>
+                    ) : (
+                        <>
+                            <p className="font-light tracking-wider crystal-text">Hammering Pewter, Fuelling Passion.</p>
+                            <p className="font-light tracking-wider crystal-text">Where Hands Connect, Cultures Converge</p>
+                            <p className="font-light tracking-wider crystal-text">Breathe Life Into Timeless Pewter.</p>
+                        </>
+                    )}
+                </div>
+            </a>
+
 
 
 
