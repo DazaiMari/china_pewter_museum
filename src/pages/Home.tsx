@@ -112,25 +112,25 @@ export default function Home() {
                             {isChinese ? "关于" : "About"}
                         </a>
                         <a
-                            href="#Exhibitions & Collections"
+                            href="#collections"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
                             {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
                         </a>
                         <a
-                            href="#Craft & Culture"
+                            href="#craft"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
                             {isChinese ? "工艺与文化" : "Craft & Culture"}
                         </a>
                         <a
-                            href="#Learning & Discovery"
+                            href="#learning"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
                             {isChinese ? "研学与教育" : "Learning & Discovery"}
                         </a>
                         <a
-                            href="#Events & Partnerships"
+                            href="#events"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
                             {isChinese ? "活动与交流" : "Events & Partnerships"}
@@ -152,10 +152,10 @@ export default function Home() {
                 <div className="flex md:hidden flex-wrap justify-center gap-x-6 gap-y-2 text-sm py-3 bg-black/80 backdrop-blur-md">
                     <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
                     <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
-                    <a href="#Exhibitions & Collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
-                    <a href="#Craft & Culture" className="hover:text-red-400">{isChinese ? "工艺与文化" : "Craft & Culture"}</a>
-                    <a href="#Learning & Discovery" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
-                    <a href="#Events & Partnerships" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
+                    <a href="#collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
+                    <a href="#craft" className="hover:text-red-400">{isChinese ? "工艺与文化" : "Craft & Culture"}</a>
+                    <a href="#learning" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
+                    <a href="#events" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
                 </div>
             </nav>
 
@@ -356,7 +356,7 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
             {/* Exhibitions & Collections Section */}
             <div className="relative z-10 bg-transparent">
                 <section
-                    id="Exhibitions & Collections"
+                    id="collections"
                     className="relative text-white py-24 px-4 md:px-10 text-center fade overflow-hidden"
                 >
                     {/* ✨ 背景层：水晶流光 */}
@@ -493,7 +493,7 @@ its sheen holding the warmth of life and the memory of time.`}
             {/* Craft & Culture Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
-                    id="Craft & Culture"
+                    id="craft"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
                     {/* 标题带链接 + hover 微亮 */}
@@ -771,7 +771,7 @@ and seeking the Way through the object.`}
             {/* Learning & Discovery Section */}
             <div className="relative z-10 bg-transparent">
                 <section
-                    id="Learning & Discovery"
+                    id="learning"
                     className="relative text-white py-24 px-6 md:px-20 text-center fade overflow-hidden"
                 >
                     {/* ✨ 水晶流光背景 */}
@@ -907,7 +907,7 @@ finding curiosity and inspiration through direct experience.”`}
             {/* Events & Partnerships Section */}
             <div className="relative z-10 bg-gray-450">
                 <section
-                    id="Events & Partnerships"
+                    id="events"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
                     <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
