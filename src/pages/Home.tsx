@@ -150,8 +150,8 @@ export default function Home() {
                         </a>
                     </div>
 
-                    {/* 右侧语言下拉菜单（仅桌面端显示） */}
-                    <div className="hidden md:block relative">
+                    {/* 右侧语言下拉菜单（ */}
+                    <div className="relative">
                         {/* 触发按钮 */}
                         <button
                             onClick={() => setLangMenuOpen(!langMenuOpen)}
@@ -237,7 +237,7 @@ export default function Home() {
                     </div>
                     
                     {/* 移动端语言下拉菜单 */}
-                    <div className="flex justify-center pb-3 px-4">
+                    <div className="hidden md:block flex justify-center pb-3 px-4">
                         <div className="relative w-full max-w-xs">
                             {/* 触发按钮 */}
                             <button
