@@ -1,0 +1,10 @@
+# robots.txt for pewtermuseum.org
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pewtermuseum.org/sitemap.xml
+
+# Allow all language versions
+Allow: /zh/
+

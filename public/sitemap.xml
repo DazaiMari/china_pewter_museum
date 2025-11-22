@@ -1,58 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 
+    China Pewter Museum - Multilingual Sitemap
+    English (default): https://pewtermuseum.org/
+    Chinese: https://pewtermuseum.org/zh/
+    Last Updated: 2025-11-22
+  -->
+
+  <!-- ==================== HOMEPAGE ==================== -->
+  
+  <!-- English Homepage -->
   <url>
     <loc>https://pewtermuseum.org/</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Collections -->
+  
+  <!-- Chinese Homepage -->
+  <url>
+    <loc>https://pewtermuseum.org/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ==================== LEARNING PAGE ==================== -->
+  
+  <!-- English Learning -->
+  <url>
+    <loc>https://pewtermuseum.org/learning</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/learning" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/learning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/learning" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Chinese Learning -->
+  <url>
+    <loc>https://pewtermuseum.org/zh/learning</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/learning" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/learning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/learning" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ==================== COLLECTIONS ==================== -->
+  
+  <!-- Collection 1: 清代锡一品锅 / Qing Dynasty Pewter Yi Pin Guo -->
   <url>
     <loc>https://pewtermuseum.org/collections/1</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/1" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/1" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/1" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/1" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/1" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/1" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 2: 威海卫紫砂锡镶壶 / Pewter-Inlaid Yixing Teapot -->
   <url>
     <loc>https://pewtermuseum.org/collections/2</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/2" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/2" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/2</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/2" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/2" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 3: 锡酒具 / Pewter Wine Vessels -->
   <url>
     <loc>https://pewtermuseum.org/collections/3</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/3" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/3" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/3</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/3" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/3" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 4: 闺房用具 / Boudoir Utensils -->
   <url>
     <loc>https://pewtermuseum.org/collections/4</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/4" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/4" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/4</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/4" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/4" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 5: 文房用具 / Scholar's Utensils -->
   <url>
     <loc>https://pewtermuseum.org/collections/5</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/5" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/5" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/5" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/5</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/5" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/5" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/5" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 6: 照明用具 / Lighting Ware -->
   <url>
     <loc>https://pewtermuseum.org/collections/6</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/6" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/6" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/6" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/6</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/6" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/6" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/6" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 7: 祭供用具 / Ritual Utensils -->
   <url>
     <loc>https://pewtermuseum.org/collections/7</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/7" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/7" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/7" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/7</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/7" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/7" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/7" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Collection 8: 雕像饰件 / Sculptures & Decorative Pewter -->
   <url>
     <loc>https://pewtermuseum.org/collections/8</loc>
-    <lastmod>2025-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/8" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/8" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/8" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pewtermuseum.org/collections/9</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://pewtermuseum.org/zh/collections/8</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/8" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/8" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/8" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Collection 9: 国外锡器 / Overseas Pewter -->
+  <url>
+    <loc>https://pewtermuseum.org/collections/9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/9" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/9" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/9" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pewtermuseum.org/zh/collections/9</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pewtermuseum.org/collections/9" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pewtermuseum.org/zh/collections/9" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pewtermuseum.org/collections/9" />
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
-
-
-

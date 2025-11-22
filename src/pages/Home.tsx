@@ -6,11 +6,21 @@ console.log("🏗️ Home component re-rendered at", new Date().toLocaleTimeStri
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import SEOHead from "../components/SEOHead";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Home() {
-    const [isChinese, setIsChinese] = useState(true);
+    const { isZh, language, switchLanguage } = useLanguage();
+    const isChinese = isZh; // For backward compatibility with existing code
     const [menuOpen, setMenuOpen] = useState(false);
+    const [langMenuOpen, setLangMenuOpen] = useState(false);
+
+    const handleLanguageSelect = (lang: string) => {
+        switchLanguage(lang);
+        setLangMenuOpen(false);
+    };
 
     useEffect(() => {
         const sections = document.querySelectorAll("section.fade");
@@ -87,6 +97,7 @@ export default function Home() {
 
     return (
         <main className="bg-gray-900 text-white font-sans overflow-x-hidden">
+            <SEOHead />
 
             {/* Navigation */}
             <nav className="fixed top-0 w-full bg-black/60 backdrop-blur-md text-gray-100 shadow-md z-50">
@@ -137,25 +148,167 @@ export default function Home() {
                         </a>
                     </div>
 
-                    {/* 右侧语言切换按钮（强制居右） */}
-                    <motion.button
-                        onClick={() => setIsChinese(!isChinese)}
-                        className="bg-[#7a1c13] hover:bg-[#a8281f] text-white text-xs font-semibold tracking-wider px-4 py-1.5 rounded-md border border-[#a8281f]/50 transition-all duration-300 focus:outline-none focus:ring-0 shadow-inner hover:shadow-red-900/40"
-                        whileHover={{ scale: 1.06 }}
-                        whileTap={{ scale: 0.94 }}
-                    >
-                        {isChinese ? "EN" : "中文"}
-                    </motion.button>
+                    {/* 右侧语言下拉菜单 */}
+                    <div className="relative">
+                        {/* 触发按钮 */}
+                        <button
+                            onClick={() => setLangMenuOpen(!langMenuOpen)}
+                            className="flex items-center gap-2 bg-[#374151] hover:bg-[#4B5563] text-white text-sm md:text-base font-medium px-4 py-2 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl border border-white/10"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                            </svg>
+                            <span>{isZh ? '中文' : 'English'}</span>
+                            <svg className={`w-4 h-4 transition-transform duration-200 ${langMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        {/* 下拉菜单 */}
+                        {langMenuOpen && (
+                            <>
+                                {/* 遮罩层 */}
+                                <div 
+                                    className="fixed inset-0 z-40" 
+                                    onClick={() => setLangMenuOpen(false)}
+                                ></div>
+                                
+                                {/* 菜单内容 */}
+                                <div className="absolute right-0 mt-2 w-48 bg-[#374151] rounded-xl shadow-2xl border border-white/10 overflow-hidden z-50 animate-slideDown">
+                                    <div className="py-2">
+                                        {/* English 选项 */}
+                                        <button
+                                            onClick={() => handleLanguageSelect('en')}
+                                            className={`w-full flex items-center gap-3 px-4 py-3 text-left text-white hover:bg-[#4B5563] transition-colors duration-150 ${language === 'en' ? 'bg-[#4B5563]/50' : ''}`}
+                                        >
+                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                            </svg>
+                                            <div className="flex-1">
+                                                <div className="text-sm font-medium">English</div>
+                                                <div className="text-xs text-gray-400">英语</div>
+                                            </div>
+                                            {language === 'en' && (
+                                                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                        </button>
+
+                                        {/* 分割线 */}
+                                        <div className="h-px bg-white/10 mx-2"></div>
+
+                                        {/* 中文选项 */}
+                                        <button
+                                            onClick={() => handleLanguageSelect('zh')}
+                                            className={`w-full flex items-center gap-3 px-4 py-3 text-left text-white hover:bg-[#4B5563] transition-colors duration-150 ${language === 'zh' ? 'bg-[#4B5563]/50' : ''}`}
+                                        >
+                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                            </svg>
+                                            <div className="flex-1">
+                                                <div className="text-sm font-medium">中文</div>
+                                                <div className="text-xs text-gray-400">Chinese</div>
+                                            </div>
+                                            {language === 'zh' && (
+                                                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                        </button>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </div>
                 </div>
 
                 {/* 小屏导航栏（自动折叠为两行） */}
-                <div className="flex md:hidden flex-wrap justify-center gap-x-6 gap-y-2 text-sm py-3 bg-black/80 backdrop-blur-md">
-                    <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
-                    <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
-                    <a href="#collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
-                    <a href="#craft" className="hover:text-red-400">{isChinese ? "工艺与文化" : "Craft & Culture"}</a>
-                    <a href="#learning" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
-                    <a href="#events" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
+                <div className="md:hidden bg-black/80 backdrop-blur-md">
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm py-3">
+                        <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
+                        <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
+                        <a href="#collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
+                        <a href="#craft" className="hover:text-red-400">{isChinese ? "工艺与文化" : "Craft & Culture"}</a>
+                        <a href="#learning" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
+                        <a href="#events" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
+                    </div>
+                    
+                    {/* 移动端语言下拉菜单 */}
+                    <div className="flex justify-center pb-3 px-4">
+                        <div className="relative w-full max-w-xs">
+                            {/* 触发按钮 */}
+                            <button
+                                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                                className="w-full flex items-center justify-center gap-2 bg-[#374151] hover:bg-[#4B5563] text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200 shadow-lg border border-white/10"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                </svg>
+                                <span>{isZh ? '中文' : 'English'}</span>
+                                <svg className={`w-4 h-4 transition-transform duration-200 ${langMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            {/* 下拉菜单 */}
+                            {langMenuOpen && (
+                                <>
+                                    {/* 遮罩层 */}
+                                    <div 
+                                        className="fixed inset-0 z-40" 
+                                        onClick={() => setLangMenuOpen(false)}
+                                    ></div>
+                                    
+                                    {/* 菜单内容 */}
+                                    <div className="absolute left-0 right-0 mt-2 bg-[#374151] rounded-xl shadow-2xl border border-white/10 overflow-hidden z-50 animate-slideDown">
+                                        <div className="py-2">
+                                            {/* English 选项 */}
+                                            <button
+                                                onClick={() => handleLanguageSelect('en')}
+                                                className={`w-full flex items-center gap-3 px-4 py-3 text-left text-white hover:bg-[#4B5563] transition-colors duration-150 ${language === 'en' ? 'bg-[#4B5563]/50' : ''}`}
+                                            >
+                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                                </svg>
+                                                <div className="flex-1">
+                                                    <div className="text-sm font-medium">English</div>
+                                                    <div className="text-xs text-gray-400">英语</div>
+                                                </div>
+                                                {language === 'en' && (
+                                                    <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                    </svg>
+                                                )}
+                                            </button>
+
+                                            {/* 分割线 */}
+                                            <div className="h-px bg-white/10 mx-2"></div>
+
+                                            {/* 中文选项 */}
+                                            <button
+                                                onClick={() => handleLanguageSelect('zh')}
+                                                className={`w-full flex items-center gap-3 px-4 py-3 text-left text-white hover:bg-[#4B5563] transition-colors duration-150 ${language === 'zh' ? 'bg-[#4B5563]/50' : ''}`}
+                                            >
+                                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                                </svg>
+                                                <div className="flex-1">
+                                                    <div className="text-sm font-medium">中文</div>
+                                                    <div className="text-xs text-gray-400">Chinese</div>
+                                                </div>
+                                                {language === 'zh' && (
+                                                    <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                    </svg>
+                                                )}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </nav>
 
@@ -449,9 +602,9 @@ its sheen holding the warmth of life and the memory of time.`}
                                     { id: 8, title: isChinese ? "雕像 饰件 花瓶 烟具" : "Sculptures & Decorative Pewter", desc: isChinese ? "从雕像到饰件，锡以柔韧之性塑造生命之美。" : "Pewter conveys artistry and remembrance.", img: "/images/collection/collection8.jpg" },
                                     { id: 9, title: isChinese ? "国外锡器" : "Overseas Pewter", desc: isChinese ? "展示世界各地锡文化的交流与融合。" : "Global pewter aesthetics.", img: "/images/collection/collection9.jpg" },
                                 ].map((item) => (
-                                    <a
+                                    <Link
                                         key={item.id}
-                                        href={`/collections/${item.id}`}
+                                        to={isZh ? `/zh/collections/${item.id}` : `/collections/${item.id}`}
                                         className="group block backdrop-blur-xl bg-[rgba(255,255,255,0.08)] border border-white/20 hover:bg-[rgba(255,255,255,0.15)] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                                     >
                                         <div className="h-64 overflow-hidden">
@@ -465,7 +618,7 @@ its sheen holding the warmth of life and the memory of time.`}
                                             <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                                             <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -1106,6 +1259,21 @@ exploring how traditional craftsmanship can find new life in modern society.`}
         0 0 6px rgba(180, 220, 255, 0.5),
         0 0 12px rgba(150, 200, 255, 0.3);
     }
+  }
+
+  /* 下拉菜单动画 */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-slideDown {
+    animation: slideDown 0.2s ease-out;
   }
 `}</style>
 
