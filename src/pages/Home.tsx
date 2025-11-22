@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import SEOHead from "../components/SEOHead";
+import StructuredData from "../components/StructuredData";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Home() {
@@ -98,6 +99,7 @@ export default function Home() {
     return (
         <main className="bg-gray-900 text-white font-sans overflow-x-hidden">
             <SEOHead />
+            <StructuredData />
 
             {/* Navigation */}
             <nav className="fixed top-0 w-full bg-black/60 backdrop-blur-md text-gray-100 shadow-md z-50">
