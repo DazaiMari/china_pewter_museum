@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
+import SEOHead from "../../components/SEOHead";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function Collection2() {
-    const [isChinese, setIsChinese] = useState(true);
+    const { isZh } = useLanguage();
+    const isChinese = isZh;
     const navigate = useNavigate();
 
     return (
@@ -30,10 +33,11 @@ export default function Collection2() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <Navbar
-                    isChinese={isChinese}
-                    onLanguageToggle={() => setIsChinese(!isChinese)}
+                <SEOHead 
+                    customTitle={isChinese ? "威海卫紫砂锡镶壶 - 中国锡器博物馆" : "Pewter-Inlaid Yixing Teapot of Weihaiwei - China Pewter Museum"}
+                    customDescription={isChinese ? "紫砂温润，锡饰生辉，地方工艺臻于化境" : "The warmth of clay meets the brilliance of pewter — craftsmanship at its finest"}
                 />
+                <Navbar />
 
                 {/* Hero Section */}
                 <section className="pt-32 pb-16 px-6 md:px-20">
@@ -162,7 +166,7 @@ export default function Collection2() {
                     {isChinese ? "返回" : "Back"}
                 </button>
                 <button
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate(isZh ? "/zh" : "/")}
                     className="bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-4 py-2 rounded-full shadow-md hover:bg-white/20 hover:text-[#bde0fe] hover:scale-105 transition-all duration-300 text-sm"
                 >
                     {isChinese ? "主页" : "Home"}

@@ -1,31 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Navbar from '../components/Navbar';
+import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function LearningDetail() {
-  const [isChinese, setIsChinese] = useState(true);
-
-  const toggleLanguage = () => {
-    setIsChinese(!isChinese);
-  };
+  const { isZh } = useLanguage();
+  const isChinese = isZh;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-8 px-4">
-      {/* Header with Language Toggle */}
-      <div className="max-w-6xl mx-auto mb-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-amber-400">
-            {isChinese ? '锡器工艺学习' : 'Tin Craft Learning'}
-          </h1>
-          <button
-            onClick={toggleLanguage}
-            className="group relative px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50"
-            aria-label={isChinese ? 'Switch to English' : '切换到中文'}
-          >
-            <span className="font-medium">
-              {isChinese ? 'EN' : '中文'}
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-          </button>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <SEOHead 
+        customTitle={isChinese ? '锡器工艺学习 - 中国锡器博物馆' : 'Tin Craft Learning - China Pewter Museum'}
+        customDescription={isChinese ? '了解锡器制作的历史和技术，探索传统工艺的魅力' : 'Learn about the history and techniques of pewter making'}
+      />
+      <Navbar />
+      
+      <div className="pt-24 py-8 px-4">
+        {/* Header */}
+        <div className="max-w-6xl mx-auto mb-8">
+          <div className="mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold text-amber-400">
+              {isChinese ? '锡器工艺学习' : 'Tin Craft Learning'}
+            </h1>
+          </div>
         <p className="text-gray-300 text-lg leading-relaxed max-w-3xl">
           {isChinese 
             ? '探索传统锡器制作工艺的精髓，从融锡到打磨，体验千年传承的匠人精神。' 
@@ -153,6 +150,7 @@ export default function LearningDetail() {
             }
           </p>
         </div>
+      </div>
       </div>
     </div>
   );
