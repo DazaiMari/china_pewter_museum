@@ -150,8 +150,8 @@ export default function Home() {
                         </a>
                     </div>
 
-                    {/* 右侧语言下拉菜单 */}
-                    <div className="relative">
+                    {/* 右侧语言下拉菜单（仅桌面端显示） */}
+                    <div className="hidden md:block relative">
                         {/* 触发按钮 */}
                         <button
                             onClick={() => setLangMenuOpen(!langMenuOpen)}
