@@ -349,10 +349,10 @@ export default function Home() {
                     <p className="text-lg text-gray-200">
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
-                    <div className="relative group mt-8">
+                    <div className="relative group mt-8 gap-4 flex">
                         <button 
-                            onClick={() => window.open('/pdf/China-Pewter-Musem-DOWNLOAD.pdf', '_blank')}
-                            className="relative px-10 py-4 text-lg font-semibold text-white
+                            onClick={() => window.open('/pdf/China-Pewter-Musem-ONLINE-READING.pdf', '_blank')}
+                            className="relative px-8 py-4 text-lg font-semibold text-white
                                        bg-gradient-to-br from-white/20 via-blue-100/10 to-white/5
                                        backdrop-blur-xl border border-white/30
                                        rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
@@ -371,13 +371,36 @@ export default function Home() {
                             <span className="relative z-10 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
                                 {isChinese ? "预览博物馆藏品" : "Preview Museum Collection"}
                             </span>
-                        </button>
-                        
-                        {/* Liquid glow effect */}
-                        <div className="absolute inset-0 -z-10 blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500">
-                            <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-300/40 rounded-full animate-pulse"></div>
-                            <div className="absolute bottom-0 right-1/4 w-24 h-24 bg-white/30 rounded-full animate-pulse delay-75"></div>
-                        </div>
+                            
+                        </button>          
+                        {/* Download Button */}
+                        <a 
+                            href="/pdf/China-Pewter-Musem-DOWNLOAD.pdf"
+                            download="China-Pewter-Museum-Collection.pdf"
+                            className="relative px-8 py-4 text-lg font-semibold text-white
+                                       bg-gradient-to-br from-white/20 via-blue-100/10 to-white/5
+                                       backdrop-blur-xl border border-white/30
+                                       rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
+                                       hover:shadow-[0_12px_48px_rgba(150,200,255,0.4)]
+                                       hover:border-white/50 hover:scale-105
+                                       transition-all duration-500 ease-out
+                                       overflow-hidden
+                                       before:absolute before:inset-0 
+                                       before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+                                       before:translate-x-[-200%] before:transition-transform before:duration-1000
+                                       hover:before:translate-x-[200%]
+                                       after:absolute after:inset-[1px] after:rounded-2xl
+                                       after:bg-gradient-to-br after:from-blue-400/5 after:to-transparent
+                                       after:-z-10
+                                       inline-flex items-center"
+                        >
+                            <span className="relative z-10 flex items-center gap-3 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                {isChinese ? "下载藏品册" : "Download"}
+                            </span>
+                        </a>
                     </div>
                 </div>
             </section>
