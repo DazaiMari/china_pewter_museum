@@ -349,6 +349,36 @@ export default function Home() {
                     <p className="text-lg text-gray-200">
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
+                    <div className="relative group mt-8">
+                        <button 
+                            onClick={() => window.open('/pdf/China-Pewter-Musem-DOWNLOAD.pdf', '_blank')}
+                            className="relative px-10 py-4 text-lg font-semibold text-white
+                                       bg-gradient-to-br from-white/20 via-blue-100/10 to-white/5
+                                       backdrop-blur-xl border border-white/30
+                                       rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
+                                       hover:shadow-[0_12px_48px_rgba(150,200,255,0.4)]
+                                       hover:border-white/50 hover:scale-105
+                                       transition-all duration-500 ease-out
+                                       overflow-hidden
+                                       before:absolute before:inset-0 
+                                       before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+                                       before:translate-x-[-200%] before:transition-transform before:duration-1000
+                                       hover:before:translate-x-[200%]
+                                       after:absolute after:inset-[1px] after:rounded-2xl
+                                       after:bg-gradient-to-br after:from-blue-400/5 after:to-transparent
+                                       after:-z-10"
+                        >
+                            <span className="relative z-10 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+                                {isChinese ? "预览博物馆藏品" : "Preview Museum Collection"}
+                            </span>
+                        </button>
+                        
+                        {/* Liquid glow effect */}
+                        <div className="absolute inset-0 -z-10 blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500">
+                            <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-300/40 rounded-full animate-pulse"></div>
+                            <div className="absolute bottom-0 right-1/4 w-24 h-24 bg-white/30 rounded-full animate-pulse delay-75"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
