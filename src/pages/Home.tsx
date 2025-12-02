@@ -53,7 +53,7 @@ export default function Home() {
                 });
         }
     }, []);
-// 自动轮播 + 按钮控制（工艺九图）
+    // 自动轮播 + 按钮控制（工艺九图）
     setTimeout(() => {
         const processContainer = document.getElementById("scrollContainerProcess");
         const leftBtn = document.getElementById("scrollLeftProcess");
@@ -170,11 +170,11 @@ export default function Home() {
                         {langMenuOpen && (
                             <>
                                 {/* 遮罩层 */}
-                                <div 
-                                    className="fixed inset-0 z-40" 
+                                <div
+                                    className="fixed inset-0 z-40"
                                     onClick={() => setLangMenuOpen(false)}
                                 ></div>
-                                
+
                                 {/* 菜单内容 */}
                                 <div className="absolute right-0 mt-2 w-48 bg-[#374151] rounded-xl shadow-2xl border border-white/10 overflow-hidden z-50 animate-slideDown">
                                     <div className="py-2">
@@ -235,7 +235,7 @@ export default function Home() {
                         <a href="#learning" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
                         <a href="#events" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
                     </div>
-                    
+
                     {/* 移动端语言下拉菜单 */}
                     <div className="hidden md:block flex justify-center pb-3 px-4">
                         <div className="relative w-full max-w-xs">
@@ -257,11 +257,11 @@ export default function Home() {
                             {langMenuOpen && (
                                 <>
                                     {/* 遮罩层 */}
-                                    <div 
-                                        className="fixed inset-0 z-40" 
+                                    <div
+                                        className="fixed inset-0 z-40"
                                         onClick={() => setLangMenuOpen(false)}
                                     ></div>
-                                    
+
                                     {/* 菜单内容 */}
                                     <div className="absolute left-0 right-0 mt-2 bg-[#374151] rounded-xl shadow-2xl border border-white/10 overflow-hidden z-50 animate-slideDown">
                                         <div className="py-2">
@@ -329,7 +329,7 @@ export default function Home() {
                 </div>
 
 
-            {/* 前景文字 */}
+                {/* 前景文字 */}
                 <div className="relative z-10 p-6 md:p-10 text-left">
                     <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug crystal-text">
                         {isChinese ? (
@@ -349,13 +349,14 @@ export default function Home() {
                     <p className="text-lg text-gray-200">
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
-                    <div className="relative group mt-8 gap-4 flex">
-                        <button 
+                    <div className="relative group mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+                        <button
                             onClick={() => window.open('/pdf/China-Pewter-Musem-ONLINE-READING.pdf', '_blank')}
-                            className="relative px-8 py-4 text-lg font-semibold text-white
+                            className="relative w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 
+                                       text-sm sm:text-lg font-semibold text-white
                                        bg-gradient-to-br from-white/20 via-blue-100/10 to-white/5
                                        backdrop-blur-xl border border-white/30
-                                       rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
+                                       rounded-xl sm:rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
                                        hover:shadow-[0_12px_48px_rgba(150,200,255,0.4)]
                                        hover:border-white/50 hover:scale-105
                                        transition-all duration-500 ease-out
@@ -364,23 +365,25 @@ export default function Home() {
                                        before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
                                        before:translate-x-[-200%] before:transition-transform before:duration-1000
                                        hover:before:translate-x-[200%]
-                                       after:absolute after:inset-[1px] after:rounded-2xl
+                                       after:absolute after:inset-[1px] after:rounded-xl sm:after:rounded-2xl
                                        after:bg-gradient-to-br after:from-blue-400/5 after:to-transparent
-                                       after:-z-10"
+                                       after:-z-10
+                                       flex items-center justify-center"
                         >
                             <span className="relative z-10 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
                                 {isChinese ? "预览博物馆藏品" : "Preview Museum Collection"}
                             </span>
-                            
-                        </button>          
+
+                        </button>
                         {/* Download Button */}
-                        <a 
+                        <a
                             href="/pdf/China-Pewter-Musem-DOWNLOAD.pdf"
                             download="China-Pewter-Museum-Collection.pdf"
-                            className="relative px-8 py-4 text-lg font-semibold text-white
+                            className="relative w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 
+                                       text-sm sm:text-lg font-semibold text-white
                                        bg-gradient-to-br from-white/20 via-blue-100/10 to-white/5
                                        backdrop-blur-xl border border-white/30
-                                       rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
+                                       rounded-xl sm:rounded-2xl shadow-[0_8px_32px_rgba(150,200,255,0.2)]
                                        hover:shadow-[0_12px_48px_rgba(150,200,255,0.4)]
                                        hover:border-white/50 hover:scale-105
                                        transition-all duration-500 ease-out
@@ -389,13 +392,13 @@ export default function Home() {
                                        before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
                                        before:translate-x-[-200%] before:transition-transform before:duration-1000
                                        hover:before:translate-x-[200%]
-                                       after:absolute after:inset-[1px] after:rounded-2xl
+                                       after:absolute after:inset-[1px] after:rounded-xl sm:after:rounded-2xl
                                        after:bg-gradient-to-br after:from-blue-400/5 after:to-transparent
                                        after:-z-10
-                                       inline-flex items-center"
+                                       inline-flex items-center justify-center"
                         >
-                            <span className="relative z-10 flex items-center gap-3 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <span className="relative z-10 flex items-center gap-2 sm:gap-3 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
+                                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
                                 {isChinese ? "下载藏品册" : "Download"}
