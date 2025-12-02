@@ -350,8 +350,37 @@ export default function Home() {
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
                     <div className="relative group mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+                        {isChinese ? (
+                            <>
+                                <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+                                    探索锡器的历史与工艺，<br className="hidden sm:block" />
+                                    在金属的静默里捕捉文明的隐秘脉动。
+                                </p>
+                                <p className="text-base sm:text-lg text-white/70">
+                                    数字典藏《千年锡语》
+                                </p>
+                                <p className="text-sm sm:text-base text-white/60">
+                                    以更开放的方式，让世界再次触摸这门古老金属的温度。
+                                </p>
+                            </>
+                        ) : (
+                            <>
+                                <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+                                    Explore the heritage and craftsmanship of pewter,<br className="hidden sm:block" />
+                                    and trace the subtle pulse of civilization within its quiet metal form.
+                                </p>
+                                <p className="text-base sm:text-lg text-white/70">
+                                    Digital Archive · Millennium Voices of Pewter
+                                </p>
+                                <p className="text-sm sm:text-base text-white/60">
+                                    A contemporary gateway to an ancient craft, inviting the world to rediscover its enduring warmth.
+                                </p>
+                            </>
+                        )}
+                    </div>
+                    <div className="relative group mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                         <button
-                            onClick={() => window.open('/pdf/China-Pewter-Musem-ONLINE-READING.pdf', '_blank')}
+                            onClick={() => window.open('/pdf/China-Pewter-Musem-2026-ONLINE.pdf', '_blank')}
                             className="relative w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 
                                        text-sm sm:text-lg font-semibold text-white
                                        bg-gradient-to-br from-white/20 via-blue-100/10 to-white/5
@@ -371,13 +400,13 @@ export default function Home() {
                                        flex items-center justify-center"
                         >
                             <span className="relative z-10 drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
-                                {isChinese ? "预览博物馆藏品" : "Preview Museum Collection"}
+                                {isChinese ? "线上浏览" : "View Online"}
                             </span>
 
                         </button>
                         {/* Download Button */}
                         <a
-                            href="/pdf/China-Pewter-Musem-DOWNLOAD.pdf"
+                            href="/pdf/China-Pewter-Musem-2026-DOWNLOAD.pdf"
                             download="China-Pewter-Museum-Collection.pdf"
                             className="relative w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 
                                        text-sm sm:text-lg font-semibold text-white
@@ -401,7 +430,7 @@ export default function Home() {
                                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
-                                {isChinese ? "下载藏品册" : "Download"}
+                                {isChinese ? "下载" : "Download"}
                             </span>
                         </a>
                     </div>
