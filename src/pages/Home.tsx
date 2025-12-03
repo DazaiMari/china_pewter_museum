@@ -349,17 +349,27 @@ export default function Home() {
                     <p className="text-lg text-gray-200">
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
-                    <div className="relative group mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+<div
+  className="
+    relative group mt-8
+    flex flex-col
+    gap-4 md:gap-6
+    w-full md:w-auto
+    bg-white/1 backdrop-blur-md
+    rounded-xl p-4 md:p-6
+  "
+>
+
                         {isChinese ? (
                             <>
                                 <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
                                     探索锡器的历史与工艺，<br className="hidden sm:block" />
                                     在金属的静默里捕捉文明的隐秘脉动。
                                 </p>
-                                <p className="text-base sm:text-lg text-white/70">
+                                <p className="text-base sm:text-lg text-white/80">
                                     数字典藏《千年锡语》
                                 </p>
-                                <p className="text-sm sm:text-base text-white/60">
+                                <p className="text-sm sm:text-base text-white/70">
                                     以更开放的方式，让世界再次触摸这门古老金属的温度。
                                 </p>
                             </>
@@ -369,10 +379,10 @@ export default function Home() {
                                     Explore the heritage and craftsmanship of pewter,<br className="hidden sm:block" />
                                     and trace the subtle pulse of civilization within its quiet metal form.
                                 </p>
-                                <p className="text-base sm:text-lg text-white/70">
+                                <p className="text-base sm:text-lg text-white/80">
                                     Digital Archive · Millennium Voices of Pewter
                                 </p>
-                                <p className="text-sm sm:text-base text-white/60">
+                                <p className="text-sm sm:text-base text-white/70">
                                     A contemporary gateway to an ancient craft, inviting the world to rediscover its enduring warmth.
                                 </p>
                             </>
