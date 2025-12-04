@@ -5,9 +5,7 @@ console.log("🏗️ Home component re-rendered at", new Date().toLocaleTimeStri
 
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import SEOHead from "../components/SEOHead";
 import StructuredData from "../components/StructuredData";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -15,7 +13,6 @@ import { useLanguage } from "../contexts/LanguageContext";
 export default function Home() {
     const { isZh, language, switchLanguage } = useLanguage();
     const isChinese = isZh; // For backward compatibility with existing code
-    const [menuOpen, setMenuOpen] = useState(false);
     const [langMenuOpen, setLangMenuOpen] = useState(false);
 
     const handleLanguageSelect = (lang: string) => {
@@ -362,27 +359,27 @@ export default function Home() {
 
                         {isChinese ? (
                             <>
-                                <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                                    探索锡器的历史与工艺，<br className="hidden sm:block" />
+                                <p className="text-base sm:text-lg text-white/80">
+                                    探索锡器的历史与工艺，<br/>
                                     在金属的静默里捕捉文明的隐秘脉动。
                                 </p>
                                 <p className="text-base sm:text-lg text-white/80">
                                     数字典藏《千年锡语》
                                 </p>
-                                <p className="text-sm sm:text-base text-white/70">
+                                <p className="text-base sm:text-lg text-white/80">
                                     以更开放的方式，让世界再次触摸这门古老金属的温度。
                                 </p>
                             </>
                         ) : (
                             <>
-                                <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                                    Explore the heritage and craftsmanship of pewter,<br className="hidden sm:block" />
+                                <p className="text-base sm:text-md text-white/80">
+                                    Explore the heritage and craftsmanship of pewter,<br />
                                     and trace the subtle pulse of civilization within its quiet metal form.
                                 </p>
-                                <p className="text-base sm:text-lg text-white/80">
-                                    Digital Archive · Millennium Voices of Pewter
+                                <p className="text-base sm:text-md text-white/80">
+                                    Digital Archive <i>Millennium Voices of Pewter</i>
                                 </p>
-                                <p className="text-sm sm:text-base text-white/70">
+                                <p className="text-base sm:text-md text-white/80">
                                     A contemporary gateway to an ancient craft, inviting the world to rediscover its enduring warmth.
                                 </p>
                             </>
