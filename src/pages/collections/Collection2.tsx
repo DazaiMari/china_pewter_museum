@@ -33,9 +33,17 @@ export default function Collection2() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "威海卫紫砂锡镶壶 - 中国锡器博物馆" : "Pewter-Inlaid Yixing Teapot of Weihaiwei - China Pewter Museum"}
-                    customDescription={isChinese ? "紫砂温润，锡饰生辉，地方工艺臻于化境" : "The warmth of clay meets the brilliance of pewter — craftsmanship at its finest"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "威海卫紫砂锡镶壶 - 中国锡器博物馆"
+                            : "Pewter-Inlaid Yixing Teapot of Weihaiwei - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "紫砂温润，锡饰生辉，地方工艺臻于化境"
+                            : "The warmth of clay meets the brilliance of pewter — craftsmanship at its finest"
+                    }
                 />
                 <Navbar />
 
@@ -224,5 +232,3 @@ export default function Collection2() {
         </main>
     );
 }
-
-

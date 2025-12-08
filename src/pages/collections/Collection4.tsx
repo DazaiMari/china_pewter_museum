@@ -24,9 +24,17 @@ export default function Collection4() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "闺房用具 - 中国锡器博物馆" : "Boudoir Utensils - China Pewter Museum"}
-                    customDescription={isChinese ? "精巧雅致，寄寓生活情趣与东方审美的温柔格调" : "Delicate and refined, reflecting domestic elegance"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "闺房用具 - 中国锡器博物馆"
+                            : "Boudoir Utensils - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "精巧雅致，寄寓生活情趣与东方审美的温柔格调"
+                            : "Delicate and refined, reflecting domestic elegance"
+                    }
                 />
                 <Navbar />
 
@@ -42,7 +50,7 @@ export default function Collection4() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 hover:text-[#bde0fe] transition-colors duration-500">
                                 {isChinese
                                     ? "錾花点铜喜字妆奁"
-                                    : 'Engraved Pewter Boudoir Casket with Copper-Infused Alloy and “Double Happiness” Motif'}
+                                    : "Engraved Pewter Boudoir Casket with Copper-Infused Alloy and “Double Happiness” Motif"}
                             </h1>
                             <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
                                 {isChinese

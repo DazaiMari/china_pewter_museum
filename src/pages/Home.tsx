@@ -95,6 +95,25 @@ export default function Home() {
 
     return (
         <main className="bg-gray-900 text-white font-sans overflow-x-hidden">
+            {/* 引入优雅的 Google Fonts */}
+            <style>
+                {`
+                    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap');
+                    
+                    /* 定义字体家族 */
+                    .font-heading { font-family: 'Cinzel', 'Noto Serif SC', serif; }
+                    .font-subheading { font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; }
+                    .font-body { font-family: 'Lora', 'Noto Serif SC', serif; }
+                    .font-accent { font-family: 'Noto Serif SC', serif; }
+                    
+                    /* 优化中文字体渲染 */
+                    .chinese-serif {
+                        font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+                        font-weight: 400;
+                        letter-spacing: 0.03em;
+                    }
+                `}
+            </style>
             <SEOHead />
             <StructuredData />
 
@@ -328,7 +347,7 @@ export default function Home() {
 
                 {/* 前景文字 */}
                 <div className="relative z-10 p-6 md:p-10 text-left">
-                    <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug crystal-text">
+                    <h1 className={`text-2xl md:text-4xl font-bold mb-3 leading-snug crystal-text ${isChinese ? 'font-accent' : 'font-heading'}`}>
                         {isChinese ? (
                             <>
                                 <span className="text-3xl md:text-4xl">欢迎来到</span>
@@ -343,7 +362,7 @@ export default function Home() {
                             </>
                         )}
                     </h1>
-                    <p className="text-lg text-gray-200">
+                    <p className={`text-lg text-gray-200 ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
 <div
@@ -359,27 +378,27 @@ export default function Home() {
 
                         {isChinese ? (
                             <>
-                                <p className="text-base sm:text-lg text-white/80">
+                                <p className="text-base sm:text-lg text-white/80 chinese-serif leading-relaxed">
                                     探索锡器的历史与工艺，<br/>
                                     在金属的静默里捕捉文明的隐秘脉动。
                                 </p>
-                                <p className="text-base sm:text-lg text-white/80">
+                                <p className="text-base sm:text-lg text-white/80 chinese-serif leading-relaxed">
                                     数字典藏《千年锡语》
                                 </p>
-                                <p className="text-base sm:text-lg text-white/80">
+                                <p className="text-base sm:text-lg text-white/80 chinese-serif leading-relaxed">
                                     以更开放的方式，让世界再次触摸这门古老金属的温度。
                                 </p>
                             </>
                         ) : (
                             <>
-                                <p className="text-base sm:text-md text-white/80">
+                                <p className="text-base sm:text-md text-white/80 font-body leading-relaxed">
                                     Explore the heritage and craftsmanship of pewter,<br />
                                     and trace the subtle pulse of civilization within its quiet metal form.
                                 </p>
-                                <p className="text-base sm:text-md text-white/80">
-                                    Digital Archive <i>Millennium Voices of Pewter</i>
+                                <p className="text-base sm:text-md text-white/80 font-body leading-relaxed">
+                                    Digital Archive <i className="font-subheading">Millennium Voices of Pewter</i>
                                 </p>
-                                <p className="text-base sm:text-md text-white/80">
+                                <p className="text-base sm:text-md text-white/80 font-body leading-relaxed">
                                     A contemporary gateway to an ancient craft, inviting the world to rediscover its enduring warmth.
                                 </p>
                             </>
@@ -447,80 +466,80 @@ export default function Home() {
             {/* Intro Section */}
             <section
                 id="intro"
-                className="relative py-16 px-6 md:px-16 text-center z-10"
+                className="relative py-16 px-6 md:px-16 text-center z-10 flex justify-center items-center"
             >
-                {/* ✨ 半透明水晶背景层 */}
-                <div className="absolute inset-0 bg-[rgba(255,255,255,0.08)] backdrop-blur-xl border border-white/20 shadow-[0_4px_20px_rgba(255,255,255,0.08)] rounded-3xl mx-auto w-[92%] md:w-[80%]"></div>
+                {/* ✨ 半透明水晶背景层 - 使用 flex 容器来包裹内容 */}
+                <div className="relative w-[92%] md:w-[80%] bg-[rgba(255,255,255,0.08)] backdrop-blur-xl shadow-[0_4px_20px_rgba(255,255,255,0.08)] rounded-3xl py-12 px-6 md:px-12">
+                    {/* 文字内容 */}
+                    <div className="relative z-10">
+                        {/* 主标题加上超链接 */}
+                        <a
+                            href="https://v.douyin.com/2Ep06fmhBaA/ hOx:/ 01/07 W@z.tr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] focus:outline-none"
+                        >
+                            <h2 className={`text-lg md:text-3xl font-bold text-white mb-8 leading-snug ${isChinese ? 'tracking-wider chinese-serif' : 'tracking-widest font-heading'} crystal-text`}>
+                                {isChinese
+                                    ? "让金属有温度，让文化会呼吸"
+                                    : "Where Metal Breathes and Culture Lives"}
+                            </h2>
+                        </a>
 
-                {/* 文字内容 */}
-                <div className="relative z-10">
-                    {/* 主标题加上超链接 */}
-                    <a
-                        href="https://v.douyin.com/2Ep06fmhBaA/ hOx:/ 01/07 W@z.tr"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]"
-                    >
-                        <h2 className="text-lg md:text-3xl font-bold text-white mb-8 leading-snug tracking-widest crystal-text">
-                            {isChinese
-                                ? "让金属有温度，让文化会呼吸"
-                                : "Where Metal Breathes and Culture Lives"}
-                        </h2>
-                    </a>
-
-                    {/* 段落内容 */}
-                    <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed space-y-5 text-base md:text-lg tracking-wide">
-                        <p>
-                            {isChinese
-                                ? "在黎里古镇的古巷与河湾间，一座明代古宅温润如锡，沉静如诗。中国锡器博物馆，于此安放光影与匠心。这里没有冷冰冰的展柜，而是一场跨越千年的对话——人与器、心与文明。"
-                                : "Amid the alleys and waterways of Lili Ancient Town, a Ming Dynasty mansion stands—serene as pewter, timeless as poetry. Here, the China Pewter Museum breathes new life into craft and heritage. This is not a hall of silent objects, but a living dialogue between people and things, between touch and time."}
-                        </p>
+                        {/* 段落内容 */}
+                        <div className={`max-w-4xl mx-auto text-gray-200 leading-relaxed space-y-5 text-base md:text-lg ${isChinese ? 'chinese-serif tracking-wide' : 'font-body tracking-normal'}`}>
+                            <p>
+                                {isChinese
+                                    ? "在黎里古镇的古巷与河湾间，一座明代古宅温润如锡，沉静如诗。中国锡器博物馆，于此安放光影与匠心。这里没有冷冰冰的展柜，而是一场跨越千年的对话——人与器、心与文明。"
+                                    : "Amid the alleys and waterways of Lili Ancient Town, a Ming Dynasty mansion stands—serene as pewter, timeless as poetry. Here, the China Pewter Museum breathes new life into craft and heritage. This is not a hall of silent objects, but a living dialogue between people and things, between touch and time."}
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 {/* ✨ 层叠柔光动画样式 */}
                 <style>{`
-    #intro::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at 20% 30%,
-        rgba(255, 255, 255, 0.1),
-        transparent 60%
-      ),
-      radial-gradient(
-        circle at 80% 70%,
-        rgba(150, 200, 255, 0.1),
-        transparent 70%
-      );
-      filter: blur(40px);
-      z-index: 0;
-      opacity: 0.8;
-      animation: introGlow 10s ease-in-out infinite alternate;
-    }
+                    #intro::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: radial-gradient(
+                        circle at 20% 30%,
+                        rgba(255, 255, 255, 0.1),
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        circle at 80% 70%,
+                        rgba(150, 200, 255, 0.1),
+                        transparent 70%
+                    );
+                    filter: blur(40px);
+                    z-index: 0;
+                    opacity: 0.8;
+                    animation: introGlow 10s ease-in-out infinite alternate;
+                    }
 
-    @keyframes introGlow {
-      0% {
-        opacity: 0.8;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.02);
-      }
-      100% {
-        opacity: 0.8;
-        transform: scale(1);
-      }
-    }
-  `}</style>
+                    @keyframes introGlow {
+                    0% {
+                        opacity: 0.8;
+                        transform: scale(1);
+                    }
+                    50% {
+                        opacity: 1;
+                        transform: scale(1.02);
+                    }
+                    100% {
+                        opacity: 0.8;
+                        transform: scale(1);
+                    }
+                    }
+                `}</style>
             </section>
 
 
 
             {/* About Section */}
-            <div className="relative z-10 bg-gray-450">
+            <div className="relative z-10">
                 <section
                     id="about"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade"
@@ -533,43 +552,45 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] hover:brightness-125"
                         >
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                            <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                                 {isChinese ? "关于锡器博物馆" : "About the Museum"}
                             </h2>
                         </a>
 
 
-                        <p className="text-white leading-relaxed text-lg mb-4 whitespace-pre-line">
-                            {isChinese
-                                ? `中国锡器博物馆位于中国苏州黎里古镇，馆舍依托明代毛宅修复而成。
-由徐鹏林创办，于二〇一七年正式开馆，
-是中国规模最大、最具代表性的锡器专题博物馆。                    
+                        <div className={`text-white leading-relaxed text-lg whitespace-pre-line bg-white-600/50 p-8 rounded-2xl backdrop-blur-sm ${isChinese ? 'chinese-serif' : 'font-body'}`}>
+                            <p>
+                                {isChinese
+                                    ? `中国锡器博物馆位于中国苏州黎里古镇，馆舍依托明代毛宅修复而成。
+                                    由徐鹏林创办，于二〇一七年正式开馆，
+                                    是中国规模最大、最具代表性的锡器专题博物馆。                    
 
-博物馆被列入中国非物质文化遗产体系，并获评为：
-苏州市中小学生综合素质发展活动基地、
-苏州市科普教育基地、
-长三角生态绿色一体化发展示范区首批科学教育基地，
-并担任全国工业博物馆联盟铸造行业分盟轮值理事长单位。
+                                    博物馆被列入中国非物质文化遗产体系，并获评为：
+                                    苏州市中小学生综合素质发展活动基地、
+                                    苏州市科普教育基地、
+                                    长三角生态绿色一体化发展示范区首批科学教育基地，
+                                    并担任全国工业博物馆联盟铸造行业分盟轮值理事长单位。
 
-博物馆扎根江南水乡，以锡为媒，探索金属与文化的共鸣。
-锡柔而不弱，润而不寒，象征着东方文化中力量与温度的平衡。
-通过展览、研学与交流合作，博物馆致力于让“技”与“道”相连，
-让传统与创新共生，让手艺与教育相融。
+                                    博物馆扎根江南水乡，以锡为媒，探索金属与文化的共鸣。
+                                    锡柔而不弱，润而不寒，象征着东方文化中力量与温度的平衡。
+                                    通过展览、研学与交流合作，博物馆致力于让"技"与"道"相连，
+                                    让传统与创新共生，让手艺与教育相融。
 
-在这里，展示不止于器物，更是一次精神的唤醒。
-中国锡器博物馆的使命，是让锡文化“活起来、传下去、走出去”
-让金属有温度，让文化会呼吸。`
-                                : `The China Pewter Museum, located in Lili Ancient Town, Suzhou, China, is housed within the restored Mao Mansion, a Ming-dynasty residence of historic character.
-Founded by Xu Penglin and opened in 2017, it is China’s largest institution dedicated to pewter culture and preservation.
+                                    在这里，展示不止于器物，更是一次精神的唤醒。
+                                    中国锡器博物馆的使命，是让锡文化"活起来、传下去、走出去"
+                                    让金属有温度，让文化会呼吸。`
+                                                                    : `The China Pewter Museum, located in Lili Ancient Town, Suzhou, China, is housed within the restored Mao Mansion, a Ming-dynasty residence of historic character.
+                                    Founded by Xu Penglin and opened in 2017, it is China's largest institution dedicated to pewter culture and preservation.
 
-The museum is officially recognized as part of China’s Intangible Cultural Heritage, and serves as a Suzhou Comprehensive Quality Development Activity Base for Primary and Secondary School Students, a Suzhou Science Popularization Base, and one of the First Batch of Science Education Bases in the Yangtze River Delta Leading Demonstration Zone. It also serves as the Rotating Director of the Foundry Industry Sub-Alliance under the National Industrial Museum Alliance of China.
+                                    The museum is officially recognized as part of China's Intangible Cultural Heritage, and serves as a Suzhou Comprehensive Quality Development Activity Base for Primary and Secondary School Students, a Suzhou Science Popularization Base, and one of the First Batch of Science Education Bases in the Yangtze River Delta Leading Demonstration Zone. It also serves as the Rotating Director of the Foundry Industry Sub-Alliance under the National Industrial Museum Alliance of China.
 
-Rooted in the ancient water town of Jiangnan, the museum regards pewter not only as a metal of craft, but as a vessel of spirit. Soft yet enduring, pewter reflects the Chinese pursuit of harmony, restraint, and warmth within strength.
-Through exhibitions, learning and discovery programs, and collaborative projects, the museum seeks to connect technology with culture, tradition with innovation, and craftsmanship with education.
+                                    Rooted in the ancient water town of Jiangnan, the museum regards pewter not only as a metal of craft, but as a vessel of spirit. Soft yet enduring, pewter reflects the Chinese pursuit of harmony, restraint, and warmth within strength.
+                                    Through exhibitions, learning and discovery programs, and collaborative projects, the museum seeks to connect technology with culture, tradition with innovation, and craftsmanship with education.
 
-For the museum, to display is to awaken — to let visitors sense that metal is not cold, but alive with memory and meaning.
-Its mission is to let pewter culture come alive, be passed on, and reach the wider world — to let metal hold warmth, and culture breathe.`}
-                        </p>
+                                    For the museum, to display is to awaken — to let visitors sense that metal is not cold, but alive with memory and meaning.
+                                    Its mission is to let pewter culture come alive, be passed on, and reach the wider world — to let metal hold warmth, and culture breathe.`}
+                            </p>
+                        </div>
                     </div>
 
                     {/* Right side: Images */}
@@ -598,6 +619,137 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                 </section>
             </div>
 
+            {/* CulturaAI Section */}
+            <div className="relative z-10">
+                <section className="text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade">
+                    {/* Left side: Text */}
+                    <div>
+        
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text font-heading">
+                                CulturaAI
+                            </h2>
+                
+                        <div className={`text-white leading-relaxed text-lg whitespace-pre-line bg-white-600/50 p-8 rounded-2xl backdrop-blur-sm ${isChinese ? 'chinese-serif' : 'font-body'}`}>
+                            {isChinese ? (
+                                <>
+                                    <p>
+                                        高速流动的时代拉开了人与文化的距离。
+                                    </p>
+                                    <p>
+                                        器物依然静静伫立，但通往它们的理解路径正在被遗忘。
+                                    </p>
+                                    <p>
+                                        一件器物在东方与西方之间、传统与未来之间，常常像隔着一层薄雾，
+                                    </p>
+                                    <p>
+                                        让人难以真正看见其文化深度。
+                                    </p>
+                                    <p>
+                                        在人工智能飞速发展的今天，
+                                    </p>
+                                    <p>
+                                        传统的数字化、多媒体与三维重建，已无法回应当下的文化需求。
+                                    </p>
+                                    <p>
+                                        我们意识到，一项更深的使命正悄然到来
+                                    </p>
+                                    <p>
+                                        不仅保存与展示器物，更要更新我们理解文化的方式。
+                                    </p>
+                                    <p>
+                                        正是在这样的背景中，由徐鹏林开发的<span className="font-semibold">CulturaAI</span> 大模型。
+                                    </p>
+                                    <p>
+                                        不仅是一套智能系统，更是一座桥
+                                    </p>
+                                    <p>
+                                        一座让人工智能能够进入器物的文化结构、读懂其深层语义的桥
+                                    </p>
+                                    <p>
+                                        一座让来自不同文明的人们得以重新看见文化之美的桥
+                                    </p>
+                                    <p>
+                                        一座让古老器物在智能时代重新焕发意义的桥。
+                                    </p>
+                                </>
+                            ) : (
+                                <>
+                                    <p>
+                                        In an era of rapid technological change, the distance between people and cultural heritage is widening.
+                                    </p>
+                                    <p>
+                                        Artifacts remain present, yet the interpretive frameworks that once made them intelligible are fading.
+                                    </p>
+                                    <p>
+                                        Positioned between East and West, and between tradition and the future, many objects now lie behind a conceptual haze that obscures their cultural depth.
+                                    </p>
+                                    <p>
+                                        As AI advances, traditional digitization and multimedia display are no longer sufficient.
+                                    </p>
+                                    <p>
+                                        A deeper mission is emerging
+                                    </p>
+                                    <p>
+                                        to preserve artifacts while renewing the ways cultural meaning is understood.
+                                    </p>
+                                    <p>
+                                        Within this context, the <span className="font-semibold">CulturaAI</span> model, developed by Penglin Xu.
+                                    </p>
+                                    <p>
+                                        It is more than an intelligent system
+                                    </p>
+                                    <p>
+                                        it is an interpretive bridge.
+                                    </p>
+                                    <p>
+                                        A bridge that enables AI to engage with the cultural structures of artifacts
+                                    </p>
+                                    <p>
+                                        A bridge that helps diverse audiences rediscover cultural meaning
+                                    </p>
+                                    <p>
+                                        A bridge that restores relevance to ancient objects in an AI-mediated world.
+                                    </p>
+                                </>
+                            )}
+                        </div>
+
+                        {/* Call-to-Action Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                        <a
+                                href="https://lithogpt.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-8 py-3 bg-red-300/20 hover:bg-red-600/30 border-2 border-red-400/40 hover:border-red-400/60 rounded-lg text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]"
+                            >
+                                {isChinese ? "访问 CulturaAI（ LithoGPT ） →" : "Visit CulturaAI ( LithoGPT ) →"}
+                            </a>
+                            <Link
+                                to={isZh ? "/zh/culturaai" : "/culturaai"}
+                                className="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-white/50 rounded-lg text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                            >
+                                {isChinese ? "了解更多关于 CulturaAI 与五天论 →" : "Learn More About CulturaAI & Five Tian Theory →"}
+                            </Link>
+
+                        </div>
+                    </div>
+
+                    {/* Right side: Images */}
+                    <div className="grid grid-cols-1 gap-4">
+                        <img
+                            src="/images/culturaai/ai1.jpg"
+                            alt="CulturaAI 1"
+                            className="rounded-lg shadow-md object-cover w-full h-48 md:h-60"
+                        />
+                        <img
+                            src="/images/culturaai/ai2.jpg"
+                            alt="CulturaAI 2"
+                            className="rounded-lg shadow-md object-cover w-full h-48 md:h-60"
+                        />
+                    </div>
+                </section>
+            </div>
+
 
 
             {/* Exhibitions & Collections Section */}
@@ -620,47 +772,47 @@ Its mission is to let pewter culture come alive, be passed on, and reach the wid
                             rel="noopener noreferrer"
                             className="inline-block transition-all duration-500 hover:scale-105 hover:-translate-y-[2px] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:brightness-125"
                         >
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                            <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                                 {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
                             </h2>
                         </a>
 
 
-                        <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg">
+                        <div className={`max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                             <p>
                                 {isChinese
                                     ? `博物馆通过常设展与专题展，系统展示锡器的多样面貌。
-展厅按主题分区陈列，涵盖食具、茶具、酒具、闺房用具、文房用具、照明用具、祭祀用具及雕像饰品等类别。
-观众可在器物之间感受古人生活的节奏与审美秩序，体会锡在饮食、居家、礼仪与精神生活中的广泛应用。
+                                    展厅按主题分区陈列，涵盖食具、茶具、酒具、闺房用具、文房用具、照明用具、祭祀用具及雕像饰品等类别。
+                                    观众可在器物之间感受古人生活的节奏与审美秩序，体会锡在饮食、居家、礼仪与精神生活中的广泛应用。
 
-海外展区收藏来自日本、英国与荷兰的锡器作品，
-以对照的方式呈现这一材料跨越地域与文化的共通审美。
-这些展品让人看到，锡不仅属于中国，也属于世界。
+                                    海外展区收藏来自日本、英国与荷兰的锡器作品，
+                                    以对照的方式呈现这一材料跨越地域与文化的共通审美。
+                                    这些展品让人看到，锡不仅属于中国，也属于世界。
 
-自十六世纪起，中国精工锡器经由海上丝绸之路远销东南亚、印度与欧洲。
-至十八世纪中期，锡器与瓷器、漆器并列，成为中国手工艺走向世界的象征。
-馆藏中保存着这一时期的外销锡器，
-它们见证了中西交流的轨迹，也承载了工艺与文明的互映。
+                                    自十六世纪起，中国精工锡器经由海上丝绸之路远销东南亚、印度与欧洲。
+                                    至十八世纪中期，锡器与瓷器、漆器并列，成为中国手工艺走向世界的象征。
+                                    馆藏中保存着这一时期的外销锡器，
+                                    它们见证了中西交流的轨迹，也承载了工艺与文明的互映。
 
-每一件展品，都记录着人类与金属共生的故事。
-在光影与陈列之间，锡的光泽仍在缓缓诉说着生活的温度与时代的记忆。`
-                                    : `Through permanent and special exhibitions,
-the museum presents the many faces of pewter in Chinese life and culture.
-The galleries are organized thematically, featuring pewter tableware, teaware, wine vessels, 
-boudoir articles, scholar’s objects, lighting pieces, ritual wares and decorative figures :
-each revealing a distinct aspect of daily use and aesthetic sensibility.
-An international section features pewter works from Japan, Britain and the Netherlands,
-highlighting the shared appreciation of this gentle metal across cultures.
-Here, visitors can see that pewter belongs not only to China, but to the world.
-From the sixteenth century onward, 
-Chinese pewter craftsmanship traveled along the Maritime Silk Road to Southeast Asia, India and Europe.
-By the mid-eighteenth century,
- pewter stood alongside porcelain and lacquerware as a symbol of China’s artistry reaching the world.
-The museum’s collection preserves export pewter from this era,
-living records of exchange between East and West, where craft and civilization met in quiet dialogue.
-Every object in the gallery carries its own story.
-In the play of light and shadow, pewter continues to speak:
-its sheen holding the warmth of life and the memory of time.`}
+                                    每一件展品，都记录着人类与金属共生的故事。
+                                    在光影与陈列之间，锡的光泽仍在缓缓诉说着生活的温度与时代的记忆。`
+                                                                        : `Through permanent and special exhibitions,
+                                    the museum presents the many faces of pewter in Chinese life and culture.
+                                    The galleries are organized thematically, featuring pewter tableware, teaware, wine vessels, 
+                                    boudoir articles, scholar’s objects, lighting pieces, ritual wares and decorative figures :
+                                    each revealing a distinct aspect of daily use and aesthetic sensibility.
+                                    An international section features pewter works from Japan, Britain and the Netherlands,
+                                    highlighting the shared appreciation of this gentle metal across cultures.
+                                    Here, visitors can see that pewter belongs not only to China, but to the world.
+                                    From the sixteenth century onward, 
+                                    Chinese pewter craftsmanship traveled along the Maritime Silk Road to Southeast Asia, India and Europe.
+                                    By the mid-eighteenth century,
+                                    pewter stood alongside porcelain and lacquerware as a symbol of China’s artistry reaching the world.
+                                    The museum’s collection preserves export pewter from this era,
+                                    living records of exchange between East and West, where craft and civilization met in quiet dialogue.
+                                    Every object in the gallery carries its own story.
+                                    In the play of light and shadow, pewter continues to speak:
+                                    its sheen holding the warmth of life and the memory of time.`}
                             </p>
                         </div>
 
@@ -709,8 +861,8 @@ its sheen holding the warmth of life and the memory of time.`}
                                             />
                                         </div>
                                         <div className="text-left p-6">
-                                            <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                                            <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+                                            <h3 className={`text-xl font-bold mb-3 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>{item.title}</h3>
+                                            <p className={`text-gray-300 text-sm leading-relaxed ${isChinese ? 'chinese-serif' : 'font-body'}`}>{item.desc}</p>
                                         </div>
                                     </Link>
                                 ))}
@@ -719,18 +871,18 @@ its sheen holding the warmth of life and the memory of time.`}
 
                         {/* 样式定义 */}
                         <style>{`
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                            .hide-scrollbar::-webkit-scrollbar { display: none; }
+                            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        @keyframes glowFlow {
-          0% { opacity: 0.9; transform: scale(1) translate(0,0); }
-          50% { opacity: 1; transform: scale(1.02) translate(10px,-8px); }
-          100% { opacity: 0.9; transform: scale(1) translate(0,0); }
-        }
-        .animate-glowFlow {
-          animation: glowFlow 14s ease-in-out infinite alternate;
-        }
-      `}</style>
+                            @keyframes glowFlow {
+                            0% { opacity: 0.9; transform: scale(1) translate(0,0); }
+                            50% { opacity: 1; transform: scale(1.02) translate(10px,-8px); }
+                            100% { opacity: 0.9; transform: scale(1) translate(0,0); }
+                            }
+                            .animate-glowFlow {
+                            animation: glowFlow 14s ease-in-out infinite alternate;
+                            }
+                        `}</style>
                     </div>
                 </section>
             </div>
@@ -750,55 +902,55 @@ its sheen holding the warmth of life and the memory of time.`}
                         rel="noopener noreferrer"
                         className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:brightness-125 hover:-translate-y-[2px]"
                     >
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                        <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                             {isChinese ? "工艺与文化" : "Craft & Culture"}
                         </h2>
                     </a>
 
 
                     {/* 段落说明（✅ 已改为居中） */}
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-center whitespace-pre-line space-y-6">
+                    <div className={`max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 text-center whitespace-pre-line space-y-6 ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                         <p>
                             {isChinese
                                 ? `锡，柔而不弱，润而不寒，素光含静气。  
-在它的延展与回收之间，蕴藏着金属最温柔的秩序。  
+                                在它的延展与回收之间，蕴藏着金属最温柔的秩序。  
 
-自古以来，锡被视为调和之材，  
-既能与铜成青，又能与银共白，  
-在火与手的交替中，显露出东方文化中的中和之美。`
-                                : `Pewter — soft yet enduring, gentle yet firm, its muted sheen carries quiet grace.  
-Between its stretch and return lies the most tender order of metal.  
+                                自古以来，锡被视为调和之材，  
+                                既能与铜成青，又能与银共白，  
+                                在火与手的交替中，显露出东方文化中的中和之美。`
+                                                                : `Pewter — soft yet enduring, gentle yet firm, its muted sheen carries quiet grace.  
+                                Between its stretch and return lies the most tender order of metal.  
 
-Since ancient times, pewter has been regarded as a metal of harmony —  
-able to form bronze with copper and shine silver with white,  
-revealing the Eastern beauty of balance through fire and hand.`}
+                                Since ancient times, pewter has been regarded as a metal of harmony —  
+                                able to form bronze with copper and shine silver with white,  
+                                revealing the Eastern beauty of balance through fire and hand.`}
                         </p>
 
                         <p>
                             {isChinese
                                 ? `制锡之道，不止于技。  
-冶炼、浇铸、锤打、焊接、打磨、抛光，  
-每一道工序，都是人与物的对话：  
-力量、节奏与心性的平衡。  
+                                冶炼、浇铸、锤打、焊接、打磨、抛光，  
+                                每一道工序，都是人与物的对话：  
+                                力量、节奏与心性的平衡。  
 
-打锡之人，在敲击的回声中体会静气；  
-观锡之人，在光泽的流转中感受时间。  
-工艺的意义，在于以形入心，以物见道。`
-                                : `The way of pewter-making goes beyond technique.  
-Smelting, casting, hammering, welding, grinding, polishing: 
-each process is a dialogue between human and material,  
-a balance of strength, rhythm, and inner calm.  
+                                打锡之人，在敲击的回声中体会静气；  
+                                观锡之人，在光泽的流转中感受时间。  
+                                工艺的意义，在于以形入心，以物见道。`
+                                                                : `The way of pewter-making goes beyond technique.  
+                                Smelting, casting, hammering, welding, grinding, polishing: 
+                                each process is a dialogue between human and material,  
+                                a balance of strength, rhythm, and inner calm.  
 
-The craftsman, through the echo of hammer strikes, finds stillness;  
-the observer, through the shimmer of light, feels the passage of time.  
-The meaning of craft lies in shaping the heart through form,  
-and seeking the Way through the object.`}
+                                The craftsman, through the echo of hammer strikes, finds stillness;  
+                                the observer, through the shimmer of light, feels the passage of time.  
+                                The meaning of craft lies in shaping the heart through form,  
+                                and seeking the Way through the object.`}
                         </p>
                     </div>
 
                     {/* 打锡工艺流程 */}
                     <div className="max-w-6xl mx-auto text-white text-center mt-16">
-                        <h3 className="text-2xl font-bold mb-10 crystal-text">
+                        <h3 className={`text-2xl font-bold mb-10 crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                             {isChinese ? "传统打锡工艺流程" : "Traditional Pewter Craft Process"}
                         </h3>
 
@@ -876,57 +1028,57 @@ and seeking the Way through the object.`}
 
                         {/* ✨ 样式部分 */}
                         <style>{`
-.glass-step {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow:
-    0 2px 8px rgba(255, 255, 255, 0.08),
-    inset 0 0 10px rgba(180, 220, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  transition: all 0.4s ease;
-}
-.glass-step:hover {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 4px 14px rgba(180, 220, 255, 0.15),
-    inset 0 0 15px rgba(200, 240, 255, 0.1);
-  transform: translateY(-3px) scale(1.03);
-}
+                            .glass-step {
+                            background: rgba(255, 255, 255, 0.08);
+                            border: 1px solid rgba(255, 255, 255, 0.25);
+                            box-shadow:
+                                0 2px 8px rgba(255, 255, 255, 0.08),
+                                inset 0 0 10px rgba(180, 220, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            border-radius: 0.5rem;
+                            padding: 0.75rem 1.5rem;
+                            transition: all 0.4s ease;
+                            }
+                            .glass-step:hover {
+                            background: rgba(255, 255, 255, 0.15);
+                            box-shadow:
+                                0 4px 14px rgba(180, 220, 255, 0.15),
+                                inset 0 0 15px rgba(200, 240, 255, 0.1);
+                            transform: translateY(-3px) scale(1.03);
+                            }
 
-/* ✨ 手机端视觉优化 */
-@media (max-width: 768px) {
-  .glass-step {
-    padding: 0.55rem 1rem;
-    font-size: 0.9rem;
-    min-width: 90px;
-  }
-  .text-gray-400.text-2xl {
-    font-size: 1.4rem;
-  }
-  .space-y-10 {
-    gap: 2rem !important;
-  }
-}
+                            /* ✨ 手机端视觉优化 */
+                            @media (max-width: 768px) {
+                            .glass-step {
+                                padding: 0.55rem 1rem;
+                                font-size: 0.9rem;
+                                min-width: 90px;
+                            }
+                            .text-gray-400.text-2xl {
+                                font-size: 1.4rem;
+                            }
+                            .space-y-10 {
+                                gap: 2rem !important;
+                            }
+                            }
 
-/* ✨ 箭头动画 */
-@keyframes arrowFloat {
-  0%, 100% { transform: translateY(0); opacity: 0.8; }
-  50% { transform: translateY(-3px); opacity: 1; }
-}
-.text-gray-400.text-2xl,
-.text-gray-400.text-3xl {
-  animation: arrowFloat 3s ease-in-out infinite;
-}
-  `}</style>
+                            /* ✨ 箭头动画 */
+                            @keyframes arrowFloat {
+                            0%, 100% { transform: translateY(0); opacity: 0.8; }
+                            50% { transform: translateY(-3px); opacity: 1; }
+                            }
+                            .text-gray-400.text-2xl,
+                            .text-gray-400.text-3xl {
+                            animation: arrowFloat 3s ease-in-out infinite;
+                            }
+                            `}</style>
                     </div>
 
 
 
                     {/* 工艺过程九图滑动展示 */}
                     <div className="max-w-[1600px] mx-auto mt-20 relative">
-                        <h3 className="text-2xl font-bold mb-6 text-center">
+                        <h3 className={`text-2xl font-bold mb-6 text-center ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                             {isChinese ? "工艺过程掠影" : "Craftsmanship in Motion"}
                         </h3>
 
@@ -985,10 +1137,10 @@ and seeking the Way through the object.`}
                                         />
                                     </div>
                                     <div className="p-4 text-left">
-                                        <h4 className="text-white font-semibold text-base mb-2">
+                                        <h4 className={`text-white font-semibold text-base mb-2 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                                             {isChinese ? `第 ${item.id} 工序` : `Step ${item.id}`}
                                         </h4>
-                                        <p className="text-gray-300 text-sm leading-snug">
+                                        <p className={`text-gray-300 text-sm leading-snug ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                                             {isChinese ? item.zh : item.en}
                                         </p>
                                     </div>
@@ -997,17 +1149,17 @@ and seeking the Way through the object.`}
                         </div>
 
                         <style>{`
-.hide-scrollbar::-webkit-scrollbar { display: none; }
-.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-`}</style>
+                            .hide-scrollbar::-webkit-scrollbar { display: none; }
+                            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                        `}</style>
                     </div>
 
                     {/* 结语 */}
-                    <div className="max-w-6xl mx-auto text-white italic leading-relaxed text-center mt-12">
+                    <div className={`max-w-6xl mx-auto text-white italic leading-relaxed text-center mt-12 ${isChinese ? 'chinese-serif' : 'font-subheading'}`}>
                         <p>
                             {isChinese
                                 ? "每一次锤击，都是对时间的回应；每一道光泽，都是对心性的修炼。传统工艺让金属拥有了生命，也让人心找到安处。"
-                                : "Each strike of the hammer answers the call of time; each sheen polished reflects the discipline of the heart. Traditional craftsmanship breathes life into metal — and stillness into the maker’s soul."}
+                                : "Each strike of the hammer answers the call of time; each sheen polished reflects the discipline of the heart. Traditional craftsmanship breathes life into metal — and stillness into the maker's soul."}
                         </p>
                     </div>
                 </section>
@@ -1027,46 +1179,46 @@ and seeking the Way through the object.`}
 
                     {/* 内容区 */}
                     <div className="relative z-10">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                        <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                             {isChinese ? "研学与教育" : "Learning & Discovery"}
                         </h2>
 
                         {/* 段落文字 */}
-                        <div className="max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg">
+                        <div className={`max-w-4xl mx-auto text-gray-200 leading-relaxed text-lg mb-16 whitespace-pre-line bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                             <p>
                                 {isChinese
                                     ? `如果说展厅是静观的课堂，工坊便是动手的学堂。
-中国锡器博物馆将传统工艺教育融入日常体验，
-让观众在“做中学”、在“造中悟”。
-每一次触摸锡片的温度、聆听锤击的节奏，
-都是一次从感官到心性的修行。
+                                    中国锡器博物馆将传统工艺教育融入日常体验，
+                                    让观众在“做中学”、在“造中悟”。
+                                    每一次触摸锡片的温度、聆听锤击的节奏，
+                                    都是一次从感官到心性的修行。
 
-博物馆将金属工艺、文化叙事与创造性思维结合，
-面向青少年、家庭与国际访客推出多层次课程体系。
-通过亲手打锡、模具设计、器物拓印等活动，
-学习者在实践中理解工艺之理，感受文化之魂。
+                                    博物馆将金属工艺、文化叙事与创造性思维结合，
+                                    面向青少年、家庭与国际访客推出多层次课程体系。
+                                    通过亲手打锡、模具设计、器物拓印等活动，
+                                    学习者在实践中理解工艺之理，感受文化之魂。
 
-与此同时，锡文化也走进校园。
-博物馆以宣讲、讲座与主题课程的形式，
-将“匠心”“文化自觉”与“工艺精神”带入课堂。
-学生了解锡器的历史脉络与当代表达，
-在近距离的接触中激发兴趣，启发思考。`
-                                    : `If the exhibition hall is a classroom of contemplation,
-then the workshop is a classroom of creation.
-The China Pewter Museum integrates traditional craftsmanship education
-into everyday experience,
-inviting visitors to “learn by doing” and “reflect through making.”
-Each touch of pewter, each rhythm of hammer and hand,
-becomes a quiet journey from the senses to the spirit.
-Combining craftsmanship, cultural narrative, and creative thinking,
-the museum offers a range of programs for youth, families, and international visitors.
-Through hands-on pewter work, mold design, and creative exercises,
-learners discover the logic of craft and the soul of culture through practice.
-At the same time, pewter culture enters schools.
-Through talks and lectures,
-the museum brings craftsmanship and cultural awareness into the classroom.
-Students encounter the history and modern relevance of pewter,
-finding curiosity and inspiration through direct experience.”`}
+                                    与此同时，锡文化也走进校园。
+                                    博物馆以宣讲、讲座与主题课程的形式，
+                                    将“匠心”“文化自觉”与“工艺精神”带入课堂。
+                                    学生了解锡器的历史脉络与当代表达，
+                                    在近距离的接触中激发兴趣，启发思考。`
+                                                                        : `If the exhibition hall is a classroom of contemplation,
+                                    then the workshop is a classroom of creation.
+                                    The China Pewter Museum integrates traditional craftsmanship education
+                                    into everyday experience,
+                                    inviting visitors to “learn by doing” and “reflect through making.”
+                                    Each touch of pewter, each rhythm of hammer and hand,
+                                    becomes a quiet journey from the senses to the spirit.
+                                    Combining craftsmanship, cultural narrative, and creative thinking,
+                                    the museum offers a range of programs for youth, families, and international visitors.
+                                    Through hands-on pewter work, mold design, and creative exercises,
+                                    learners discover the logic of craft and the soul of culture through practice.
+                                    At the same time, pewter culture enters schools.
+                                    Through talks and lectures,
+                                    the museum brings craftsmanship and cultural awareness into the classroom.
+                                    Students encounter the history and modern relevance of pewter,
+                                    finding curiosity and inspiration through direct experience.”`}
                             </p>
                         </div>
 
@@ -1117,17 +1269,17 @@ finding curiosity and inspiration through direct experience.”`}
                                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
                                     </div>
                                     <div className="p-6 text-left">
-                                        <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
+                                        <h3 className={`text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                                             {item.title}
                                         </h3>
-                                        <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
+                                        <p className={`text-gray-300 text-sm leading-snug ${isChinese ? 'chinese-serif' : 'font-body'}`}>{item.desc}</p>
                                     </div>
                                 </a>
                             ))}
                         </div>
 
                         {/* ✨ 结语 */}
-                        <div className="max-w-4xl mx-auto text-gray-300 italic leading-relaxed text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl py-6 px-10 shadow-inner">
+                        <div className={`max-w-4xl mx-auto text-gray-300 italic leading-relaxed text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl py-6 px-10 shadow-inner ${isChinese ? 'chinese-serif' : 'font-subheading'}`}>
                             <p>
                                 {isChinese
                                     ? "学习的终点，不是记忆，而是发现。唯有亲手触摸文化，方能真正理解文化的温度。"
@@ -1138,15 +1290,15 @@ finding curiosity and inspiration through direct experience.”`}
 
                     {/* 样式定义 */}
                     <style>{`
-      @keyframes glowFlow {
-        0% { opacity: 0.9; transform: scale(1) translate(0,0); }
-        50% { opacity: 1; transform: scale(1.02) translate(12px,-10px); }
-        100% { opacity: 0.9; transform: scale(1) translate(0,0); }
-      }
-      .animate-glowFlow {
-        animation: glowFlow 14s ease-in-out infinite alternate;
-      }
-    `}</style>
+                        @keyframes glowFlow {
+                            0% { opacity: 0.9; transform: scale(1) translate(0,0); }
+                            50% { opacity: 1; transform: scale(1.02) translate(12px,-10px); }
+                            100% { opacity: 0.9; transform: scale(1) translate(0,0); }
+                        }
+                        .animate-glowFlow {
+                            animation: glowFlow 14s ease-in-out infinite alternate;
+                        }
+                    `}</style>
                 </section>
             </div>
 
@@ -1157,50 +1309,50 @@ finding curiosity and inspiration through direct experience.”`}
                     id="events"
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text">
+                    <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                         {isChinese ? "活动与交流" : "Events & Partnerships"}
                     </h2>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line">
+                    <div className={`max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                         <p>
                             {isChinese
                                 ? `文化的生命，在于交流。
-中国锡器博物馆以开放的姿态，
-参与并发起多层次的文化合作与公众活动，
-让锡的温度跨越地域、连接世界。
-从区域峰会到国际展会，
-博物馆以展览、论坛与艺术计划的形式，
-持续推动锡文化的对话与传播。
-无论是在长三角一体化发展峰会，
-还是在中国国际进口博览会、国际旅游交易会等平台，
-锡器都以它独特的光泽与东方美感，
-讲述着“工艺之美、生活之雅、文化之信”。
+                                    中国锡器博物馆以开放的姿态，
+                                    参与并发起多层次的文化合作与公众活动，
+                                    让锡的温度跨越地域、连接世界。
+                                    从区域峰会到国际展会，
+                                    博物馆以展览、论坛与艺术计划的形式，
+                                    持续推动锡文化的对话与传播。
+                                    无论是在长三角一体化发展峰会，
+                                    还是在中国国际进口博览会、国际旅游交易会等平台，
+                                    锡器都以它独特的光泽与东方美感，
+                                    讲述着“工艺之美、生活之雅、文化之信”。
 
-近年来，博物馆连续受邀在民非博物馆馆长国际论坛作主题发言，
-分享在展陈策划、教育推广、文创开发与文化节庆中的经验。
-同时，联合地方政府共同举办“中国道口锡器文化节”，
-以地方文化为根基，以公众参与为纽带，
-探索传统手艺融入现代生活的新路径。`
-                                : `Culture lives through connection.
-The China Pewter Museum takes an open approach to collaboration and exchange,
-engaging in a wide range of programs that bring the warmth of pewter
-beyond its local roots and into the world.
-From regional summits to international expos,
-the museum participates in exhibitions, forums, and cultural initiatives
-that foster dialogue and understanding around pewter culture.
-At events such as the Yangtze River Delta Integration Summit,
-the China International Import Expo, and the China Tourism Fair,
-the museum presents pewter not only as a craft,
-but as a reflection of Chinese aesthetics and cultural confidence.
+                                    近年来，博物馆连续受邀在民非博物馆馆长国际论坛作主题发言，
+                                    分享在展陈策划、教育推广、文创开发与文化节庆中的经验。
+                                    同时，联合地方政府共同举办“中国道口锡器文化节”，
+                                    以地方文化为根基，以公众参与为纽带，
+                                    探索传统手艺融入现代生活的新路径。`
+                                                                    : `Culture lives through connection.
+                                    The China Pewter Museum takes an open approach to collaboration and exchange,
+                                    engaging in a wide range of programs that bring the warmth of pewter
+                                    beyond its local roots and into the world.
+                                    From regional summits to international expos,
+                                    the museum participates in exhibitions, forums, and cultural initiatives
+                                    that foster dialogue and understanding around pewter culture.
+                                    At events such as the Yangtze River Delta Integration Summit,
+                                    the China International Import Expo, and the China Tourism Fair,
+                                    the museum presents pewter not only as a craft,
+                                    but as a reflection of Chinese aesthetics and cultural confidence.
 
-In recent years, the museum has been invited to deliver keynote presentations
-at the International Forum for Private Museum Directors,
-sharing its experience in exhibition planning, cultural education,
-creative design, and public engagement.
-It also co-organized the China Daokou Pewter Culture Festival
-with local government partners —
-a celebration rooted in regional heritage and open to the public,
-exploring how traditional craftsmanship can find new life in modern society.`}
+                                    In recent years, the museum has been invited to deliver keynote presentations
+                                    at the International Forum for Private Museum Directors,
+                                    sharing its experience in exhibition planning, cultural education,
+                                    creative design, and public engagement.
+                                    It also co-organized the China Daokou Pewter Culture Festival
+                                    with local government partners —
+                                    a celebration rooted in regional heritage and open to the public,
+                                    exploring how traditional craftsmanship can find new life in modern society.`}
                         </p>
                     </div>
                 </section>
@@ -1264,10 +1416,10 @@ exploring how traditional craftsmanship can find new life in modern society.`}
 
                             {/* 文本区域 */}
                             <div className="p-6 text-left">
-                                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500">
+                                <h3 className={`text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-300 text-sm leading-snug">{item.desc}</p>
+                                <p className={`text-gray-300 text-sm leading-snug ${isChinese ? 'chinese-serif' : 'font-body'}`}>{item.desc}</p>
                             </div>
                         </a>
                     ))}
@@ -1283,18 +1435,18 @@ exploring how traditional craftsmanship can find new life in modern society.`}
                 rel="noopener noreferrer"
                 className="block"
             >
-                <div className="relative z-20 text-center text-gray-100 text-xl leading-loose mt-20 mb-24 border-t border-gray-700/40 pt-12 pb-12 bg-black/40 backdrop-blur-sm rounded-2xl w-fit mx-auto px-8 space-y-3 cursor-pointer hover:bg-black/50 transition">
+                <div className={`relative z-20 text-center text-gray-100 text-xl font-bold leading-loose mt-20 mb-24 border-t border-gray-700/40 pt-12 pb-12 bg-black/40 backdrop-blur-sm rounded-2xl w-fit mx-auto px-8 space-y-3 cursor-pointer hover:bg-black/50 transition ${isChinese ? 'chinese-serif' : 'font-subheading'}`}>
                     {isChinese ? (
                         <>
-                            <p className="font-medium tracking-widest crystal-text">锤锻锡器，点燃热忱</p>
-                            <p className="font-medium tracking-widest crystal-text">在此携手，文化交融</p>
-                            <p className="font-medium tracking-widest crystal-text">永恒锡器，注入呼吸</p>
+                            <p className="font-bold tracking-widest crystal-text">锤锻锡器，点燃热忱</p>
+                            <p className="font-bold tracking-widest crystal-text">在此携手，文化交融</p>
+                            <p className="font-bold tracking-widest crystal-text">永恒锡器，注入呼吸</p>
                         </>
                     ) : (
                         <>
-                            <p className="font-light tracking-wider crystal-text">Hammering Pewter, Fuelling Passion.</p>
-                            <p className="font-light tracking-wider crystal-text">Where Hands Connect, Cultures Converge</p>
-                            <p className="font-light tracking-wider crystal-text">Breathe Life Into Timeless Pewter.</p>
+                            <p className="font-bold tracking-wider crystal-text">Hammering Pewter, Fuelling Passion.</p>
+                            <p className="font-bold tracking-wider crystal-text">Hands Connect, Cultures Converge</p>
+                            <p className="font-bold tracking-wider crystal-text">Breathe Life Into Timeless Pewter.</p>
                         </>
                     )}
                 </div>
@@ -1315,6 +1467,15 @@ exploring how traditional craftsmanship can find new life in modern society.`}
 
             {/* Crystal Text Effect */}
             <style>{`
+  /* 去掉所有元素点击后的黄色边框 */
+  * {
+    outline: none !important;
+  }
+  
+  a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: none !important;
+  }
+
   .crystal-text {
     background: linear-gradient(
       90deg,

@@ -24,9 +24,17 @@ export default function Collection6() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "照明用具 - 中国锡器博物馆" : "Lighting Ware - China Pewter Museum"}
-                    customDescription={isChinese ? "烛台灯具，映照古人的审美与生活之光" : "Candleholders illuminating culture"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "照明用具 - 中国锡器博物馆"
+                            : "Lighting Ware - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "烛台灯具，映照古人的审美与生活之光"
+                            : "Candleholders illuminating culture"
+                    }
                 />
                 <Navbar />
 

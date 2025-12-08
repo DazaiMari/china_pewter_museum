@@ -24,9 +24,17 @@ export default function Collection8() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "雕像 饰件 花瓶 烟具 - 中国锡器博物馆" : "Sculptures & Decorative Pewter - China Pewter Museum"}
-                    customDescription={isChinese ? "从雕像到饰件，锡以柔韧之性塑造生命之美" : "Pewter conveys artistry and remembrance"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "雕像 饰件 花瓶 烟具 - 中国锡器博物馆"
+                            : "Sculptures & Decorative Pewter - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "从雕像到饰件，锡以柔韧之性塑造生命之美"
+                            : "Pewter conveys artistry and remembrance"
+                    }
                 />
                 <Navbar />
 
@@ -43,7 +51,9 @@ export default function Collection8() {
                                 {isChinese ? "仙鹤立像锡雕" : "Standing Tin Sculpture of a Crane"}
                             </h1>
                             <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
-                                {isChinese ? "祥瑞长生，雅器生辉" : "Auspicious Elegance in Form and Spirit"}
+                                {isChinese
+                                    ? "祥瑞长生，雅器生辉"
+                                    : "Auspicious Elegance in Form and Spirit"}
                             </p>
                         </motion.div>
 
@@ -58,7 +68,11 @@ export default function Collection8() {
                             >
                                 <img
                                     src="/images/collection/collection8.jpg"
-                                    alt={isChinese ? "仙鹤立像锡雕" : "Standing Tin Sculpture of a Crane"}
+                                    alt={
+                                        isChinese
+                                            ? "仙鹤立像锡雕"
+                                            : "Standing Tin Sculpture of a Crane"
+                                    }
                                     className="w-full rounded-lg shadow-2xl"
                                 />
                                 <div className="grid grid-cols-2 gap-4">

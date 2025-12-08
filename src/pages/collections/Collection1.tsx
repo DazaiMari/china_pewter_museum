@@ -24,9 +24,17 @@ export default function Collection1() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "清代锡一品锅 - 中国锡器博物馆" : "Qing Dynasty Pewter Yi Pin Guo - China Pewter Museum"}
-                    customDescription={isChinese ? "古雅精工，展现清代宫廷器物的匠心与礼制之美" : "Elegant craftsmanship reflecting the harmony and refinement of Qing imperial utensils"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "清代锡一品锅 - 中国锡器博物馆"
+                            : "Qing Dynasty Pewter Yi Pin Guo - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "古雅精工，展现清代宫廷器物的匠心与礼制之美"
+                            : "Elegant craftsmanship reflecting the harmony and refinement of Qing imperial utensils"
+                    }
                 />
                 <Navbar />
 
@@ -61,7 +69,9 @@ export default function Collection1() {
                                 <img
                                     src="/images/collection/collection1.jpg"
                                     alt={
-                                        isChinese ? "清代锡一品锅" : "Qing Dynasty Pewter Yi Pin Guo"
+                                        isChinese
+                                            ? "清代锡一品锅"
+                                            : "Qing Dynasty Pewter Yi Pin Guo"
                                     }
                                     className="w-full rounded-lg shadow-2xl"
                                 />
@@ -191,6 +201,3 @@ export default function Collection1() {
         </main>
     );
 }
-
-
-

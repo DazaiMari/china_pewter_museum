@@ -24,9 +24,17 @@ export default function Collection3() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "锡酒具 - 中国锡器博物馆" : "Pewter Wine Vessels - China Pewter Museum"}
-                    customDescription={isChinese ? "温润如玉的锡酒器，凝结古人待客的礼节与风雅" : "Pewter wine vessels capture the elegance of gatherings"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "锡酒具 - 中国锡器博物馆"
+                            : "Pewter Wine Vessels - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "温润如玉的锡酒器，凝结古人待客的礼节与风雅"
+                            : "Pewter wine vessels capture the elegance of gatherings"
+                    }
                 />
                 <Navbar />
 

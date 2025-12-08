@@ -24,9 +24,17 @@ export default function Collection5() {
 
             {/* ✅ 内容层 */}
             <div className="relative z-10">
-                <SEOHead 
-                    customTitle={isChinese ? "文房用具 - 中国锡器博物馆" : "Scholar's Utensils - China Pewter Museum"}
-                    customDescription={isChinese ? "炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息" : "Blending artistry and scholarly refinement"}
+                <SEOHead
+                    customTitle={
+                        isChinese
+                            ? "文房用具 - 中国锡器博物馆"
+                            : "Scholar's Utensils - China Pewter Museum"
+                    }
+                    customDescription={
+                        isChinese
+                            ? "炉、瓶、盒等文房器物，凝聚书香与匠心的双重气息"
+                            : "Blending artistry and scholarly refinement"
+                    }
                 />
                 <Navbar />
 
@@ -198,4 +206,3 @@ export default function Collection5() {
         </main>
     );
 }
-
