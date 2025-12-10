@@ -625,9 +625,9 @@ export default function Home() {
                     {/* Left side: Text */}
                     <div>
         
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text font-heading">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text font-body cultura-ai-title">
                                 CulturaAI
-                            </h2>
+                            </h3>
                 
                         <div className={`text-white leading-relaxed text-lg whitespace-pre-line bg-white-600/50 p-8 rounded-2xl backdrop-blur-sm ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                             {isChinese ? (
@@ -1493,6 +1493,11 @@ export default function Home() {
       0 0 16px rgba(150, 200, 255, 0.4);
     animation: crystalGlow 6s ease-in-out infinite;
     background-size: 200% auto;
+  }
+
+  /* Cultura AI 标题样式 - 保持正常大小写 */
+  .cultura-ai-title {
+    text-transform: none !important;
   }
 
   @keyframes crystalGlow {

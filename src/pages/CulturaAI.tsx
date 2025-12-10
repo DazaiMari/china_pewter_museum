@@ -635,6 +635,118 @@ export default function CulturaAI() {
                         )}
                     </motion.div>
 
+                    <SectionTitle 
+    number="06" 
+    title={isChinese ? "为什么天系美学可以跨越不同对象" : "Why Tian Aesthetics Transcends All Objects"} 
+    subtitle={isChinese ? "理解的本质" : "The Nature of Understanding"}
+/>
+
+<motion.div 
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={sectionVariant}
+    className="text-gray-300 leading-relaxed font-light text-lg mb-12 space-y-4"
+>
+    {isChinese ? (
+        <>
+            <p>因为天系美学解决的，不是对象的问题。</p>
+            <p className="font-semibold text-white">而是理解如何发生。</p>
+
+            <p>它提供的不是事物的分类，而是观看的结构：</p>
+            <ul className="list-none space-y-2 pl-6">
+                <li>• 如何如实看见？</li>
+                <li>• 如何识别潜能？</li>
+                <li>• 如何生成图像？</li>
+                <li>• 如何建立秩序？</li>
+                <li>• 如何抵达心境？</li>
+            </ul>
+
+            <p>
+                对象可以变化，理解的路径不变。
+                因此天系美学能够跨越器物、自然、味觉与一切体验。
+            </p>
+        </>
+    ) : (
+        <>
+            <p>Because Tian Aesthetics is not designed for one object type.</p>
+            <p className="font-semibold text-white">It explains how understanding itself happens.</p>
+
+            <p>It offers not a taxonomy of things, but a structure of perception:</p>
+            <ul className="list-none space-y-2 pl-6">
+                <li>• How do we see truthfully?</li>
+                <li>• How do we sense potential?</li>
+                <li>• How does imagery emerge?</li>
+                <li>• How is order established?</li>
+                <li>• How do we reach a state of resonance?</li>
+            </ul>
+
+            <p>
+                Objects may differ, but the path of understanding remains the same.
+                That is why Tian Aesthetics transcends artifacts, nature, taste, and all human experiences.
+            </p>
+        </>
+    )}
+</motion.div>
+
+
+                    {/* ✨ CulturaAI 核心功能/展示卡片 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+                        {[
+                            {
+                                id: 1,
+                                title: isChinese ? "海洋玉髓《荷花》" : "Ocean Jadeite《Lotus》",
+                                desc: isChinese
+                                    ? "海洋玉髓《荷花》｜泼墨写荷影，独枝动乾坤｜五天论赏石修心 "
+                                    : "Ocean Jadeite《Lotus》｜Splashing Ink for Lotus Shadows, a Single Branch Moving the Heavens｜Five Tian Theory for Appreciating Stones and Cultivating Mind.",
+                                img: "/images/culturaai/article1.png", // 请确保替换为你项目中的实际图片路径
+                                link: "https://www.sohu.com/a/943342198_122537318", // 替换为实际跳转链接
+                            },
+                            {
+                                id: 2,
+                                title: isChinese ? "红烧茄子" : "Braised Eggplant",
+                                desc: isChinese
+                                    ? "一味平凡亦惊艳｜五天论·味之观"
+                                    : "Ordinary Yet Astonishing｜Five Days on Taste: A Perspective",
+                                img: "/images/culturaai/article2.png",
+                                link: "https://www.toutiao.com/article/7573838857070707215/",
+                            },
+                            {
+                                id: 3,
+                                title: isChinese ? "清代锡一品锅" : "Qing Dynasty First-Grade Tin Pot",
+                                desc: isChinese
+                                    ? "五天论·器之观｜赏器修心"
+                                    : "Five-Day Treatise: Contemplating Artefacts｜Admiring Objects to Cultivate the Mind",
+                                img: "/images/culturaai/article3.png",
+                                link: "https://www.toutiao.com/article/7574792845186417203/",
+                            },
+                        ].map((item) => (
+                            <a
+                                key={item.id}
+                                href={item.link}
+                                // 如果是内部路由，建议将 href 改为 React Router 的 Link 组件，或者保持 a 标签
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group block backdrop-blur-xl bg-[rgba(255,255,255,0.08)] border border-white/20 hover:bg-[rgba(255,255,255,0.15)] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+                            >
+                                <div className="relative">
+                                    <img
+                                        src={item.img}
+                                        alt={item.title}
+                                        className="w-180 h-60 object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset  -0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
+                                </div>
+                                <div className="p-6 text-left">
+                                    <h3 className={`text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
+                                        {item.title}
+                                    </h3>
+                                    <p className={`text-gray-300 text-sm leading-snug ${isChinese ? 'chinese-serif' : 'font-body'}`}>{item.desc}</p>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+
                     {/* Section 6 */}
                     <SectionTitle 
                         number="06" 
