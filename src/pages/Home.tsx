@@ -1266,7 +1266,6 @@ export default function Home() {
                                             alt={item.title}
                                             className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
-                                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
                                     </div>
                                     <div className="p-6 text-left">
                                         <h3 className={`text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>

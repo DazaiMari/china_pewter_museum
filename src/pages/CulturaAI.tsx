@@ -636,62 +636,62 @@ export default function CulturaAI() {
                     </motion.div>
 
                     <SectionTitle 
-    number="06" 
-    title={isChinese ? "为什么天系美学可以跨越不同对象" : "Why Tian Aesthetics Transcends All Objects"} 
-    subtitle={isChinese ? "理解的本质" : "The Nature of Understanding"}
-/>
+                        number="06"
+                        title={isChinese ? "为什么天系美学可以跨越不同对象" : "Why Tian Aesthetics Transcends All Objects"}
+                        subtitle={isChinese ? "理解的本质" : "The Nature of Understanding"}
+                    />
 
-<motion.div 
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    variants={sectionVariant}
-    className="text-gray-300 leading-relaxed font-light text-lg mb-12 space-y-4"
->
-    {isChinese ? (
-        <>
-            <p>因为天系美学解决的，不是对象的问题。</p>
-            <p className="font-semibold text-white">而是理解如何发生。</p>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={sectionVariant}
+                        className="text-gray-300 leading-relaxed font-light text-lg mb-12 space-y-4"
+                    >
+                        {isChinese ? (
+                            <>
+                                <p>因为天系美学解决的，不是对象的问题。</p>
+                                <p className="font-semibold text-white">而是理解如何发生。</p>
 
-            <p>它提供的不是事物的分类，而是观看的结构：</p>
-            <ul className="list-none space-y-2 pl-6">
-                <li>• 如何如实看见？</li>
-                <li>• 如何识别潜能？</li>
-                <li>• 如何生成图像？</li>
-                <li>• 如何建立秩序？</li>
-                <li>• 如何抵达心境？</li>
-            </ul>
+                                <p>它提供的不是事物的分类，而是观看的结构：</p>
+                                <ul className="list-none space-y-2 pl-6">
+                                    <li>• 如何如实看见？</li>
+                                    <li>• 如何识别潜能？</li>
+                                    <li>• 如何生成图像？</li>
+                                    <li>• 如何建立秩序？</li>
+                                    <li>• 如何抵达心境？</li>
+                                </ul>
 
-            <p>
-                对象可以变化，理解的路径不变。
-                因此天系美学能够跨越器物、自然、味觉与一切体验。
-            </p>
-        </>
-    ) : (
-        <>
-            <p>Because Tian Aesthetics is not designed for one object type.</p>
-            <p className="font-semibold text-white">It explains how understanding itself happens.</p>
+                                <p>
+                                    对象可以变化，理解的路径不变。
+                                    因此天系美学能够跨越器物、自然、味觉与一切体验。
+                                </p>
+                            </>
+                        ) : (
+                            <>
+                                <p>Because Tian Aesthetics is not designed for one object type.</p>
+                                <p className="font-semibold text-white">It explains how understanding itself happens.</p>
 
-            <p>It offers not a taxonomy of things, but a structure of perception:</p>
-            <ul className="list-none space-y-2 pl-6">
-                <li>• How do we see truthfully?</li>
-                <li>• How do we sense potential?</li>
-                <li>• How does imagery emerge?</li>
-                <li>• How is order established?</li>
-                <li>• How do we reach a state of resonance?</li>
-            </ul>
+                                <p>It offers not a taxonomy of things, but a structure of perception:</p>
+                                <ul className="list-none space-y-2 pl-6">
+                                    <li>• How do we see truthfully?</li>
+                                    <li>• How do we sense potential?</li>
+                                    <li>• How does imagery emerge?</li>
+                                    <li>• How is order established?</li>
+                                    <li>• How do we reach a state of resonance?</li>
+                                </ul>
 
-            <p>
-                Objects may differ, but the path of understanding remains the same.
-                That is why Tian Aesthetics transcends artifacts, nature, taste, and all human experiences.
-            </p>
-        </>
-    )}
-</motion.div>
+                                <p>
+                                    Objects may differ, but the path of understanding remains the same.
+                                    That is why Tian Aesthetics transcends artifacts, nature, taste, and all human experiences.
+                                </p>
+                            </>
+                        )}
+                    </motion.div>
 
 
                     {/* ✨ CulturaAI 核心功能/展示卡片 */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
                         {[
                             {
                                 id: 1,
@@ -708,7 +708,7 @@ export default function CulturaAI() {
                                 desc: isChinese
                                     ? "一味平凡亦惊艳｜五天论·味之观"
                                     : "Ordinary Yet Astonishing｜Five Days on Taste: A Perspective",
-                                img: "/images/culturaai/article2.png",
+                                img: "/images/culturaai/article2.jpg",
                                 link: "https://www.toutiao.com/article/7573838857070707215/",
                             },
                             {
@@ -724,7 +724,6 @@ export default function CulturaAI() {
                             <a
                                 key={item.id}
                                 href={item.link}
-                                // 如果是内部路由，建议将 href 改为 React Router 的 Link 组件，或者保持 a 标签
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group block backdrop-blur-xl bg-[rgba(255,255,255,0.08)] border border-white/20 hover:bg-[rgba(255,255,255,0.15)] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
@@ -733,9 +732,8 @@ export default function CulturaAI() {
                                     <img
                                         src={item.img}
                                         alt={item.title}
-                                        className="w-180 h-60 object-cover group-hover:scale-105 transition-transform duration-700"
+                                        className="w-full h-50 object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
-                                    <div className="absolute inset  -0 bg-black/30 group-hover:bg-black/40 transition duration-500" />
                                 </div>
                                 <div className="p-6 text-left">
                                     <h3 className={`text-xl font-semibold mb-3 text-white group-hover:text-red-400 transition-colors duration-500 ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
