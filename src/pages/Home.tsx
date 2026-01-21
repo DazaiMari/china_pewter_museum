@@ -717,7 +717,7 @@ export default function Home() {
                         {/* Call-to-Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-6">
                         <a
-                                href="https://lithogpt.com"
+                                href="https://culturaai.org"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block px-8 py-3 bg-red-300/20 hover:bg-red-600/30 border-2 border-red-400/40 hover:border-red-400/60 rounded-lg text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]"
