@@ -722,7 +722,7 @@ export default function Home() {
                                 rel="noopener noreferrer"
                                 className="inline-block px-8 py-3 bg-red-300/20 hover:bg-red-600/30 border-2 border-red-400/40 hover:border-red-400/60 rounded-lg text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]"
                             >
-                                {isChinese ? "访问 CulturaAI（ LithoGPT ） →" : "Visit CulturaAI ( LithoGPT ) →"}
+                                {isChinese ? "访问 CulturaAI →" : "Visit CulturaAI →"}
                             </a>
                             <Link
                                 to={isZh ? "/zh/culturaai" : "/culturaai"}
