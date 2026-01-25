@@ -365,8 +365,8 @@ export default function Home() {
                     <p className={`text-lg text-gray-200 ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                         9:30 – 16:30 ({isChinese ? "周一闭馆" : "Closed Mondays"})
                     </p>
-<div
-  className="
+                    <div
+                        className="
     relative group mt-8
     flex flex-col
     gap-4 md:gap-6
@@ -374,12 +374,12 @@ export default function Home() {
     bg-white/1 backdrop-blur-md
     rounded-xl p-4 md:p-6
   "
->
+                    >
 
                         {isChinese ? (
                             <>
                                 <p className="text-base sm:text-lg text-white/80 chinese-serif leading-relaxed">
-                                    探索锡器的历史与工艺，<br/>
+                                    探索锡器的历史与工艺，<br />
                                     在金属的静默里捕捉文明的隐秘脉动。
                                 </p>
                                 <p className="text-base sm:text-lg text-white/80 chinese-serif leading-relaxed">
@@ -579,7 +579,7 @@ export default function Home() {
                                     在这里，展示不止于器物，更是一次精神的唤醒。
                                     中国锡器博物馆的使命，是让锡文化"活起来、传下去、走出去"
                                     让金属有温度，让文化会呼吸。`
-                                                                    : `The China Pewter Museum, located in Lili Ancient Town, Suzhou, China, is housed within the restored Mao Mansion, a Ming-dynasty residence of historic character.
+                                    : `The China Pewter Museum, located in Lili Ancient Town, Suzhou, China, is housed within the restored Mao Mansion, a Ming-dynasty residence of historic character.
                                     Founded by Xu Penglin and opened in 2017, it is China's largest institution dedicated to pewter culture and preservation.
 
                                     The museum is officially recognized as part of China's Intangible Cultural Heritage, and serves as a Suzhou Comprehensive Quality Development Activity Base for Primary and Secondary School Students, a Suzhou Science Popularization Base, and one of the First Batch of Science Education Bases in the Yangtze River Delta Leading Demonstration Zone. It also serves as the Rotating Director of the Foundry Industry Sub-Alliance under the National Industrial Museum Alliance of China.
@@ -624,91 +624,64 @@ export default function Home() {
                 <section className="text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade">
                     {/* Left side: Text */}
                     <div>
-        
-                            <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text font-body cultura-ai-title">
-                                CulturaAI
-                            </h3>
-                
+
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text font-body cultura-ai-title">
+                            {isChinese ? (
+                                <a
+                                    href="https://doi.org/10.5281/zenodo.18261926"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-red-400 transition-colors duration-300 decoration-red-500/50 underline-offset-8 hover:underline"
+                                >
+                                    人工智能时代，博物馆的第四使命
+                                </a>
+                            ) : (
+                                <a
+                                    href="https://doi.org/10.5281/zenodo.18261926"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-red-400 transition-colors duration-300 decoration-red-500/50 underline-offset-8 hover:underline"
+                                >
+                                    The Fourth Mission of Museums in the Age of Artificial Intelligence
+                                </a>
+                            )}
+                        </h3>
+
                         <div className={`text-white leading-relaxed text-lg whitespace-pre-line bg-white-600/50 p-8 rounded-2xl backdrop-blur-sm ${isChinese ? 'chinese-serif' : 'font-body'}`}>
                             {isChinese ? (
                                 <>
-                                    <p>
-                                        高速流动的时代拉开了人与文化的距离。
+                                    <p className="mb-4">
+                                        过去二十多年，互联网的发展让信息越来越多、越来越快，但人们获取信息的方式也变得越来越碎片化。我们知道的东西变多了，却更难形成系统的认识和稳定的判断。
+                                    </p>
+                                    <p className="mb-4">
+                                        近几年，人工智能的突飞猛进进一步放大了这一变化。越来越多的思考过程被算法代替，人们逐渐习惯于让系统 <span className="font-bold">“替自己想”</span>，而不是亲自观察、理解和判断。
+                                    </p>
+                                    <p className="mb-4">
+                                        在这样的背景下，博物馆正在发生一次重要的转变。除了文物保存、展览展示和公众教育之外，博物馆开始承担起新的角色：<span className="font-bold text-red-200">成为认知训练的场所</span> —— 帮助人们放慢节奏，重新学习如何观察、理解和形成判断。
+                                    </p>
+                                    <p className="mb-4">
+                                        博物馆的第四使命，正是通过清晰、可重复的认知路径，让人与真实的物建立起深入的关系。<span className="font-bold">“五天论”</span> 正是这样一条可训练的认知路径，它让判断的形成过程变得清楚、可学、可练。
                                     </p>
                                     <p>
-                                        器物依然静静伫立，但通往它们的理解路径正在被遗忘。
-                                    </p>
-                                    <p>
-                                        一件器物在东方与西方之间、传统与未来之间，常常像隔着一层薄雾，
-                                    </p>
-                                    <p>
-                                        让人难以真正看见其文化深度。
-                                    </p>
-                                    <p>
-                                        在人工智能飞速发展的今天，
-                                    </p>
-                                    <p>
-                                        传统的数字化、多媒体与三维重建，已无法回应当下的文化需求。
-                                    </p>
-                                    <p>
-                                        我们意识到，一项更深的使命正悄然到来
-                                    </p>
-                                    <p>
-                                        不仅保存与展示器物，更要更新我们理解文化的方式。
-                                    </p>
-                                    <p>
-                                        正是在这样的背景中，由徐鹏林开发的<span className="font-semibold">CulturaAI</span> 大模型。
-                                    </p>
-                                    <p>
-                                        不仅是一套智能系统，更是一座桥
-                                    </p>
-                                    <p>
-                                        一座让人工智能能够进入器物的文化结构、读懂其深层语义的桥
-                                    </p>
-                                    <p>
-                                        一座让来自不同文明的人们得以重新看见文化之美的桥
-                                    </p>
-                                    <p>
-                                        一座让古老器物在智能时代重新焕发意义的桥。
+                                        在这一结构中，人工智能不是用来替代人的思考，而是作为一种 <span className="font-bold">辅助认知的工具</span> 。<span className="font-semibold cultura-ai-accent">CulturaAI</span> 展示了这些理念如何在博物馆中被实际应用。
                                     </p>
                                 </>
                             ) : (
                                 <>
-                                    <p>
-                                        In an era of rapid technological change, the distance between people and cultural heritage is widening.
+                                    <p className="mb-4">
+                                        Over the past two decades, the rapid expansion of the internet and digital platforms has dramatically increased access to information, while gradually fragmenting the cognitive pathways through which knowledge is organized and judgment is formed.
+                                    </p>
+                                    <p className="mb-4">
+                                        In recent years, the rapid advancement of artificial intelligence has further accelerated this shift by automating reasoning processes and increasingly substituting human cognitive effort.
+                                    </p>
+                                    <p className="mb-4">
+                                        Beyond preservation, exhibition, and public education, museums can function as <span className="font-bold text-red-200">cognitive training institutions</span> — spaces that support perception, interpretation, and meaning-making under conditions of technological acceleration.
+                                    </p>
+                                    <p className="mb-4">
+                                        The Fourth Mission of museums is articulated through the <span className="font-bold">Five-Tian Framework</span>, a transferable cognitive pathway that renders judgment formation explicit and trainable through object encounter.
                                     </p>
                                     <p>
-                                        Artifacts remain present, yet the interpretive frameworks that once made them intelligible are fading.
-                                    </p>
-                                    <p>
-                                        Positioned between East and West, and between tradition and the future, many objects now lie behind a conceptual haze that obscures their cultural depth.
-                                    </p>
-                                    <p>
-                                        As AI advances, traditional digitization and multimedia display are no longer sufficient.
-                                    </p>
-                                    <p>
-                                        A deeper mission is emerging
-                                    </p>
-                                    <p>
-                                        to preserve artifacts while renewing the ways cultural meaning is understood.
-                                    </p>
-                                    <p>
-                                        Within this context, the <span className="font-semibold">CulturaAI</span> model, developed by Penglin Xu.
-                                    </p>
-                                    <p>
-                                        It is more than an intelligent system
-                                    </p>
-                                    <p>
-                                        it is an interpretive bridge.
-                                    </p>
-                                    <p>
-                                        A bridge that enables AI to engage with the cultural structures of artifacts
-                                    </p>
-                                    <p>
-                                        A bridge that helps diverse audiences rediscover cultural meaning
-                                    </p>
-                                    <p>
-                                        A bridge that restores relevance to ancient objects in an AI-mediated world.
+                                        Within this structure, artificial intelligence functions not as a replacement for human cognition, but as <span className="font-bold">cognitive scaffolding</span>. <span className="font-semibold cultura-ai-accent">CulturaAI</span> demonstrates how these principles can be applied in museum contexts.
                                     </p>
                                 </>
                             )}
@@ -716,7 +689,7 @@ export default function Home() {
 
                         {/* Call-to-Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                        <a
+                            <a
                                 href="https://culturaai.org"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -796,7 +769,7 @@ export default function Home() {
 
                                     每一件展品，都记录着人类与金属共生的故事。
                                     在光影与陈列之间，锡的光泽仍在缓缓诉说着生活的温度与时代的记忆。`
-                                                                        : `Through permanent and special exhibitions,
+                                    : `Through permanent and special exhibitions,
                                     the museum presents the many faces of pewter in Chinese life and culture.
                                     The galleries are organized thematically, featuring pewter tableware, teaware, wine vessels, 
                                     boudoir articles, scholar’s objects, lighting pieces, ritual wares and decorative figures :
@@ -918,7 +891,7 @@ export default function Home() {
                                 自古以来，锡被视为调和之材，  
                                 既能与铜成青，又能与银共白，  
                                 在火与手的交替中，显露出东方文化中的中和之美。`
-                                                                : `Pewter — soft yet enduring, gentle yet firm, its muted sheen carries quiet grace.  
+                                : `Pewter — soft yet enduring, gentle yet firm, its muted sheen carries quiet grace.  
                                 Between its stretch and return lies the most tender order of metal.  
 
                                 Since ancient times, pewter has been regarded as a metal of harmony —  
@@ -936,7 +909,7 @@ export default function Home() {
                                 打锡之人，在敲击的回声中体会静气；  
                                 观锡之人，在光泽的流转中感受时间。  
                                 工艺的意义，在于以形入心，以物见道。`
-                                                                : `The way of pewter-making goes beyond technique.  
+                                : `The way of pewter-making goes beyond technique.  
                                 Smelting, casting, hammering, welding, grinding, polishing: 
                                 each process is a dialogue between human and material,  
                                 a balance of strength, rhythm, and inner calm.  
@@ -1203,7 +1176,7 @@ export default function Home() {
                                     将“匠心”“文化自觉”与“工艺精神”带入课堂。
                                     学生了解锡器的历史脉络与当代表达，
                                     在近距离的接触中激发兴趣，启发思考。`
-                                                                        : `If the exhibition hall is a classroom of contemplation,
+                                    : `If the exhibition hall is a classroom of contemplation,
                                     then the workshop is a classroom of creation.
                                     The China Pewter Museum integrates traditional craftsmanship education
                                     into everyday experience,
@@ -1332,7 +1305,7 @@ export default function Home() {
                                     同时，联合地方政府共同举办“中国道口锡器文化节”，
                                     以地方文化为根基，以公众参与为纽带，
                                     探索传统手艺融入现代生活的新路径。`
-                                                                    : `Culture lives through connection.
+                                : `Culture lives through connection.
                                     The China Pewter Museum takes an open approach to collaboration and exchange,
                                     engaging in a wide range of programs that bring the warmth of pewter
                                     beyond its local roots and into the world.
