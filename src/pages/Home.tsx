@@ -141,28 +141,34 @@ export default function Home() {
                             {isChinese ? "关于" : "About"}
                         </a>
                         <a
+                            href="#culturaai"
+                            className="hover:text-red-400 transition-colors duration-300"
+                        >
+                            {isChinese ? "CulturaAI" : "CulturaAI"}
+                        </a>
+                        <a
                             href="#collections"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
-                            {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
+                            {isChinese ? "收藏" : "Collection"}
                         </a>
                         <a
                             href="#craft"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
-                            {isChinese ? "工艺与文化" : "Craft & Culture"}
+                            {isChinese ? "工艺" : "Craft"}
                         </a>
                         <a
                             href="#learning"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
-                            {isChinese ? "研学与教育" : "Learning & Discovery"}
+                            {isChinese ? "研学" : "Learn"}
                         </a>
                         <a
                             href="#events"
                             className="hover:text-red-400 transition-colors duration-300"
                         >
-                            {isChinese ? "活动与交流" : "Events & Partnerships"}
+                            {isChinese ? "活动" : "Events"}
                         </a>
                     </div>
 
@@ -246,10 +252,11 @@ export default function Home() {
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm py-3">
                         <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
                         <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
-                        <a href="#collections" className="hover:text-red-400">{isChinese ? "展览与收藏" : "Exhibitions & Collections"}</a>
-                        <a href="#craft" className="hover:text-red-400">{isChinese ? "工艺与文化" : "Craft & Culture"}</a>
-                        <a href="#learning" className="hover:text-red-400">{isChinese ? "研学与教育" : "Learning & Discovery"}</a>
-                        <a href="#events" className="hover:text-red-400">{isChinese ? "活动与交流" : "Events & Partnerships"}</a>
+                        <a href="#culturaai" className="hover:text-red-400">{isChinese ? "CulturaAI" : "CulturaAI"}</a>
+                        <a href="#collections" className="hover:text-red-400">{isChinese ? "收藏" : "Collection"}</a>
+                        <a href="#craft" className="hover:text-red-400">{isChinese ? "工艺" : "Craft"}</a>
+                        <a href="#learning" className="hover:text-red-400">{isChinese ? "研学" : "Learn"}</a>
+                        <a href="#events" className="hover:text-red-400">{isChinese ? "活动" : "Events"}</a>
                     </div>
 
                     {/* 移动端语言下拉菜单 */}
@@ -621,7 +628,7 @@ export default function Home() {
 
             {/* CulturaAI Section */}
             <div className="relative z-10">
-                <section className="text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade">
+                <section id="culturaai" className="text-white py-24 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center fade">
                     {/* Left side: Text */}
                     <div>
 
@@ -723,8 +730,6 @@ export default function Home() {
                 </section>
             </div>
 
-
-
             {/* Exhibitions & Collections Section */}
             <div className="relative z-10 bg-transparent">
                 <section
@@ -746,7 +751,7 @@ export default function Home() {
                             className="inline-block transition-all duration-500 hover:scale-105 hover:-translate-y-[2px] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:brightness-125"
                         >
                             <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
-                                {isChinese ? "展览与收藏" : "Exhibitions & Collections"}
+                                {isChinese ? "收藏" : "Collection"}
                             </h2>
                         </a>
 
@@ -876,7 +881,7 @@ export default function Home() {
                         className="inline-block transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:brightness-125 hover:-translate-y-[2px]"
                     >
                         <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
-                            {isChinese ? "工艺与文化" : "Craft & Culture"}
+                            {isChinese ? "工艺" : "Craft"}
                         </h2>
                     </a>
 
@@ -1153,7 +1158,7 @@ export default function Home() {
                     {/* 内容区 */}
                     <div className="relative z-10">
                         <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
-                            {isChinese ? "研学与教育" : "Learning & Discovery"}
+                            {isChinese ? "研学" : "Learn"}
                         </h2>
 
                         {/* 段落文字 */}
@@ -1282,7 +1287,7 @@ export default function Home() {
                     className="bg-gray-450 text-white py-24 px-6 md:px-20 text-center fade"
                 >
                     <h2 className={`text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text ${isChinese ? 'chinese-serif' : 'font-heading'}`}>
-                        {isChinese ? "活动与交流" : "Events & Partnerships"}
+                        {isChinese ? "活动" : "Events"}
                     </h2>
 
                     <div className={`max-w-4xl mx-auto text-gray-300 leading-relaxed text-lg mb-16 whitespace-pre-line ${isChinese ? 'chinese-serif' : 'font-body'}`}>
