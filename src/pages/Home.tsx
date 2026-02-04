@@ -134,9 +134,6 @@ export default function Home() {
 
                     {/* 中间导航链接 */}
                     <div className="hidden md:flex flex-wrap justify-center gap-6 text-sm md:text-base">
-                        <a href="#hero" className="hover:text-red-400 transition-colors duration-300">
-                            {isChinese ? "首页" : "Home"}
-                        </a>
                         <a href="#about" className="hover:text-red-400 transition-colors duration-300">
                             {isChinese ? "关于" : "About"}
                         </a>
@@ -250,7 +247,6 @@ export default function Home() {
                 {/* 小屏导航栏（自动折叠为两行） */}
                 <div className="md:hidden bg-black/80 backdrop-blur-md">
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm py-3">
-                        <a href="#hero" className="hover:text-red-400">{isChinese ? "首页" : "Home"}</a>
                         <a href="#about" className="hover:text-red-400">{isChinese ? "关于" : "About"}</a>
                         <a href="#culturaai" className="hover:text-red-400">{isChinese ? "CulturaAI" : "CulturaAI"}</a>
                         <a href="#collections" className="hover:text-red-400">{isChinese ? "收藏" : "Collection"}</a>
