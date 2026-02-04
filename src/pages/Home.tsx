@@ -631,7 +631,7 @@ export default function Home() {
                         <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-snug crystal-text font-body cultura-ai-title">
                             {isChinese ? (
                                 <a
-                                    href="https://doi.org/10.5281/zenodo.18261926"
+                                    href="https://doi.org/10.5281/zenodo.18234292"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-red-400 transition-colors duration-300 decoration-red-500/50 underline-offset-8 hover:underline"
@@ -640,7 +640,7 @@ export default function Home() {
                                 </a>
                             ) : (
                                 <a
-                                    href="https://doi.org/10.5281/zenodo.18261926"
+                                    href="https://doi.org/10.5281/zenodo.18234292"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-red-400 transition-colors duration-300 decoration-red-500/50 underline-offset-8 hover:underline"
